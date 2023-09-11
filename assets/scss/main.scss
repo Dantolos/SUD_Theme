@@ -1,0 +1,32 @@
+@import 'utils/reset';
+@import 'utils/responsive';
+@import 'utils/variables';
+@import 'utils/fonts';
+@import 'utils/elements';
+@import 'utils/forms';
+@import 'utils/scrollbar';
+
+@import 'components/header';
+@import 'components/footer';
+@import 'components/lightbox';
+// Import other files as needed
+
+::selection {
+     background: $orange;
+     color: $white;
+}
+
+
+
+#main-wrapper { width:100vw; }
+.bspbox {
+     @include primaryBox;
+}
+
+.bspbox2 {
+     @include secondaryBox;
+}
+
+//plugins
+@import 'plugins/splide';
+@import 'plugins/friendly-forms';

@@ -1,0 +1,23 @@
+form {
+
+     label { font-size: $fxs; }
+
+     input[type=text],
+     input[type=email] {
+          font-size: $fxs;
+          font-family: 'GT Alpina';
+          padding: 20px;
+          border-radius: 20px;
+
+          &:focus {
+               
+               background-color: $blue-ultra-light;
+          }
+     }
+
+     input[type=checkbox] { 
+          border-radius: 50%;
+          margin: 0;
+     }
+     
+}

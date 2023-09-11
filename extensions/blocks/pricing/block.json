@@ -1,0 +1,15 @@
+{
+     "name": "acf/pricing",
+     "title": "Pricing",
+     "description": "Section to promote event pricing.",
+     "style": [ "file:./pricing.css" ],
+     "script": "block-pricing",
+     "category": "Startup Days",
+     "icon": { "foreground": "#1582BE",  "src": "money-alt"},
+     "keywords": ["preise", "pricing", "tichets", "sud"],
+     "acf": {
+         "mode": "preview",
+         "renderTemplate": "./pricing.php"
+     },
+     "align": "full"
+}

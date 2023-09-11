@@ -1,0 +1,79 @@
+
+$headerHeight: 180px;
+
+
+body { 
+     margin-top: $headerHeight;
+     @include breakpoint('m'){ $headerHeight: 100px;margin-top: $headerHeight; }
+}
+
+.header-wrapper {
+     
+     z-index: 100;
+     position: fixed;
+     top:0;
+     left:0;
+     height: $headerHeight;
+     width: 100vw;
+     padding: 20px 30px;
+     background-color: $white;
+     @include breakpoint('m'){ $headerHeight: 100px;height: $headerHeight; }
+}
+
+.header-logo {
+     &:hover { cursor: pointer;}
+
+     img {
+          @include breakpoint('m'){
+               height: 60px;
+          }  
+     }
+}
+
+//META MENU
+.header-meta-menu {
+     position: absolute;
+     right: 30px;
+     top:-16px !important;
+
+     @include breakpoint('s'){ display: none; }
+
+     ul {
+          display: flex;
+          list-style: none outside none !important;
+          color: $blue;
+          font-weight: bold;
+          li { 
+               padding: 10px 10px 0 10px;
+               border-left: 2px solid $blue;
+               &:last-of-type {
+                    border-right: 2px solid $blue;
+               }
+               &:hover {
+                    background-color: $blue;
+                    color: $white;
+                    cursor: pointer;
+               }
+          }
+     }
+}
+
+
+//MENU
+.header-menu {
+     position: absolute;
+     bottom:20px;
+     right:30px;
+
+     @include breakpoint('m'){ display: none; }
+
+     ul {
+          display: flex;
+          gap: 40px;
+          list-style: none outside none !important;
+          font-family: 'Media Sans';
+          font-size: $fxs;
+          color: $orange;
+          
+     }
+}

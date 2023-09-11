@@ -1,0 +1,15 @@
+{
+     "name": "acf/photo-slider",
+     "title": "Photo Slider",
+     "description": "Section with photo slider.",
+     "style": [ "file:./photo-slider.css" ],
+     "script": "block-photo-slider",
+     "category": "Startup Days",
+     "icon": { "foreground": "#1582BE",  "src": "format-gallery"},
+     "keywords": ["photo-slider", "slider", "photos", "sud", "gallery"],
+     "acf": {
+         "mode": "preview",
+         "renderTemplate": "./photo-slider.php"
+     },
+     "align": "full"
+}

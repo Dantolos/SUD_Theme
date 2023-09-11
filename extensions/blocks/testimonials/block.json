@@ -1,0 +1,15 @@
+{
+     "name": "acf/testimonials",
+     "title": "Testimonials",
+     "description": "Show a slider of textimonials.",
+     "style": [ "file:./testimonials.css" ],
+     "script": "block-testimonials",
+     "category": "Startup Days",
+     "icon": { "foreground": "#1582BE",  "src": "format-quote"},
+     "keywords": ["testimonials", "quotes", "zitate", "sud"],
+     "acf": {
+         "mode": "preview",
+         "renderTemplate": "./testimonials.php"
+     },
+     "align": "full"
+}

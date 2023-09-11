@@ -1,0 +1,14 @@
+{
+     "name": "acf/counter",
+     "title": "Counter",
+     "description": "Show upcoming events.",
+     "style": [ "file:./counter.css" ],
+     "category": "Startup Days",
+     "icon": { "foreground": "#1582BE",  "src": "performance"},
+     "keywords": ["counter", "zähler", "sud"],
+     "acf": {
+         "mode": "preview",
+         "renderTemplate": "./counter.php"
+     },
+     "align": "full"
+ }

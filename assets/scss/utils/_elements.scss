@@ -1,0 +1,94 @@
+@mixin imageSettings {
+     background-size: cover;
+     -ms-background-size: cover;
+     -o-background-size: cover;
+     -moz-background-size: cover;
+     -webkit-background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center center;
+}
+.img-cover { @include imageSettings(); }
+
+@mixin shadow {
+     box-shadow: 5px 5px 21px 0px rgba(69, 64, 52, 0.30);
+}
+.sud-shadow {
+     @include shadow();
+}
+
+@mixin primaryBox {
+     @include shadow;
+     border-radius: 20px;
+     border: 1px solid rgba(69, 64, 52, 0.15);
+     background: var(--white, #FFF);
+}
+.primatyBox { @include primaryBox(); }
+
+@mixin secondaryBox {
+     border-radius: $fs;
+     border: 1px solid rgba(0, 0, 0, 0.20);
+     background: rgba(69, 64, 52, 0.05);
+}
+.secondaryBox { @include secondaryBox(); }
+
+//BUTTON SETTINGS
+@mixin basicButton {
+     font-family: 'Media Sans';
+     font-size: clamp( 20px, 3vw, 30px);
+     padding:20px;
+     border-radius: 25px;
+     border:none;
+     &:hover {
+          cursor: pointer;
+     }
+}
+
+@mixin primaryButton {
+     @include basicButton();
+     background-color: $blue;
+     color: $white;
+     &:hover {
+          background-color: $orange;
+     }
+}
+
+@mixin secondaryButton {
+     @include basicButton();
+     border: 2px solid $blue;
+     background-color: unset;
+     color: $blue;
+     &:hover {
+          border-color: $orange;
+          background-color: $orange;
+          color: $white;
+     }
+}
+
+button {
+     @include primaryButton()
+}
+
+
+// BG SUD design elements
+.sud-bg-design {
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     top:0;
+     left:0;
+     overflow: visible;
+
+     .sud-bg-element-half-circle-01 {
+          background-color: $blue-ultra-light;
+          clip-path: circle(50% at 50% 0%);
+          position: absolute;
+          overflow: visible;
+     }
+
+     .sud-bg-element-polygon-01 {
+          position: absolute;
+          background-color: $blue-ultra-light;
+          clip-path: polygon(100% 0, 63% 71%, 100% 100%);
+     }
+}
+

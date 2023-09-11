@@ -1,0 +1,14 @@
+{
+     "name": "acf/section",
+     "title": "Section",
+     "description": "Section",
+     "style": [ "file:./section.css" ],
+     "category": "Startup Days",
+     "icon": { "foreground": "#1582BE",  "src": "align-wide"},
+     "keywords": [ "section", "sud"],
+     "acf": {
+         "mode": "preview",
+         "renderTemplate": "./section.php"
+     },
+     "align": "full"
+}

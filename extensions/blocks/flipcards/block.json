@@ -1,0 +1,14 @@
+{
+     "name": "acf/flipcards",
+     "title": "Flipcards",
+     "description": "Show upcoming events.",
+     "style": [ "file:./flipcards.css" ],
+     "category": "Startup Days",
+     "icon": { "foreground": "#1582BE",  "src": "columns"},
+     "keywords": ["flipcards", "cards", "sud"],
+     "acf": {
+         "mode": "preview",
+         "renderTemplate": "./flipcards.php"
+     },
+     "align": "full"
+ }

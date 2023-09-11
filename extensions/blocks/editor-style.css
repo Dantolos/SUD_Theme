@@ -1,0 +1,46 @@
+@font-face {
+     font-family: 'Media Sans';
+     src: url('../../assets/fonts/mediasansweb-bold.woff2') format('woff2'),
+          url('../../assets/mediasansweb-bold.woff') format('woff');
+     /* Add more src lines for different formats if needed */
+     font-weight: normal;
+     font-style: normal;
+}
+
+@font-face {
+     font-family: 'GT Alpina';
+     src: url('../../assets/fonts/GT-Alpina-Standard-Regular.woff2') format('woff2'),
+          url('../../assets/fonts/GT-Alpina-Standard-Regular.woff') format('woff');
+     /* Add more src lines for different formats if needed */
+     font-weight: normal;
+     font-style: normal;
+}
+
+@font-face {
+     font-family: 'GT Alpina';
+     src: url('../../assets/fonts/GT-Alpina-Standard-Bold.woff2') format('woff2'),
+          url('../../assets/fonts/GT-Alpina-Standard-Bold.woff') format('woff');
+     /* Add more src lines for different formats if needed */
+     font-weight: bold;
+     font-style: normal;
+}
+
+@font-face {
+     font-family: 'GT Alpina';
+     src: url('../../assets/fonts/GT-Alpina-Standard-Regular-Italic.woff2') format('woff2'),
+          url('../../assets/fonts/GT-Alpina-Standard-Regular-Italic.woff') format('woff');
+     /* Add more src lines for different formats if needed */
+     font-weight: normal;
+     font-style: italic;
+}
+
+@font-face {
+     font-family: 'GT Alpina';
+     src: url('../../assets/fonts/GT-Alpina-Standard-Bold-Italic.woff2') format('woff2'),
+          url('../../assets/fonts/GT-Alpina-Standard-Bold-Italic.woff') format('woff');
+     /* Add more src lines for different formats if needed */
+     font-weight: bold;
+     font-style: italic;
+}
+
+html :where(.wp-block) { max-width: unset; }
