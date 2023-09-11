@@ -65,7 +65,8 @@
 }
 
 button {
-     @include primaryButton()
+     @include primaryButton();
+     letter-spacing: 1px;
 }
 
 
