@@ -10,6 +10,11 @@
      object-fit: cover;
 }
 
+.hero-background > video {
+     min-height:100%;
+     min-width:100%;
+}
+
 .hero-content-container {
      position: absolute;
      top:0;

@@ -46,6 +46,13 @@ if (!function_exists('sud_cast_component')) {
                     $componentHTML .= '<img src="'.$component['image']['url'].'" alt="'.$component['image']['alt'].'">';
                     $componentHTML .= '</div>';
                     break;
+               case 'video':
+                    $componentHTML .= '<div class="component-video">';
+                    $componentHTML .= '<video controls>';
+                    $componentHTML .= '<source src="'.$component['video'].'">';
+                    $componentHTML .= '</video>';
+                    $componentHTML .= '</div>';
+                    break;
                case 'subtitle':
                     $componentHTML .= '<div class="component-subtitle">';
                     $componentHTML .= '<h5 class="c-orange">'.$component['subtitle'].'</h5>';

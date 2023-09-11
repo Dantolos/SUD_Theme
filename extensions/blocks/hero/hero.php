@@ -10,6 +10,7 @@ if ( ! empty( $block['anchor'] ) ) {
 $title = get_field( 'title' ) ?: 'Titel ';
 $subtitle = get_field( 'subtitle' ) ?: 'Subtitle';
 $image = get_field( 'image' ) ?: null;
+$video = get_field( 'video' ) ?: null;
 $callToAction = get_field( 'call_to_action' )['text'] ? get_field( 'call_to_action' ) : null;
 $button = get_field( 'button' )['link'] ? get_field( 'button' ) : null;
 ?>
@@ -17,7 +18,12 @@ $button = get_field( 'button' )['link'] ? get_field( 'button' ) : null;
 <div <?php echo $anchor; ?>class="hero-wrapper bg-lightgrey" style="min-height:200px;">
     <div class="hero-background">
         <!-- Hero image -->
-        <?php if($image){
+        <?php if($video){
+            echo '<video id="hero_video" autoplay muted loop>';
+            echo '<source src="'.$video.'">';
+            echo '</video>';
+        } ?>
+        <?php if($image ){
             echo '<img src="' . $image . '" alt="hero-image" />';
         } ?>
     </div>
