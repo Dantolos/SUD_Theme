@@ -8,6 +8,7 @@ if ( ! empty( $block['anchor'] ) ) {
 
 // Load values and assign defaults.
 $section_title = get_field( 'section_title' ) ?: '';
+$note = get_field('note') ?: '';
 $benefit_title = get_field('benefits')['title'] ?: '';
 $benefit_content = get_field('benefits')['benefit_description'] ?: '';
 $tickets = get_field('tickets') ?: null;
@@ -18,8 +19,8 @@ $button = get_field('button') ?: null;
      
      <div class="pricing-container">
 
-          <h3 class="c-orange" style="text-align:center; width:100%;"><?php echo $section_title; ?></h3>
-
+          <h3 class="c-orange" style="text-align:center; width:100%; margin-bottom:0; line-height: 0;"><?php echo $section_title; ?></h3>
+          <p class="c-blue" style="margin:0;"><?php echo $note; ?></p>
           <div class="pricing-overview">
           <div class="pricing-benefits secondaryBox c-blue">
                <h5 class="c-orange" style="margin-bottom:20px;" ><?php echo $benefit_title; ?></h5>
