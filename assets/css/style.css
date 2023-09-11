@@ -130,7 +130,7 @@ h5, .fs {
 h6, .fxs {
   font-size: clamp(16px, 2vw, 22px); }
 
-p, blockquote, ul > li {
+p, blockquote, ul > li, ol > li {
   font-size: clamp(16px, 2vw, 22px); }
 
 a:hover {
@@ -139,6 +139,9 @@ a:hover {
 .fxxs {
   font-size: clamp(16px, 1.6vw, 18px);
   line-height: 1.4; }
+
+ul > li, ol > li {
+  margin-bottom: 10px; }
 
 .img-cover {
   background-size: cover;
@@ -453,7 +456,7 @@ body {
     max-width: 800px; }
     .template-legals-wtapper .template-legals-container h1, .template-legals-wtapper .template-legals-container h2, .template-legals-wtapper .template-legals-container h3, .template-legals-wtapper .template-legals-container h4, .template-legals-wtapper .template-legals-container h5, .template-legals-wtapper .template-legals-container h6 {
       color: #DF5F31; }
-    .template-legals-wtapper .template-legals-container p {
+    .template-legals-wtapper .template-legals-container p, .template-legals-wtapper .template-legals-container li, .template-legals-wtapper .template-legals-container span, .template-legals-wtapper .template-legals-container ul, .template-legals-wtapper .template-legals-container ol {
       color: #1582BE; }
 
 .splide {

@@ -79,8 +79,10 @@ h5, .fs { font-size: $fs; }
 
 h6, .fxs { font-size: $fxs; }
 
-p, blockquote, ul>li { font-size: $fxs; }
+p, blockquote, ul>li, ol>li { font-size: $fxs; }
 
 a { &:hover {cursor: pointer;} }
 
 .fxxs { font-size: $fxxs; line-height: 1.4; }
+
+ul>li, ol>li { margin-bottom: 10px; }
