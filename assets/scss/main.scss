@@ -27,6 +27,10 @@
      @include secondaryBox;
 }
 
+//templates
+@import 'templates/default';
+@import 'templates/legals';
+
 //plugins
 @import 'plugins/splide';
 @import 'plugins/friendly-forms';

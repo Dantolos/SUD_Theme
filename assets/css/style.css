@@ -440,6 +440,22 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.2);
   background: rgba(69, 64, 52, 0.05); }
 
+.template-default-wtapper {
+  display: flex;
+  padding: 20px; }
+
+.template-legals-wtapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px; }
+  .template-legals-wtapper .template-legals-container {
+    max-width: 800px; }
+    .template-legals-wtapper .template-legals-container h1, .template-legals-wtapper .template-legals-container h2, .template-legals-wtapper .template-legals-container h3, .template-legals-wtapper .template-legals-container h4, .template-legals-wtapper .template-legals-container h5, .template-legals-wtapper .template-legals-container h6 {
+      color: #DF5F31; }
+    .template-legals-wtapper .template-legals-container p {
+      color: #1582BE; }
+
 .splide {
   width: 100%; }
 
