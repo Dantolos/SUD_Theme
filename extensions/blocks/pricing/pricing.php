@@ -19,8 +19,8 @@ $button = get_field('button') ?: null;
      
      <div class="pricing-container">
 
-          <h3 class="c-orange" style="text-align:center; width:100%; margin-bottom:0; line-height: 0;"><?php echo $section_title; ?></h3>
-          <p class="c-blue" style="margin:0; width:100%; margin-bottom:20px;"><?php echo $note; ?></p>
+          <h3 class="c-orange" style="text-align:center; width:100%; margin-bottom:0; line-height: 1;"><?php echo $section_title; ?></h3>
+          <p class="c-blue" style="margin:0; width:100%; text-align: center; margin-bottom:20px;"><?php echo $note; ?></p>
           <div class="pricing-overview">
           <div class="pricing-benefits secondaryBox c-blue">
                <h5 class="c-orange" style="margin-bottom:20px;" ><?php echo $benefit_title; ?></h5>

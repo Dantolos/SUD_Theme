@@ -12,10 +12,12 @@ add_action('wp_enqueue_scripts', 'sud_register_style');
 function sud_register_scripts() {
      $theme_version = wp_get_theme()->get( 'Version' );
      // extern
+     wp_enqueue_script( 'gsap', get_template_directory_uri() . '/assets/js/plugins/gsap/gsap.min.js', array(), '1.0', true );
+     wp_enqueue_script( 'gsap-scroll', get_template_directory_uri() . '/assets/js/plugins/gsap/ScrollTrigger.min.js', ['gsap'], '1.0', true );
      wp_enqueue_script( 'splide', get_template_directory_uri() . '/assets/js/plugins/splide/splide.min.js', array(), '1.0', true );
 
      // main theme
-     wp_enqueue_script( 'sud-script', get_template_directory_uri() . '/assets/js/main.js', array(), $theme_version, true );
+     wp_enqueue_script( 'sud-script', get_template_directory_uri() . '/assets/js/main.js', ['gsap', 'gsap-scroll'], $theme_version, true );
      
 }
 add_action('wp_enqueue_scripts', 'sud_register_scripts');

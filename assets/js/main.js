@@ -14,6 +14,28 @@ async function sudLightbox(target) {
           });
      }
      await CLOSER();
-    
- 
 }
+
+// REVEAL ANIMATIONS
+/*
+gsap.registerPlugin(ScrollTrigger);
+const sudElements = document.querySelectorAll('.sud-element-animation');
+
+for (let i=0;i<sudElements.length;i++) {
+    
+     gsap.to(sudElements[i], {
+          scrollTrigger: {
+               trigger: sudElements[i],
+               toggleActions: 'play none none pause',
+               scrub: true
+          },
+          rotation: 240, 
+          opacity: 1,
+          scale: 1.25,
+          x: 150,
+          y: -150,
+          transformOrigin:"75% center",
+          duration: 3
+     })
+}
+*/

@@ -74,10 +74,10 @@ if (!function_exists('sud_cast_component')) {
 }
 ?>
 
-<div <?php echo $anchor; ?>class="section-wrapper" style="min-height:200px;">
+<div <?php echo $anchor; ?>class="section-wrapper reveal" style="min-height:200px;">
      <!--Design Elements-->
      <div class="sud-bg-design">
-          <div class="sud-bg-element-half-circle-01" style="right:-35vw; top:-55vw; width:120vw; height:120vw; transform: rotate(180deg);"></div>
+          <div class="sud-bg-element-half-circle-01 sud-element-animation" style="right:-35vw; top:-55vw; width:120vw; height:120vw; transform: rotate(180deg);"></div>
      </div>
 
      <div class="section-container">

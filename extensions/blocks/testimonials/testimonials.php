@@ -13,7 +13,7 @@ $testimonials = get_field( 'testimonials' ) ?: null;
 
 <div <?php echo $anchor; ?>class="testimonials-wrapper bg-white" style="min-height:200px;">
      <div class="testimonials-header bg-blue-ultra-light">
-          <h4 class="c-orange" style="text-align:center;"><?php echo $section_title; ?></h4>
+          <h4 class="c-orange" style="text-align:center; max-width: 95vw;"><?php echo $section_title; ?></h4>
      </div>
      
      <div class="testimonials-container bg-blue-ultra-light">
