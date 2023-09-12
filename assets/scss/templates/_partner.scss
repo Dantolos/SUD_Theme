@@ -141,6 +141,7 @@
           @include breakpoint('s'){ width: 100%; }
                a  { 
                     width: 49%; margin:.5%; min-height: 150px; 
+                    @include breakpoint('xs'){ width: 49%; margin:.5%; min-height: 180px; }
                     @include breakpoint('xxs'){ width: 100%; margin:0; }
                }
           

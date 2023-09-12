@@ -650,6 +650,11 @@ body {
       width: 49%;
       margin: .5%;
       min-height: 150px; }
+      @media (max-width: 480px) {
+        .sud-partner-container .partner-prio-3.partner-grid-width-50 a {
+          width: 49%;
+          margin: .5%;
+          min-height: 180px; } }
       @media (max-width: 380px) {
         .sud-partner-container .partner-prio-3.partner-grid-width-50 a {
           width: 100%;
