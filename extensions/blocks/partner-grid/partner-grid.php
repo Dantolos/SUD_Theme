@@ -57,7 +57,7 @@ foreach ($partner_categories as $key => $partner_category) {
 
           <?php
           if($call_to_action){ 
-               echo '<a href="'.$call_to_action['url'].'" target="'.$call_to_action['target'].'"><button>'.$call_to_action['title'].'</button></a>';
+               echo '<a href="'.$call_to_action['url'].'" target="'.$call_to_action['target'].'" style="margin-top:40px;"><button>'.$call_to_action['title'].'</button></a>';
           }
           ?>
      </div>
