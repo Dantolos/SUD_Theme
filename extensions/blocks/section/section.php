@@ -80,6 +80,9 @@ if (!function_exists('sud_cast_component')) {
           <div class="sud-bg-element-half-circle-01 sud-element-animation" style="right:-35vw; top:-55vw; width:120vw; height:120vw; transform: rotate(180deg);"></div>
      </div>
 
+     <div class="sud-element" sud-shape="semicircle"></div>
+     <div class="sud-element" sud-shape="polycon-01"></div>
+
      <div class="section-container">
           <div class="section-col section-col-l" style="width:<?php echo $colstyle['left-width']; ?>; ">
                <?php

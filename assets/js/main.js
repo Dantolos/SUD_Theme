@@ -39,3 +39,30 @@ for (let i=0;i<sudElements.length;i++) {
      })
 }
 */
+
+const ElementAmount = document.querySelectorAll('.sud-element');
+
+if( ElementAmount.length > 0 ){
+     for (let e = 0; e < ElementAmount.length; e++) {
+          let element = ElementAmount[e]
+          let shapeType = element.getAttribute('sud-shape')
+          let path = '';
+          if(shapeType){
+               switch (shapeType) {
+                    case 'semicircle':
+                         path = 'circle(50% at 50% 0%)';
+                         break;
+                    case 'polycon-01':
+                         path = 'polygon(100% 0, 63% 71%, 100% 100%)';
+                         break;
+                    default:
+                         break;
+               }
+          }
+          
+          let shape = document.createElement('div')
+          shape.style.clipPath = path;
+          shape.style.backgroundColor = 'green';
+          element.appendChild(shape) 
+     }
+}
