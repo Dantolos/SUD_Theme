@@ -11,6 +11,7 @@
      display: flex;
      justify-content: space-between;
      align-items: center;
+     flex-wrap: wrap;
      width: 95%;
      max-width: 1600px;
      @include breakpoint('m'){ padding: 0 40px; }
@@ -46,6 +47,32 @@
                }
           }
          
+     }
+
+     .footer-bottom-line {
+          width: 100%;
+          border-top: 1px solid $white;
+          padding: 20px 0 0 0;
+          margin-top: 20px; 
+          display: flex;
+          justify-content: flex-end;
+
+          .footer-social-media {
+               display: flex;
+               gap: 10px;
+
+               a {
+                    width: 30px;
+                    height: 30px;
+                    transition: all ease 200ms;
+                    img { height:100%; width:100%;}
+
+                    &:hover {
+                         transform: scale(1.2);
+                         cursor: pointer;
+                    }
+               }
+          }
      }
 
      @include breakpoint('m'){

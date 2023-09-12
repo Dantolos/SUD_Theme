@@ -26,15 +26,17 @@
           display: flex;
           flex-wrap: wrap;
 
-          a {
-               width: fit-content;
+          a { 
+               min-height: 200px;
           }
 
           .partner-logo-box {
                position: relative;
                width: 100%;
+               height: 100%;
                display: flex;
                justify-content: center;
+               align-items: center;
                padding: 15px 10px;
                
                overflow: hidden;
@@ -103,16 +105,28 @@
 
      /* PRIO 1 */
      .partner-prio-1 {
-          a  { width: 49%; margin:.5%; }
+          a  { 
+               width: 49%; margin:.5%; min-height: 200px; 
+               @include breakpoint('xs'){ width: 100%; margin:0; }
+          }
      }
 
      /* PRIO 2 */
      .partner-prio-2 {
-          a  { width: 32%; margin:.5%; }
+          a  { 
+               width: 32%; margin:.5%; min-height: 180px; 
+               @include breakpoint('s'){ width: 49%; margin:.5%; min-height: 200px; }
+               @include breakpoint('xxs'){ width: 100%; margin:0; }
+          }
      }
 
      /* PRIO 3 */
      .partner-prio-3 {
-          a  { width: 24%; margin:.5%; }
+          a  { 
+               width: 24%; margin:.5%; min-height: 130px; 
+               @include breakpoint('s'){ width: 32%; margin:.5%; min-height: 180px; }
+               @include breakpoint('xs'){ width: 49%; margin:.5%; min-height: 180px; }
+               @include breakpoint('xxs'){ width: 100%; margin:0; }
+          }
      }
 }

@@ -42,6 +42,21 @@
                }
                ?>
           </div>
+
+          <!-- Footer Bottom Line -->
+          <div class="footer-bottom-line">
+          <?php
+               if(get_field('channels', 'option')){
+                    echo '<div class="footer-social-media">';
+                    foreach( get_field('channels', 'option') as $sm ){
+                         echo '<a href="'.$sm['url'].'" target="_blank">';
+                         echo '<img src="'.get_template_directory_uri().'/assets/img/utils/sm/'.$sm['icon'].'-neg.svg" alt="icon-'.$sm['icon'].'">';
+                         echo '</a>';
+                    }
+                    echo '</ul>';
+               }
+               ?>
+          </div>
      </div>
 </div>
 
