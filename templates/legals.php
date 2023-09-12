@@ -5,8 +5,8 @@
  */
 get_header();
 
-echo '<div class="legals-legals-wrapper">';
-echo '<div class="legals-legals-container">';
+echo '<div class="template-legals-wrapper">';
+echo '<div class="template-legals-container">';
 echo the_content();
 echo '</div>';
 echo '</div>';

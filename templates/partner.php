@@ -20,9 +20,6 @@ echo the_content();
                $termName = $category["partner_category"]->name;
                $importance = $category["importance"];
                $prioclass = 'partner-prio-'.$importance;
-              
-
-               
                
                $args = array(
                     'post_type' => 'partner', // the post type

@@ -660,6 +660,23 @@ body {
           width: 100%;
           margin: 0; } }
 
+.sud-404-wrapper {
+  background-color: #E3F0F9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px; }
+  .sud-404-wrapper .sud-404-container {
+    max-width: 1600px;
+    margin: 10vh 0; }
+    .sud-404-wrapper .sud-404-container h3 {
+      color: #DF5F31;
+      font-size: 20vw; }
+    .sud-404-wrapper .sud-404-container h5 {
+      text-align: right; }
+    .sud-404-wrapper .sud-404-container p, .sud-404-wrapper .sud-404-container li, .sud-404-wrapper .sud-404-container span, .sud-404-wrapper .sud-404-container ul, .sud-404-wrapper .sud-404-container ol {
+      color: #1582BE; }
+
 .splide {
   width: 100%; }
 
