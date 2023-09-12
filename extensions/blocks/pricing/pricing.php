@@ -53,7 +53,7 @@ $button = get_field('button') ?: null;
           echo '</div>';
               
           if($button){
-               echo '<div style="width:100%;display:flex;justify-content:center;"><a href="'.$button['url'].' target="'.$button['target'].'" style="margin-top:40px;"><button>'.$button['title'].'</button></a></div>';
+               echo '<div style="width:100%;display:flex;justify-content:center;"><a href="'.$button['url'].'" target="'.$button['target'].'" style="margin-top:40px;"><button>'.$button['title'].'</button></a></div>';
           }
           ?>
      </div>
