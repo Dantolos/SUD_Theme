@@ -1,12 +1,12 @@
 <?php
 
 /*
- *Template Name: Legals Template
+ *Template Name: Default Template
  */
 get_header();
 
-echo '<div class="template-legals-wtapper">';
-echo '<div class="template-legals-container">';
+echo '<div class="template-default-wrapper">';
+echo '<div class="template-default-container">';
 echo the_content();
 echo '</div>';
 echo '</div>';
