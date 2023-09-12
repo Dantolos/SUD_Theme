@@ -22,9 +22,7 @@ echo the_content();
                $prioclass = 'partner-prio-'.$importance;
               
 
-               echo '<h5>';
-               echo  $termName;
-               echo '</h5>';
+               
                
                $args = array(
                     'post_type' => 'partner', // the post type
@@ -41,8 +39,10 @@ echo the_content();
                );
                $partners = new WP_Query( $args );
 
-               echo '<div class="partner-logo-grid '.$prioclass.'">';
-               
+               echo '<div class="partner-logo-grid '.$prioclass.' partner-grid-width-'.$category["width"].'">';
+               echo '<h5>';
+               echo  $termName;
+               echo '</h5>';
                foreach($partners->posts as $partner){
                     $partnerID = $partner->ID;
                     echo '<a href="'.get_field('website', $partnerID).'" target="_blank" rel="external">';

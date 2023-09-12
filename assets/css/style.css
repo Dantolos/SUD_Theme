@@ -528,13 +528,20 @@ body {
       color: #1582BE; }
 
 .sud-partner-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   /* PRIO 1 */
   /* PRIO 2 */
   /* PRIO 3 */ }
+  .sud-partner-container h5 {
+    width: 100%;
+    margin-bottom: 40px; }
   .sud-partner-container .partner-logo-grid {
     margin: 20px 0 80px 0;
     display: flex;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    justify-content: space-between; }
     .sud-partner-container .partner-logo-grid a {
       min-height: 200px; }
     .sud-partner-container .partner-logo-grid .partner-logo-box {
@@ -633,6 +640,19 @@ body {
       .sud-partner-container .partner-prio-3 a {
         width: 100%;
         margin: 0; } }
+  .sud-partner-container .partner-prio-3.partner-grid-width-50 {
+    width: 49%; }
+    @media (max-width: 600px) {
+      .sud-partner-container .partner-prio-3.partner-grid-width-50 {
+        width: 100%; } }
+    .sud-partner-container .partner-prio-3.partner-grid-width-50 a {
+      width: 49%;
+      margin: .5%;
+      min-height: 150px; }
+      @media (max-width: 380px) {
+        .sud-partner-container .partner-prio-3.partner-grid-width-50 a {
+          width: 100%;
+          margin: 0; } }
 
 .splide {
   width: 100%; }

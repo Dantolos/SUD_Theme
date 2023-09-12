@@ -20,11 +20,16 @@
 
 
 .sud-partner-container {
-     
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+
+     h5 { width: 100%; margin-bottom: 40px; }
      .partner-logo-grid {
           margin: 20px 0 80px 0;
           display: flex;
           flex-wrap: wrap;
+          justify-content: space-between;
 
           a { 
                min-height: 200px;
@@ -128,5 +133,15 @@
                @include breakpoint('xs'){ width: 49%; margin:.5%; min-height: 180px; }
                @include breakpoint('xxs'){ width: 100%; margin:0; }
           }
+     }
+
+     .partner-prio-3.partner-grid-width-50 {
+          width: 49%;
+          @include breakpoint('s'){ width: 100%; }
+               a  { 
+                    width: 49%; margin:.5%; min-height: 150px; 
+                    @include breakpoint('xxs'){ width: 100%; margin:0; }
+               }
+          
      }
 }
