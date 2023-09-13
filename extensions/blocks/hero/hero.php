@@ -19,8 +19,11 @@ $button = get_field( 'button' )['link'] ? get_field( 'button' ) : null;
     <div class="hero-background">
         <!-- Hero image -->
         <?php if($video){
-            echo '<video id="hero_video" autoplay muted loop>';
-            echo '<source src="'.$video.'">';
+            echo '<video id="hero_video" poster="'.$video['thumbnail'].'" autoplay muted loop>';
+                echo '<source src="'.$video['videofiles']['webm'].'" type="video/webm">';
+                if($video['videofiles']['mp4']){
+                    echo '<source src="'.$video['videofiles']['mp4'].'" type="video/mp4">';
+                }
             echo '</video>';
         } ?>
         <?php if($image ){
