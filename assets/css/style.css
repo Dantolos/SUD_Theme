@@ -256,27 +256,14 @@ form input[type=checkbox] {
 *::-webkit-scrollbar-thumb:active {
   background-color: #DF5F31; }
 
-video::-webkit-media-controls-panel {
-  position: relative; }
-
 video::-webkit-media-controls-play-button {
   background-color: #1582BE;
-  border-radius: 50%;
-  position: fixed;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  color: red; }
+  border-radius: 50%; }
   video::-webkit-media-controls-play-button:active {
     background-color: rgba(0, 0, 0, 0.3); }
 
 video::-webkit-media-controls-timeline-container {
   color: #1582BE; }
-
-video::-webkit-media-controls-seek-back-button {
-  background-color: red; }
 
 body {
   margin-top: 180px; }

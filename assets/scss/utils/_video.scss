@@ -1,16 +1,11 @@
 
 video::-webkit-media-controls-panel {
 
-     position: relative;
 }
 video::-webkit-media-controls-play-button {
      background-color: $blue;
      border-radius: 50%;
-     position: fixed;
-     margin: auto;
-     top:0; bottom:0;
-     left:0; right:0;
-     color: red;
+     
 
      &:hover {
        
@@ -40,7 +35,7 @@ video::-webkit-media-controls-time-remaining-display {
      
 }
 video::-webkit-media-controls-seek-back-button {
-     background-color: red;
+
 }
 video::-webkit-media-controls-seek-forward-button {}
 video::-webkit-media-controls-fullscreen-button {}
