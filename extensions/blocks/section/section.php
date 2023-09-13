@@ -48,8 +48,8 @@ if (!function_exists('sud_cast_component')) {
                     break;
                case 'video':
                     $componentHTML .= '<div class="component-video">';
-                    $componentHTML .= '<video controls>';
-                    $componentHTML .= '<source src="'.$component['video'].'">';
+                    $componentHTML .= '<video poster="'.$component['video']['thumbnail'].'" controls>';
+                    $componentHTML .= '<source src="'.$component['video']['webm'].'">';
                     $componentHTML .= '</video>';
                     $componentHTML .= '</div>';
                     break;
