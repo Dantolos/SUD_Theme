@@ -11,7 +11,7 @@ $cards = get_field( 'cards' ) ?: null;
 $section_title = get_field( 'section_title' ) ?: '';
 ?>
 
-<div <?php echo $anchor; ?>class="flipcards-wrapper bg-white" style="min-height:200px;">
+<div <?php echo $anchor; ?>class="flipcards-wrapper" style="min-height:200px;">
      <h3 class="c-orange" style="width: 100%; text-align:center; margin-bottom:40px;"><?php echo $section_title; ?></h3>
      <?php
      if($cards){

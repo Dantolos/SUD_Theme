@@ -10,13 +10,13 @@ if ( ! empty( $block['anchor'] ) ) {
 $counters = get_field( 'counters' ) ?: null;
 ?>
 
-<div <?php echo $anchor; ?>class="counter-wrapper bg-white" style="min-height:200px;">
+<div <?php echo $anchor; ?>class="counter-wrapper" style="min-height:200px;">
      <?php
      if($counters){
           echo '<div class="counter-container">';
           foreach($counters as $counter){
                echo '<div class="counter">';
-               echo '<div class="counter-value"><h3 class="c-orange">'.$counter['prefix'].$counter['value'].$counter['sufix'].'</h3></div>';
+               echo '<div class="counter-value"><h3 class="c-orange">'.$counter['prefix'].'<span class="count-value" count-value="'.$counter['value'].'">0</span>'.$counter['sufix'].'</h3></div>';
                echo '<div class="counter-label"><h5 class="c-blue gtalpina fs" style="font-weight:normal;">'.$counter['label'].'</h5></div>';
                echo '</div>';
           }

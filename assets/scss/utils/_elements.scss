@@ -27,7 +27,7 @@
 @mixin secondaryBox {
      border-radius: $fs;
      border: 1px solid rgba(0, 0, 0, 0.20);
-     background: rgba(69, 64, 52, 0.05);
+     background: rgb(248, 248, 248);
 }
 .secondaryBox { @include secondaryBox(); }
 
@@ -95,15 +95,13 @@ button {
 
 .sud-element {
      position: fixed;
-     width:500px;
-     height:500px;
-     
-     display: none;
+     z-index:-5;
+     transform-origin: center center;
 
+     display:none;
      div {
-          z-index: 5000;
           width: 100%; 
           height: 100%;
-          background-color:green;
+          background-color: $blue-ultra-light;
      }
 }

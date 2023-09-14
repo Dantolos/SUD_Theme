@@ -12,13 +12,16 @@
      display: flex;
      align-items: center;
      justify-content: center;
-     gap: 80px;
+     gap: 60px;
      flex-wrap: wrap;
+     width: 100%;
 }
+
 .counter {
      display: flex;
      flex-direction: column;
      align-items: center;
+     width:20%;
 }
 
 .counter-value {
@@ -34,7 +37,6 @@
           gap: 40px;
           flex-direction: column;
           align-items: center;
-          justify-content: center;
-         
+          justify-content: center; 
      }
 }

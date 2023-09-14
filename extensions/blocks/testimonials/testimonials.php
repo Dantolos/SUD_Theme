@@ -11,7 +11,7 @@ $section_title = get_field( 'section_title' ) ?: null;
 $testimonials = get_field( 'testimonials' ) ?: null;
 ?>
 
-<div <?php echo $anchor; ?>class="testimonials-wrapper bg-white" style="min-height:200px;">
+<div <?php echo $anchor; ?>class="testimonials-wrapper" style="min-height:200px;">
      <div class="testimonials-header bg-blue-ultra-light">
           <h4 class="c-orange" style="text-align:center; max-width: 95vw;"><?php echo $section_title; ?></h4>
      </div>

@@ -39,30 +39,55 @@ for (let i=0;i<sudElements.length;i++) {
      })
 }
 */
+document.addEventListener("DOMContentLoaded", function () {
+     const ElementAmount = document.querySelectorAll('.sud-element');
 
-const ElementAmount = document.querySelectorAll('.sud-element');
-
-if( ElementAmount.length > 0 ){
-     for (let e = 0; e < ElementAmount.length; e++) {
-          let element = ElementAmount[e]
-          let shapeType = element.getAttribute('sud-shape')
-          let path = '';
-          if(shapeType){
-               switch (shapeType) {
-                    case 'semicircle':
-                         path = 'circle(50% at 50% 0%)';
-                         break;
-                    case 'polycon-01':
-                         path = 'polygon(100% 0, 63% 71%, 100% 100%)';
-                         break;
-                    default:
-                         break;
+     if( ElementAmount.length > 0 ){
+          for (let e = 0; e < ElementAmount.length; e++) {
+               let element = ElementAmount[e]
+               let shapeType = element.getAttribute('sud-shape')
+               let path = '';
+               if(shapeType){
+                    switch (shapeType) {
+                         case 'semicircle':
+                              path = 'circle(50% at 50% 0%)';
+                              break;
+                         case 'polycon-01':
+                              path = 'polygon(100% 0, 63% 71%, 100% 100%)';
+                              break;
+                         default:
+                              break;
+                    }
                }
+               
+               let shape = document.createElement('div')
+               shape.style.clipPath = path;
+               
+               element.appendChild(shape) 
+               const parent = element.parentElement;
+
+               const randomize = Math.random()
+               let targetDeg = 180 + (randomize * 10 + e)
+               let endDeg = 200 + (randomize * 100 + e)
+               const tl = gsap.timeline({
+                    scrollTrigger: {
+                         trigger: parent,
+                         start: "-200px 100%", // Adjust this value as needed
+                         end: "bottom top", // Adjust this value as needed
+                         scrub: 1,
+                         onEnter: countFuntion,
+                         markers: false,
+                    },
+                    });
+                    let delay = Math.random();
+                    tl.set( element, { scale: .8, rotate: '150deg', y: 2000, ease:"none", display:'block' } )
+                    .to( element, { scale: 1, rotate:targetDeg+'deg', y: 0, ease:"none"  } )
+                    .to( element, { scale: 1.5, rotate: endDeg+'deg', y: -2000, opacity: 0, ease:"none"  } );
+
           }
+
           
-          let shape = document.createElement('div')
-          shape.style.clipPath = path;
-          shape.style.backgroundColor = 'green';
-          element.appendChild(shape) 
+     
+         
      }
-}
+});
