@@ -471,6 +471,9 @@ body {
   background: #DF5F31;
   color: #ffffff; }
 
+body {
+  cursor: url("../img/utils/cursor.svg"), auto !important; }
+
 #main-wrapper {
   width: 100vw; }
 
