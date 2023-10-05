@@ -82,16 +82,18 @@ if (!function_exists('sud_cast_component')) {
                               break;
                          case 'lb': 
                               $targeting = 'lb-target-'.rand(100, 999);
-                              $componentHTML .= '<button class="'.$component['button_type'].'" onclick="sudLightbox(\''.$targeting.'\')">'.$component['buttontext'].'</button>';
-                              //CONTENT
-                              $componentHTML .= '<div class="lightbox-wrapper" lbtarget="'.$targeting.'">'; 
-                                   $componentHTML .= '<div class="lightbox-close-layer" lbcloser="'.$targeting.'" ><img src="'. get_template_directory_uri() .'/assets/img/utils/close-cross.svg" alt=""></div>';
-                                   $componentHTML .= '<div class="lightbox-container" >'; 
-                                        $componentHTML .= '<div class="lightbox-content">';
-                                             $componentHTML .= $component['lightbox_content'];
+                              $componentHTML .= '<div class="component-button">';
+                                   $componentHTML .= '<button class=" '.$component['button_type'].'" onclick="sudLightbox(\''.$targeting.'\')">'.$component['buttontext'].'</button>';
+                                   //CONTENT
+                                   $componentHTML .= '<div class="lightbox-wrapper" lbtarget="'.$targeting.'">'; 
+                                        $componentHTML .= '<div class="lightbox-close-layer" lbcloser="'.$targeting.'" ><img src="'. get_template_directory_uri() .'/assets/img/utils/close-cross.svg" alt=""></div>';
+                                        $componentHTML .= '<div class="lightbox-container" >'; 
+                                             $componentHTML .= '<div class="lightbox-content">';
+                                                  $componentHTML .= $component['lightbox_content'];
+                                             $componentHTML .= '</div>';
+                                             $componentHTML .= '<div class="lightbox-bg-element-01"></div>';
+                                             $componentHTML .= '<div class="lightbox-bg-element-02"></div>';
                                         $componentHTML .= '</div>';
-                                        $componentHTML .= '<div class="lightbox-bg-element-01"></div>';
-                                        $componentHTML .= '<div class="lightbox-bg-element-02"></div>';
                                    $componentHTML .= '</div>';
                               $componentHTML .= '</div>';
                               break;
