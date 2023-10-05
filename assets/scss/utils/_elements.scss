@@ -51,6 +51,7 @@
           background-color: $orange;
      }
 }
+.btn-primary { @include primaryButton(); }
 
 @mixin secondaryButton {
      @include basicButton();
@@ -63,6 +64,7 @@
           color: $white;
      }
 }
+.btn-secondary { @include secondaryButton(); }
 
 button {
      @include primaryButton();

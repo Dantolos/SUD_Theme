@@ -28,6 +28,7 @@ function sud_register_block_script() {
      $theme_version = wp_get_theme()->get( 'Version' );
      wp_register_script( 'block-hero', get_template_directory_uri() . '/extensions/blocks/hero/hero.js', [  ], $theme_version );
      wp_register_script( 'block-counter', get_template_directory_uri() . '/extensions/blocks/counter/counter.js', [ 'gsap', 'gsap-scroll' ], $theme_version, true );
+     wp_register_script( 'block-accordion', get_template_directory_uri() . '/extensions/blocks/accordion/accordion.js', [ 'gsap', 'gsap-scroll' ], $theme_version, true );
      wp_register_script( 'block-testimonials', get_template_directory_uri() . '/extensions/blocks/testimonials/testimonials.js', [ 'jquery', 'splide' ], $theme_version );
      wp_register_script( 'block-photo-slider', get_template_directory_uri() . '/extensions/blocks/photo-slider/photo-slider.js', [ 'jquery', 'splide' ], $theme_version );
 }

@@ -10,6 +10,9 @@ function register_acf_blocks() {
     register_block_type( __DIR__ . '/photo-slider' );
     register_block_type( __DIR__ . '/partner-grid' );
     register_block_type( __DIR__ . '/section' );
+    register_block_type( __DIR__ . '/people-grid' );
+    register_block_type( __DIR__ . '/accordion' );
+    register_block_type( __DIR__ . '/box-link' );
     //require_once( __DIR__ . '/hero/hero-block.acf.php' );
 }
 

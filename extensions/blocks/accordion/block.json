@@ -1,0 +1,15 @@
+{
+     "name": "acf/accordion",
+     "title": "Accordion",
+     "description": "Make a accordion list.",
+     "style": [ "file:./accordion.css" ],
+     "script": "block-accordion",
+     "category": "Startup Days",
+     "icon": { "foreground": "#1582BE",  "src": "plus-alt"},
+     "keywords": ["accordion", "collapse", "sud"],
+     "acf": {
+         "mode": "preview",
+         "renderTemplate": "./accordion.php"
+     },
+     "align": "full"
+ }

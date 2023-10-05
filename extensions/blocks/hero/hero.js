@@ -10,8 +10,10 @@ document.addEventListener("DOMContentLoaded", function () {
          }
      }
  
-     // Ensure the video has loaded metadata before setting a random start time
-     video.addEventListener("loadedmetadata", function () {
-         setRandomStartTime();
-     });
+    // Ensure the video has loaded metadata before setting a random start time
+    if(video){
+        video.addEventListener("loadedmetadata", function () {
+            setRandomStartTime();
+        });
+    }
  });

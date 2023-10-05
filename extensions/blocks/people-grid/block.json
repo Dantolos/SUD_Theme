@@ -1,0 +1,14 @@
+{
+     "name": "acf/people-grid",
+     "title": "People Grid",
+     "description": "Section to publish people in a grid layout.",
+     "style": [ "file:./people-grid.css" ],
+     "category": "Startup Days",
+     "icon": { "foreground": "#1582BE",  "src": "groups"},
+     "keywords": ["people", "grid", "team", "board", "sud"],
+     "acf": {
+         "mode": "preview",
+         "renderTemplate": "./people-grid.php"
+     },
+     "align": "full"
+}

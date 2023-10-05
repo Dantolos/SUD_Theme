@@ -12,6 +12,7 @@
      justify-content: space-between;
      align-items: center;
      flex-wrap: wrap;
+     gap: 50px;
      width: 95%;
      max-width: 1600px;
      @include breakpoint('m'){ padding: 0 40px; }
@@ -21,7 +22,7 @@
      }
      
      .footer-mid {
-          width:50%;
+          width:calc(50% - 100px);
           display: flex;
           justify-content: center;
           @include breakpoint('m'){ width: 100%; }

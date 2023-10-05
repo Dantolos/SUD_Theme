@@ -25,26 +25,36 @@ switch ($columns) {
                'right-width' => '50%'
           ];
           break;
+     case '2-1':
+          $colstyle = [
+               'left-width' => '61.8%',
+               'right-width' => '38.2%'
+          ];
+          break;
      default:
-          # code...
+          $colstyle = [
+               'left-width' => '50%',
+               'right-width' => '50%'
+          ];
           break;
 }
 $leftComponents = get_field('components_left') ?: null;
 $rightComponents = get_field('components_right') ?: null;
- 
+
+
 if (!function_exists('sud_cast_component')) {
      function sud_cast_component($component, $col) {
           $componentHTML = '';
           switch ($component['acf_fc_layout']) {
-               case 'big_title':
+               case 'title':
                     $componentHTML .= '<div class="component-title">';
-                    $componentHTML .= '<h3 class="c-blue-mid">'.$component['title'].'</h3>';
+                    $componentHTML .= '<h3 class="c-blue-mid '.$component['font_size'].'" style="color: '.$component['font_color'].';">'.$component['title'].'</h3>';
                     $componentHTML .= '</div>';
                     break;
                case 'image':
-                    $componentHTML .= '<div class="component-image">';
+                    $componentHTML .= '<figure class="component-image">';
                     $componentHTML .= '<img src="'.$component['image']['url'].'" alt="'.$component['image']['alt'].'">';
-                    $componentHTML .= '</div>';
+                    $componentHTML .= '</figure>';
                     break;
                case 'video':
                     $componentHTML .= '<div class="component-video">';
@@ -56,17 +66,18 @@ if (!function_exists('sud_cast_component')) {
                     $componentHTML .= '</video>';
                     $componentHTML .= '</div>';
                     break;
-               case 'subtitle':
-                    $componentHTML .= '<div class="component-subtitle">';
-                    $componentHTML .= '<h5 class="c-orange">'.$component['subtitle'].'</h5>';
-                    $componentHTML .= '</div>';
-                    break;
-               case 'paragraph':
+               case 'content':
                     $componentHTML .= '<div class="component-paragraph">';
-                    $componentHTML .= '<p class="c-blue">'.$component['paragraph'].'</p>';
+                    $componentHTML .= $component['content'];
                     $componentHTML .= '</div>';
                     break;
-               
+               case 'button':
+                    $componentHTML .= '<a class="component-button" href="'.$component['buttonlink']['url'].'" target="'.$component['buttonlink']['target'].'">';
+                         $componentHTML .= '<div class="'.$component['button_type'].'">'; 
+                              $componentHTML .= $component['buttonlink']['title'];
+                         $componentHTML .= '</div>';
+                    $componentHTML .= '</a>';
+                    break;
                default:
                     # code...
                     break;
@@ -89,7 +100,7 @@ if (!function_exists('sud_cast_component')) {
           <div class="section-col section-col-l" style="width:<?php echo $colstyle['left-width']; ?>; ">
                <?php
                if($leftComponents) {
-                    foreach($leftComponents as $leftComponent){
+                    foreach($leftComponents['components'] as $leftComponent){
                          echo sud_cast_component($leftComponent, 'L');
                     }
                }
@@ -99,7 +110,7 @@ if (!function_exists('sud_cast_component')) {
           <div class="section-col section-col-r" style="width:<?php echo $colstyle['right-width']; ?>; ">
                <?php
                if($rightComponents) {
-                    foreach($rightComponents as $rightComponent){
+                    foreach($rightComponents['components'] as $rightComponent){
                          echo sud_cast_component($rightComponent, 'R');
                     }
                }

@@ -29,24 +29,26 @@ function countFuntion(){
 document.addEventListener("DOMContentLoaded", function () {
 
      const element = document.querySelector(".counter-wrapper");
-   
-     const tl = gsap.timeline({
-       scrollTrigger: {
-         trigger: element,
-         start: "top 80%", // Adjust this value as needed
-         end: "bottom 20%", // Adjust this value as needed
-         onEnter: countFuntion,
-         markers: false,
-       },
-     });
-    
-     tl.fromTo(
-       element.querySelectorAll('.counter'),
-       { opacity: 0, scale: .8, y: 20 },
-       { opacity: 1, scale: 1, y: 0, duration: .4, stagger: {
-          each: .1,
-          from: 'random'
-        }}
-       
-     );
+     
+     if(element){
+          const tl = gsap.timeline({
+          scrollTrigger: {
+          trigger: element,
+          start: "top 80%", // Adjust this value as needed
+          end: "bottom 20%", // Adjust this value as needed
+          onEnter: countFuntion,
+          markers: false,
+          },
+          });
+     
+          tl.fromTo(
+          element.querySelectorAll('.counter'),
+          { opacity: 0, scale: .8, y: 20 },
+          { opacity: 1, scale: 1, y: 0, duration: .4, stagger: {
+               each: .1,
+               from: 'random'
+          }}
+          
+          );
+     }
 });

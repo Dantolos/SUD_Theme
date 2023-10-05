@@ -9,12 +9,11 @@
 }
 
 .flipcard-container {
-     width: 360px;
-     height: 540px;
-     max-width: 95vw;
+     
      perspective: 1000px;
      margin-bottom: 20px;
 }
+
 
 .flipcard-inner-container {
      position: relative;
@@ -38,19 +37,18 @@
 
 
 .flipcard-front  {
+     display: flex; 
+}
+.flipcard-front-t1 {
      background-size: cover !important;
      -ms-background-size: cover;
      -o-background-size: cover;
      -moz-background-size: cover;
      -webkit-background-size: cover;
      background-repeat: no-repeat !important;
-     background-position: center center !important;
-
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     padding: 85px;
+     background-position: center center !important; 
 }
+
 .flipcard-front h5 {
      text-align: center;
 
@@ -60,4 +58,40 @@
 .flipcard-back {
      padding: 30px;
      transform: rotateY(180deg);
+}
+
+/* TYPE 1 */
+.flipcard-container-t1 {
+     width: 360px;
+     height: 540px;
+     max-width: 95vw;
+}
+.flipcard-inner-container-t1 {
+
+}
+.flipcard-front-t1 {
+     justify-content: center;
+     align-items: center;
+     padding: 85px;
+}
+
+
+/* TYPE 2 */
+.flipcard-container-t2 {
+     width: 360px;
+     height: 360px;
+}
+.flipcard-inner-container-t2 {
+
+}
+.flipcard-front-t2 {
+     justify-content: center;
+     flex-direction: column;
+     align-items: center;
+     flex-wrap: wrap;
+     gap: 25px;
+     padding: 20px;
+}
+.flipcard-front-t2 img {
+     width: 50%;
 }

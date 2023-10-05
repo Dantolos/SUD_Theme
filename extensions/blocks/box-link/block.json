@@ -1,0 +1,15 @@
+{
+     "name": "acf/box-link",
+     "title": "Box Link",
+     "description": "Cast Link Boxes to tease other Pages.",
+     "style": [ "file:./box-link.css" ],
+     "script": "block-box-link",
+     "category": "Startup Days",
+     "icon": { "foreground": "#1582BE",  "src": "button"},
+     "keywords": ["box-link", "link", "box", "sud"],
+     "acf": {
+         "mode": "preview",
+         "renderTemplate": "./box-link.php"
+     },
+     "align": "full"
+ }
