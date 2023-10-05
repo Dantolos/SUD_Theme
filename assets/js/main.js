@@ -5,6 +5,7 @@ async function sudLightbox(target) {
      let LIGHTBOX_WRAPPER = await document.querySelector('[lbtarget="' + target + '"]');
      console.log(LIGHTBOX_WRAPPER);
      LIGHTBOX_WRAPPER.style.visibility = 'visible';
+     document.querySelector('body').append(LIGHTBOX_WRAPPER);
      
      const CLOSER = async () => {
           let LIGHTBOX_CLOSER = await LIGHTBOX_WRAPPER.querySelector('[lbcloser="' + target + '"]');
@@ -17,7 +18,7 @@ async function sudLightbox(target) {
 }
 
 // REVEAL ANIMATIONS
-/*
+/* 
 gsap.registerPlugin(ScrollTrigger);
 const sudElements = document.querySelectorAll('.sud-element-animation');
 

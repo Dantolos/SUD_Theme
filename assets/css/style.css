@@ -431,7 +431,7 @@ body {
 
 .lightbox-wrapper {
   position: fixed;
-  z-index: 2000;
+  z-index: 2000 !important;
   top: 0;
   left: 0;
   width: 100vw;
