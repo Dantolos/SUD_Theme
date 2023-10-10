@@ -69,16 +69,15 @@
                     margin: auto;
                     top: 0;
                     bottom:0;
-                    right: -20px;
+                    
                     opacity: 0;
-                    border: 2px solid $blue-mid;
                     border-radius: 50%;
-                    height:30px;
-                    width: 30px;
+                    height:50px;
+                    width: 50px;
                     display: flex;
                     justify-content: center;
                     align-items: center; 
-                    transition: all ease 200ms;
+                    transition: all ease 400ms;
                }
 
                &:hover {
@@ -97,7 +96,9 @@
                     .partner-link-arrow {
                          background-color: $blue;
                          opacity: 1;
-                         right: 15px;
+                         right:0; left:0;
+                         transform: scale(1.35);
+                         
                          img { filter:brightness(10); }
                     }
                }

@@ -616,6 +616,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; }
+    @media (max-width: 996px) {
+      .lightbox-wrapper .lightbox-close-layer {
+        top: 1%; } }
     .lightbox-wrapper .lightbox-close-layer img {
       width: 50%;
       height: 50%;
@@ -634,6 +637,10 @@ body {
     border-radius: 30px;
     overflow: hidden;
     box-shadow: 5px 5px 21px 0px rgba(69, 64, 52, 0.3); }
+    @media (max-width: 996px) {
+      .lightbox-wrapper .lightbox-container {
+        padding: 30px 0 20px 10px;
+        max-width: 95vw; } }
     .lightbox-wrapper .lightbox-container .lightbox-content {
       position: relative;
       overflow-y: scroll;
@@ -758,16 +765,14 @@ body {
         margin: auto;
         top: 0;
         bottom: 0;
-        right: -20px;
         opacity: 0;
-        border: 2px solid #6EA9D8;
         border-radius: 50%;
-        height: 30px;
-        width: 30px;
+        height: 50px;
+        width: 50px;
         display: flex;
         justify-content: center;
         align-items: center;
-        transition: all ease 200ms; }
+        transition: all ease 400ms; }
       .sud-partner-container .partner-logo-grid .partner-logo-box:hover {
         cursor: pointer;
         transform: scale(0.98);
@@ -780,7 +785,9 @@ body {
         .sud-partner-container .partner-logo-grid .partner-logo-box:hover .partner-link-arrow {
           background-color: #1582BE;
           opacity: 1;
-          right: 15px; }
+          right: 0;
+          left: 0;
+          transform: scale(1.35); }
           .sud-partner-container .partner-logo-grid .partner-logo-box:hover .partner-link-arrow img {
             filter: brightness(10); }
   .sud-partner-container .partner-prio-1 a, .sud-partner-container .partner-prio-1 .partner-logo-a-placer {

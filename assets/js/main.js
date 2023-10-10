@@ -3,10 +3,14 @@
 // LIGHTBOX
 async function sudLightbox(target) {
      let LIGHTBOX_WRAPPER = await document.querySelector('[lbtarget="' + target + '"]');
+     let LIGHTBOX_CONTAINER = await LIGHTBOX_WRAPPER.querySelector('.lightbox-container');
      console.log(LIGHTBOX_WRAPPER);
      LIGHTBOX_WRAPPER.style.visibility = 'visible';
      document.querySelector('body').append(LIGHTBOX_WRAPPER);
-     
+     gsap.fromTo( LIGHTBOX_WRAPPER, {  opacity: 0 }, { duration: .2, opacity: 1 })
+     gsap.fromTo( LIGHTBOX_CONTAINER, { scale: .8 }, { duration: .3, scale: 1 })
+     gsap.fromTo( LIGHTBOX_CONTAINER.querySelectorAll('div'), {  scale: .8 }, { stagger: .025, duration: .3, scale: 1 })
+
      const CLOSER = async () => {
           let LIGHTBOX_CLOSER = await LIGHTBOX_WRAPPER.querySelector('[lbcloser="' + target + '"]');
           console.log(LIGHTBOX_CLOSER)
@@ -14,6 +18,7 @@ async function sudLightbox(target) {
               LIGHTBOX_WRAPPER.style.visibility = 'hidden';
           });
      }
+
      await CLOSER();
 }
 

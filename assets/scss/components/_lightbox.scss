@@ -22,7 +22,7 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          
+          @include breakpoint('m'){ top:1%; }
           img {
                width: 50%;
                height: 50%;
@@ -46,6 +46,12 @@
           overflow: hidden;
           @include shadow; 
          
+          @include breakpoint('m'){
+               padding: 30px 0 20px 10px;
+               max-width: 95vw;
+     
+          }
+
           .lightbox-content {
                position: relative;
                overflow-y: scroll;
