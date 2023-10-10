@@ -44,13 +44,27 @@ echo '<div class="template-partner-container">';
                echo '</h5>';
                foreach($partners->posts as $partner){
                     $partnerID = $partner->ID;
-                    echo '<a href="'.get_field('website', $partnerID).'" target="_blank" rel="external">';
+                    $hoverIcon ='arrow-right';
+                    if ( !$category['lightbox'] ){
+                         echo '<a href="'.get_field('website', $partnerID).'" target="_blank" rel="external">';
                          echo '<div class="partner-logo-box">';
+                    } else {
+                         $hoverIcon ='search';
+                         $lb_targeting = 'partner-'.$partner->ID;
+                         echo '<div class="partner-logo-box partner-logo-a-placer" onclick="sudLightbox(\''.$lb_targeting.'\')">';
+                         echo cast_partner_lightbox( $partnerID, $lb_targeting );
+                    }
+                         
                          echo '<div class="partner-box-overlay"></div>';
-                         echo '<div class="partner-link-arrow"><img src="'. get_template_directory_uri() .'/assets/img/utils/arrow-right.svg" alt="arrow-right"></div>';
+                         echo '<div class="partner-link-arrow"><img src="'. get_template_directory_uri() .'/assets/img/utils/'.$hoverIcon.'.svg" alt="arrow-right" /></div>';
                          echo '<img src="'.get_field('logo', $partnerID)['url'].'" alt="Logo '.get_field('company_name', $partnerID).'"/>';
+                          
+                    if ( !$category['lightbox'] ){
                          echo '</div>';
-                    echo '</a>';
+                         echo '</a>';
+                    } else {
+                         echo '</div>';
+                    }
                }
 
                echo '</div>';
@@ -65,4 +79,27 @@ echo '</div>';
 echo '</div>';
 
 get_footer();
+
+function cast_partner_lightbox($partnerID, $target) {
+     $partnerLightbox = '';
+     $partnerLightbox .= '<div class="lightbox-wrapper partner-lightbox" lbtarget="'.$target.'">';
+                    
+          $partnerLightbox .= '<div class="lightbox-close-layer" lbcloser="'.$target.'" ><img src="'. get_template_directory_uri() .'/assets/img/utils/close-cross.svg" alt=""></div>';
+          $partnerLightbox .= '<div class="lightbox-container" >'; 
+               $partnerLightbox .= '<div class="lightbox-content">';
+                    $partnerLightbox .= '<h3 class="c-white">'.get_field('company_name', $partnerID).'</h3>';
+                    $partnerLightbox .= '<p class="c-white">'.get_field('description', $partnerID).'</p>';
+                    if(get_field('quote_text', $partnerID)){
+                         $partnerLightbox .= '<blockquote class="c-white">'.get_field('quote_text', $partnerID).'<br /><span>'.get_field('autor', $partnerID).'</span></blockquote>';
+                    }
+                    $partnerLightbox .= '<a class="partner-website-btn" href="'.get_field('website', $partnerID).'" target="_blank" rel="external"><div class="btn-secondary btn-neg">Website</div></a>';
+               $partnerLightbox .= '</div>'; 
+
+               $partnerLightbox .= '<div class="lightbox-bg-element-01"></div>';
+               $partnerLightbox .= '<div class="lightbox-bg-element-02"></div>';
+          $partnerLightbox .= '</div>';
+     $partnerLightbox .= '</div>';
+
+     return $partnerLightbox;
+}
 ?>

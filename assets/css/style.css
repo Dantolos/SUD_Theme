@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0;
   max-width: 100vw;
@@ -725,12 +726,10 @@ body {
     flex-wrap: wrap;
     justify-content: flex-start;
     align-content: flex-start; }
-    .sud-partner-container .partner-logo-grid a {
+    .sud-partner-container .partner-logo-grid a, .sud-partner-container .partner-logo-grid .partner-logo-box {
       min-height: 200px; }
     .sud-partner-container .partner-logo-grid .partner-logo-box {
       position: relative;
-      width: 100%;
-      height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -784,43 +783,43 @@ body {
           right: 15px; }
           .sud-partner-container .partner-logo-grid .partner-logo-box:hover .partner-link-arrow img {
             filter: brightness(10); }
-  .sud-partner-container .partner-prio-1 a {
+  .sud-partner-container .partner-prio-1 a, .sud-partner-container .partner-prio-1 .partner-logo-a-placer {
     width: 49%;
     margin: .5%;
     min-height: 200px; }
     @media (max-width: 480px) {
-      .sud-partner-container .partner-prio-1 a {
+      .sud-partner-container .partner-prio-1 a, .sud-partner-container .partner-prio-1 .partner-logo-a-placer {
         width: 100%;
         margin: 0; } }
-  .sud-partner-container .partner-prio-2 a {
+  .sud-partner-container .partner-prio-2 a, .sud-partner-container .partner-prio-2 .partner-logo-a-placer {
     width: 32%;
     margin: .5%;
     min-height: 180px; }
     @media (max-width: 600px) {
-      .sud-partner-container .partner-prio-2 a {
+      .sud-partner-container .partner-prio-2 a, .sud-partner-container .partner-prio-2 .partner-logo-a-placer {
         width: 49%;
         margin: .5%;
         min-height: 200px; } }
     @media (max-width: 380px) {
-      .sud-partner-container .partner-prio-2 a {
+      .sud-partner-container .partner-prio-2 a, .sud-partner-container .partner-prio-2 .partner-logo-a-placer {
         width: 100%;
         margin: 0; } }
-  .sud-partner-container .partner-prio-3 a {
+  .sud-partner-container .partner-prio-3 a, .sud-partner-container .partner-prio-3 .partner-logo-a-placer {
     width: 24%;
     margin: .5%;
     min-height: 130px; }
     @media (max-width: 600px) {
-      .sud-partner-container .partner-prio-3 a {
+      .sud-partner-container .partner-prio-3 a, .sud-partner-container .partner-prio-3 .partner-logo-a-placer {
         width: 32%;
         margin: .5%;
         min-height: 180px; } }
     @media (max-width: 480px) {
-      .sud-partner-container .partner-prio-3 a {
+      .sud-partner-container .partner-prio-3 a, .sud-partner-container .partner-prio-3 .partner-logo-a-placer {
         width: 49%;
         margin: .5%;
         min-height: 180px; } }
     @media (max-width: 380px) {
-      .sud-partner-container .partner-prio-3 a {
+      .sud-partner-container .partner-prio-3 a, .sud-partner-container .partner-prio-3 .partner-logo-a-placer {
         width: 100%;
         margin: 0; } }
   .sud-partner-container .partner-prio-3.partner-grid-width-50 {
@@ -828,19 +827,47 @@ body {
     @media (max-width: 600px) {
       .sud-partner-container .partner-prio-3.partner-grid-width-50 {
         width: 100%; } }
-    .sud-partner-container .partner-prio-3.partner-grid-width-50 a {
+    .sud-partner-container .partner-prio-3.partner-grid-width-50 a, .sud-partner-container .partner-prio-3.partner-grid-width-50 .partner-logo-a-placer {
       width: 49%;
       margin: .5%;
       min-height: 150px; }
       @media (max-width: 480px) {
-        .sud-partner-container .partner-prio-3.partner-grid-width-50 a {
+        .sud-partner-container .partner-prio-3.partner-grid-width-50 a, .sud-partner-container .partner-prio-3.partner-grid-width-50 .partner-logo-a-placer {
           width: 49%;
           margin: .5%;
           min-height: 180px; } }
       @media (max-width: 380px) {
-        .sud-partner-container .partner-prio-3.partner-grid-width-50 a {
+        .sud-partner-container .partner-prio-3.partner-grid-width-50 a, .sud-partner-container .partner-prio-3.partner-grid-width-50 .partner-logo-a-placer {
           width: 100%;
           margin: 0; } }
+
+.partner-lightbox .lightbox-content {
+  display: flex;
+  flex-direction: column; }
+
+.partner-lightbox blockquote {
+  font-family: 'Media Sans';
+  letter-spacing: 2px;
+  line-height: 2rem; }
+  .partner-lightbox blockquote::before, .partner-lightbox blockquote::after {
+    position: absolute;
+    font-size: 64px;
+    opacity: .8;
+    font-family: 'GT Alpina'; }
+  .partner-lightbox blockquote::before {
+    content: '«';
+    margin: -10px 0 0 -45px; }
+  .partner-lightbox blockquote::after {
+    content: '»';
+    right: 40px;
+    margin: 0 -35px 0 0; }
+  .partner-lightbox blockquote span {
+    font-family: 'GT Alpina'; }
+
+.partner-lightbox .partner-website-btn {
+  display: block;
+  width: fit-content;
+  align-self: center; }
 
 .sud-404-wrapper {
   background-color: #E3F0F9;

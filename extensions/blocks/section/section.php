@@ -60,7 +60,7 @@ if (!function_exists('sud_cast_component')) {
                     $componentHTML .= '<div class="component-video">';
                     $componentHTML .= '<video poster="'.$component['thumbnail'].'" controls>';
                     $componentHTML .= '<source src="'.$component['videofiles']['webm'].'" type="video/webm">';
-                    if($component['videofiles']['mp4']){
+                    if($component['videofiles']['mp4']){ 
                          $componentHTML .= '<source src="'.$component['videofiles']['mp4'].'" type="video/mp4">';
                     }
                     $componentHTML .= '</video>';
