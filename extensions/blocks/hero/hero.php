@@ -72,11 +72,22 @@ if (!function_exists('cast_hero_type_2')) {
             $hero_type_2 .= '<div class="hero-col hero-col-left">';
                 // ELEMENT
                 $hero_type_2 .= '<div class="hero-t2-bg-element bg-blue-ultra-light"></div>';
-                
-                /* image */
-                if ($data['image']) {
-                    $hero_type_2 .= '<figure class="hero-t2-image " ><img src="'. $data['image']. '" alt="hero-image-'.$data['title'].'"></figure>';
-                }
+                 
+                $hero_type_2 .= '<figure class="hero-t2-media" >';
+                    /* image */
+                    if ($data['image'] && !$data['video']['videofiles']['webm']) {
+                        $hero_type_2 .= '<img src="'. $data['image']. '" alt="hero-image-'.$data['title'].'">';
+                    }
+                    /* Video */
+                    if($data['video']['videofiles']['webm']){
+                        $hero_type_2 .= '<video id="hero_video" poster="'.$data['video']['thumbnail'].'" autoplay muted loop>';
+                        $hero_type_2 .= '<source src="'.$data['video']['videofiles']['webm'].'" type="video/webm"/>';
+                            if($data['video']['videofiles']['mp4']){
+                                $hero_type_2 .= '<source src="'.$data['video']['videofiles']['mp4'].'" type="video/mp4"/>';
+                            }
+                        $hero_type_2 .= '</video>';
+                    } 
+                $hero_type_2 .= '</figure>';
             $hero_type_2 .= '</div>';
 
             $hero_type_2 .= '<div class="hero-col hero-col-right">';

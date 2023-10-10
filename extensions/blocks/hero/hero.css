@@ -124,7 +124,7 @@ h1, h3 { z-index: 5; }
      width: 50%;
      position: relative;
 }
-
+ 
 .hero-t2-bg-element {
      position: absolute;
      width: 100%;
@@ -134,19 +134,29 @@ h1, h3 { z-index: 5; }
      z-index: -5;
 }
 
+
+
 .hero-col-left {
      padding: 5%;
 }
+
+
+
 .hero-col-right {
      padding: 0 5% 0 0;
 }
-.hero-t2-image {
+.hero-t2-media {
      overflow: hidden;
      z-index: 5;
      height: 50vh;
      border-radius: 30px;
+     overflow: hidden;
+     display: flex;
+     justify-content: center;
 }
-.hero-t2-image > img { object-fit: cover;  width: 100%; height: 100%;}
+.hero-t2-media > video { height: 100%; }
+
+.hero-t2-media > img { object-fit: cover;  width: 100%; height: 100%; }
 
 @media only screen and (max-width: 900px) {
      .hero-t2-container { flex-wrap: wrap; }

@@ -49,8 +49,17 @@ if($sort && $sort != 'custom'){
                echo '<div class="people-grid-box">';
                     echo '<div class="people-grid-image"><img src="'.get_field('portrait', $personID)['url'].'" alt="'.get_field('name', $personID).'-'.get_field('surname', $personID).'"/></div>';
                     echo '<h4 class="c-orange fxs">'.get_field('name', $personID).' '.get_field('surname', $personID).'</h4>';
-                    echo '<p class="c-blue">'.get_field( 'function', $personID ).'</p>';
-                    echo '<div class="people-grid-icons">';
+                    echo '<p class="c-blue">';
+                         if( get_field( 'settings' )['show_function'] && get_field( 'function', $personID ) ){
+                              echo get_field( 'function', $personID );
+                         }
+                         if( get_field( 'settings' )['show_function'] && get_field( 'function', $personID ) && get_field( 'settings' )['show_company'] && get_field( 'company', $personID ) ){ echo ', '; }
+                         if( get_field( 'settings' )['show_company'] && get_field( 'company', $personID ) ){
+                              echo '<span>'.get_field( 'company', $personID ).'</span>';
+                         }
+                    echo '</p>';
+                    if(get_field( 'settings' )['show_social_media']){
+                         echo '<div class="people-grid-icons">';
                          if(get_field('contacts', $personID)['e-mail']){
                               echo '<a href="mailto:'.get_field('contacts', $personID)['e-mail'].'" target="_blank"><img src="'.get_template_directory_uri().'/assets/img/utils/icon_mail.svg" /></a>';
                          }
@@ -62,7 +71,8 @@ if($sort && $sort != 'custom'){
                                    echo '</a>';
                               }                   
                          }
-                    echo '</div>';
+                         echo '</div>';
+                    }
                echo '</div>';
           } 
           echo '</div>';

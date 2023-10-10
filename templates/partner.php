@@ -40,7 +40,7 @@ echo '<div class="template-partner-container">';
 
                echo '<div class="partner-logo-grid '.$prioclass.' partner-grid-width-'.$category["width"].'">';
                echo '<h5>';
-               echo  $termName;
+                    echo  $termName;
                echo '</h5>';
                foreach($partners->posts as $partner){
                     $partnerID = $partner->ID;
