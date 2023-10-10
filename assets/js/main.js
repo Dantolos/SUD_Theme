@@ -86,9 +86,39 @@ document.addEventListener("DOMContentLoaded", function () {
                     .to( element, { scale: 1.5, rotate: endDeg+'deg', y: -2000, opacity: 0, ease:"none"  } );
 
           }
-
-          
-     
-         
+ 
      }
 });
+
+
+// MENU
+// JavaScript to handle the dropdown menu
+const parentMenuItems = document.querySelectorAll('.se2-navigation .se2-submenu');
+
+parentMenuItems.forEach((menuItem) => {
+    const parentLink = menuItem.querySelector('.parent-menu-item');
+
+    menuItem.addEventListener('mouseover', () => {
+        menuItem.querySelector('.se2-sub-menu').style.display = 'block';
+    });
+
+    menuItem.addEventListener('mouseout', (event) => {
+        const relatedTarget = event.relatedTarget;
+        if (!relatedTarget || !menuItem.contains(relatedTarget)) {
+            menuItem.querySelector('.se2-sub-menu').style.display = 'none';
+        }
+    });
+});
+
+//MOBILE BURGER MENU
+const burgerMenu = document.querySelector('.burger-menu-trigger');
+const mobileMenu = document.querySelector('.burger-menu-wrapper');
+const closeButton = document.querySelector('.burger-menu-closer');
+
+burgerMenu.addEventListener('click', ()=>{ 
+     mobileMenu.classList.add("open"); 
+})
+
+closeButton.addEventListener('click', ()=> {
+     mobileMenu.classList.remove("open") ;
+})

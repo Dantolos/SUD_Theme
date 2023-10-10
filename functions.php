@@ -93,10 +93,53 @@ function mytheme_setup_theme_supported_features() {
        ),
        
      ) );
-   }
+}
+
+add_action( 'after_setup_theme', 'mytheme_setup_theme_supported_features' );
    
-   add_action( 'after_setup_theme', 'mytheme_setup_theme_supported_features' );
-   
+
+
+/*-------------------------------------------------------------*/
+/*----------------------------MENU-----------------------------*/
+/*-------------------------------------------------------------*/
+
+//Menu einstellung
+function wpb_custom_new_menu() 
+{
+    register_nav_menus(
+        array(
+            'main-menu' => __( 'Hauptmenu' ),
+            'sprachen' => __( 'Sprachen' ),
+            'footer-menu' => __( 'Footermenu' )
+        )
+    );
+}
+add_action( 'init', 'wpb_custom_new_menu' );
+
+add_filter( 'wp_nav_menu_objects', 'submenu_limit', 10, 2 );
+
+function submenu_limit( $items, $args ) {
+    if ( empty( $args->submenu ) ) 
+    {
+        return $items;
+    }
+
+    $ids       = wp_filter_object_list( $items, array( 'title' => $args->submenu ), 'and', 'ID' );
+    $parent_id = array_pop( $ids );
+    $children  = submenu_get_children_ids( $parent_id, $items );
+
+    foreach ( $items as $key => $item ) 
+    {
+        if ( ! in_array( $item->ID, $children ) ) 
+        {
+            unset( $items[$key] );
+        }
+    }
+    return $items;
+}
+/*------------------------MENU WALKER--------------------------*/
+require get_template_directory() . '/inc/walker.php';
+
 
 /*-------------------------------------------------------------*/
 /*---------------------DISABLE COMMENTS------------------------*/

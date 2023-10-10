@@ -1,0 +1,174 @@
+//MENU
+.header-menu {
+     position: absolute;
+     bottom:20px;
+     right:30px;
+     display:flex;
+     align-items: center;
+
+     .desktop-menu {
+          display: flex;
+          gap: 10px;
+          list-style: none outside none !important;
+          font-family: 'Media Sans';
+          font-size: $fxs;
+          color: $orange;
+          
+     }
+
+     .menu-item:hover {
+          > a {color:$blue;}
+
+     }
+  
+     /* Style for the navigation menu */
+     .se2-navigation ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+      }
+
+      .se2-navigation li {
+          display: inline-block;
+          margin: 0 5px;
+          position: relative;
+      }
+
+      .se2-navigation a {
+          text-decoration: none;
+      }
+
+      /* Style for the dropdown menu */
+      .se2-sub-menu {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background-color: #fff;
+          @include shadow();
+          padding: 10px;
+          margin-top:10px;
+      }
+
+      .se2-sub-menu li {
+          margin: 0;
+          padding: 20px;
+          width: 100%;
+          cursor: pointer;
+      }
+
+     .header-cta {
+          margin-left: 10px;
+     }
+
+     
+}
+
+.burger-menu-wrapper { display: none; }
+.burger-menu-trigger { display: none;}
+
+@include breakpoint('m') {
+     .header-menu {
+          display: flex;
+          flex-direction: column;
+          top:0;
+          height: 100%;
+          justify-content: center;
+     }
+
+     .desktop-menu-content  {
+         display: none;
+     }
+     
+     .header-cta-desktop { display: none; }
+
+     .burger-menu-trigger { display: block; cursor: pointer;}
+
+     .open { display: block !important; }
+
+     .burger-menu-wrapper  {
+          position: fixed;
+          width: 100vw;
+          height: 100vh;
+          background-color: $blue;
+          top:0;
+          left:0;
+          z-index: 2000;
+          padding-top: 5vh;
+          
+
+          .burger-menu-closer {
+               position: absolute;
+               top: 30px;
+               right:30px;
+               height: 25px;
+               img { width: 25px;}
+          }
+
+          .burger-menu-sud-icon {
+               width: 100%;
+               display: flex;
+               justify-content: center;
+               margin-bottom: 50px;
+               img {
+                    width: 80px;
+               }
+
+          }
+
+          .header-cta-wrapper {
+               display: flex;
+               justify-content: center;
+               width: 100%;
+               margin: 40px 0;
+
+               a { margin:0; }
+               .header-cta { margin:0; }
+          }
+
+          .burger-menu {
+               display: flex ;
+               flex-direction: column;
+               flex-wrap: nowrap;
+               align-items: center;
+               
+
+               a { font-family: 'Media Sans'; color: white; letter-spacing: .1rem;}
+
+               > li{
+                    width: 100%;
+                    border-bottom: 1px solid $blue-mid;
+                    padding: 20px 0;
+                    margin: 0;
+                    text-align: center; 
+
+                    &:hover {
+                         background-color: $blue-mid;
+                    }
+
+                    .sub-menu {
+                         display: flex ;
+                         flex-direction: column;
+                         flex-wrap: nowrap;
+                         align-items: center;
+                         width: 100%;
+                         li {
+                              margin:0;
+                              &:first-of-type { margin-top: 20px; }
+                              &:last-of-type { margin-bottom: 0; }
+                              width: 100%;
+                              padding: 20px 0;
+                              border-bottom: 1px solid $blue;
+                              text-align: center; 
+                              background-color: $blue-mid;
+                              &:hover {
+                                   background-color: $blue-light;
+                              }
+
+                              a { color:$blue; }
+                         }
+                    }
+               }
+          }
+     }
+ }

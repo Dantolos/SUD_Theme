@@ -10,8 +10,24 @@
           </div>
 
           <!-- Newsletter Section -->
-          <div class="footer-mid">
-               <button type="button" onclick="sudLightbox('newsletter')"><?php echo get_field('newsletter', 'option')['button_text'];?></button>
+          <div class="footer-right">
+               <?php
+               wp_nav_menu(array(
+                    'menu'              => "Footermenu", 
+                    'menu_class'        => "footer-menu",
+                    'container'         => "nav", 
+                    'container_class'   => "se2-navigation footer-menu-content ", 
+                    'walker' => new Footer_Menu_Walker(),
+               ));
+               ?>
+          </div>
+
+
+
+          <!-- Footer Bottom Line -->
+          <div class="footer-bottom-line">
+
+               <button type="button" onclick="sudLightbox('newsletter')" class="btn-s"><?php echo get_field('newsletter', 'option')['button_text'];?></button>
                <div class="lightbox-wrapper" lbtarget="newsletter">
                     
                     <div class="lightbox-close-layer" lbcloser="newsletter" ><img src="<?php echo get_template_directory_uri(); ?>/assets/img/utils/close-cross.svg" alt=""></div>
@@ -26,26 +42,8 @@
                          <div class="lightbox-bg-element-02"></div>
                     </div>
                </div>
-          </div>
 
-          <!-- Footer Menu Section -->
-          <div class="footer-right">
                <?php
-               if(get_field('footer_menu', 'option')){
-                    echo '<ul>';
-                    foreach( get_field('footer_menu', 'option')[0]['navigation'] as $navitem ){
-                         echo '<li>';
-                         echo '<a href="'.$navitem['page'].'" class="c-white fxs">'.$navitem['label'].'</a>';
-                         echo '</li>';
-                    }
-                    echo '</ul>';
-               }
-               ?>
-          </div>
-
-          <!-- Footer Bottom Line -->
-          <div class="footer-bottom-line">
-          <?php
                if(get_field('channels', 'option')){
                     echo '<div class="footer-social-media">';
                     foreach( get_field('channels', 'option') as $sm ){

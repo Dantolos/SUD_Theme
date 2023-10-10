@@ -6,10 +6,11 @@ get_header();
 
 $partnerCategories = get_field('partnercategories');
 
+echo the_content();
+
 echo '<div class="template-partner-wrapper">';
 echo '<div class="template-partner-container">';
 
-echo the_content();
 ?>
 
 <div class="sud-partner-container">
@@ -44,11 +45,11 @@ echo the_content();
                foreach($partners->posts as $partner){
                     $partnerID = $partner->ID;
                     echo '<a href="'.get_field('website', $partnerID).'" target="_blank" rel="external">';
-                    echo '<div class="partner-logo-box">';
-                    echo '<div class="partner-box-overlay"></div>';
-                    echo '<div class="partner-link-arrow"><img src="'. get_template_directory_uri() .'/assets/img/utils/arrow-right.svg" alt="arrow-right"></div>';
-                    echo '<img src="'.get_field('logo', $partnerID)['url'].'" alt="Logo '.get_field('company_name', $partnerID).'"/>';
-                    echo '</div>';
+                         echo '<div class="partner-logo-box">';
+                         echo '<div class="partner-box-overlay"></div>';
+                         echo '<div class="partner-link-arrow"><img src="'. get_template_directory_uri() .'/assets/img/utils/arrow-right.svg" alt="arrow-right"></div>';
+                         echo '<img src="'.get_field('logo', $partnerID)['url'].'" alt="Logo '.get_field('company_name', $partnerID).'"/>';
+                         echo '</div>';
                     echo '</a>';
                }
 

@@ -10,39 +10,46 @@
 .footer-container {
      display: flex;
      justify-content: space-between;
-     align-items: center;
+     align-items: start;
      flex-wrap: wrap;
-     gap: 50px;
+     gap: 5%;
      width: 95%;
      max-width: 1600px;
      @include breakpoint('m'){ padding: 0 40px; }
+
      .footer-left {
           width:25%;
           @include breakpoint('m'){ width: 100%; }
      }
-     
-     .footer-mid {
-          width:calc(50% - 100px);
-          display: flex;
-          justify-content: center;
-          @include breakpoint('m'){ width: 100%; }
-          .mauticform_wrapper {
-               color: $white;
-          }
-     }
-     
+       
      .footer-right {
-          width: 25%;
+          width: 70%;
           @include breakpoint('m'){ width: 100%; }
-          ul {
+          .footer-menu {
                list-style-type:none;
                padding: 0;
-               li {
+               display: flex;
+               justify-content: space-between;
+               color: $white; 
+               > li {
                     margin-bottom:10px;
-                    a { 
+                    > a { 
+                         font-family:'Media Sans';
                          &:hover {
                               color: $orange;
                               cursor: pointer;
+                         }
+                    }
+
+                    .sub-menu {
+                         margin-top:10px;
+                         list-style-type:none;
+                         padding: 0;
+                         li {
+                              align-self: start;
+                              a:hover {
+                                   color: $orange;
+                              }
                          }
                     }
                }
@@ -56,7 +63,9 @@
           padding: 20px 0 0 0;
           margin-top: 20px; 
           display: flex;
-          justify-content: flex-end;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
 
           .footer-social-media {
                display: flex;

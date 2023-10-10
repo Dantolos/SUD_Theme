@@ -21,6 +21,7 @@ body {
 }
 
 .header-logo {
+     display: flex;
      &:hover { cursor: pointer;}
 
      img {
@@ -36,7 +37,7 @@ body {
      right: 30px;
      top:0px !important;
 
-     @include breakpoint('s'){ display: none; }
+     @include breakpoint('m'){ display: none; }
 
      ul {
           display: flex;
@@ -59,21 +60,3 @@ body {
 }
 
 
-//MENU
-.header-menu {
-     position: absolute;
-     bottom:20px;
-     right:30px;
-
-     @include breakpoint('m'){ display: none; }
-
-     ul {
-          display: flex;
-          gap: 40px;
-          list-style: none outside none !important;
-          font-family: 'Media Sans';
-          font-size: $fxs;
-          color: $orange;
-          
-     }
-}

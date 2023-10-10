@@ -26,8 +26,8 @@
 <!-- Header -->
 <div class="header-wrapper">
 
-     <a href="<?php echo esc_url( get_home_url() ); ?>">
-          <div class="header-logo"><img src="<?php echo get_field('logo', 'option');?>" alt=""></div>
+     <a href="<?php echo esc_url( get_home_url() ); ?>" style="max-width: 30%;">
+          <div class="header-logo"><img src="<?php echo get_field('logo', 'option');?>" alt="startup days logo" /></div>
      </a>
      
 
@@ -56,14 +56,47 @@
                }
                echo '</ul>';
           }
+          
           ?>
      </div>
 
      <div class="header-menu">
-          <ul>
-               
-              
-          </ul>
+          <?php 
+          $menuArgs = array(
+               'menu'              => "Hauptmenu", 
+               'menu_class'        => "desktop-menu",
+               'container'         => "nav", 
+               'container_class'   => "se2-navigation desktop-menu-content ", 
+               'walker'            => new Walker_Nav_Primary()
+          );
+          if($menuArgs){
+               wp_nav_menu( $menuArgs );
+          }
+
+          if(get_field('header_cta', 'option')){
+               echo '<a class="header-cta-desktop" href="'.get_field('cta_button', 'option')['url'].'" target="'.get_field('cta_button', 'option')['target'].'"><div class="header-cta btn-secondary btn-s">'.get_field('cta_button', 'option')['title'].'</div></a>';
+          }
+          echo '<div class="burger-menu-trigger"><img src="'.get_template_directory_uri().'/assets/img/utils/burger-menu.svg" alt="Burger Menu" /></div>';
+          
+          echo '<div class="burger-menu-wrapper">';
+               echo '<div class="burger-menu-closer"><img src="'.get_template_directory_uri().'/assets/img/utils/close-cross-white.svg" alt="Close Icon" /></div>';
+               echo '<div class="burger-menu-sud-icon"><img src="'.get_template_directory_uri().'/assets/img/sud_icon-white.svg" alt="Close Icon" /></div>';
+
+               wp_nav_menu(array(
+                    'menu'              => "Hauptmenu", 
+                    'menu_class'        => "burger-menu",
+                    'container'         => "nav", 
+                    'container_class'   => "se2-navigation menu-burger-content ", 
+                    'walker' => new Burger_Menu_Walker(),
+               ));
+
+               if(get_field('header_cta', 'option')){
+                    echo '<div class="header-cta-wrapper">';
+                    echo '<a class="header-cta" href="'.get_field('cta_button', 'option')['url'].'" target="'.get_field('cta_button', 'option')['target'].'"><div class="header-cta btn-secondary btn-s btn-neg">'.get_field('cta_button', 'option')['title'].'</div></a>';
+                    echo '</div>';
+               }
+          echo '</div>';
+          ?>
      </div>
 </div>
 

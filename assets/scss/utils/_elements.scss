@@ -43,6 +43,8 @@
      }
 }
 
+
+
 @mixin primaryButton {
      @include basicButton();
      background-color: $blue;
@@ -65,6 +67,14 @@
      }
 }
 .btn-secondary { @include secondaryButton(); }
+
+.btn-l { font-size: clamp( 20px, 3vw, 30px); padding:20px; }
+.btn-s { font-size: clamp( 10px, 2vw, 20px); padding:10px; }
+
+.btn-secondary.btn-neg {
+     border-color: $white;
+     color: $white;
+}
 
 button {
      @include primaryButton();
