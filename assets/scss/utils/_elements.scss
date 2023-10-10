@@ -68,8 +68,13 @@
 }
 .btn-secondary { @include secondaryButton(); }
 
-.btn-l { font-size: clamp( 20px, 3vw, 30px); padding:20px; }
-.btn-s { font-size: clamp( 10px, 2vw, 20px); padding:10px; }
+// Button sizes
+.btn-l { font-size: clamp( 20px, 3vw, 30px); padding:20px; letter-spacing: 1px;
+     @include breakpoint('m'){ font-size: clamp( 20px, 3vw, 30px); padding:20px;  }
+}
+.btn-s { font-size: clamp( 10px, 2vw, 20px); padding:10px; letter-spacing: 1px;
+     @include breakpoint('m'){ font-size: clamp( 15px, 2.5vw, 30px); padding:15px;   }
+}
 
 .btn-secondary.btn-neg {
      border-color: $white;

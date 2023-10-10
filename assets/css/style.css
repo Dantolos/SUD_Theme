@@ -198,11 +198,21 @@ ul > li, ol > li {
 
 .btn-l {
   font-size: clamp(20px, 3vw, 30px);
-  padding: 20px; }
+  padding: 20px;
+  letter-spacing: 1px; }
+  @media (max-width: 996px) {
+    .btn-l {
+      font-size: clamp(20px, 3vw, 30px);
+      padding: 20px; } }
 
 .btn-s {
   font-size: clamp(10px, 2vw, 20px);
-  padding: 10px; }
+  padding: 10px;
+  letter-spacing: 1px; }
+  @media (max-width: 996px) {
+    .btn-s {
+      font-size: clamp(15px, 2.5vw, 30px);
+      padding: 15px; } }
 
 .btn-secondary.btn-neg {
   border-color: #ffffff;
@@ -384,7 +394,8 @@ video::-webkit-media-controls-timeline-container {
       position: absolute;
       top: 30px;
       right: 30px;
-      height: 25px; }
+      height: 25px;
+      z-index: 2005; }
       .burger-menu-wrapper .burger-menu-closer img {
         width: 25px; }
     .burger-menu-wrapper .burger-menu-sud-icon {
@@ -403,6 +414,12 @@ video::-webkit-media-controls-timeline-container {
         margin: 0; }
       .burger-menu-wrapper .header-cta-wrapper .header-cta {
         margin: 0; }
+    .burger-menu-wrapper .menu-burger-content {
+      overflow-y: scroll;
+      height: 60vh;
+      scrollbar-width: 0; }
+      .burger-menu-wrapper .menu-burger-content::-webkit-scrollbar {
+        width: 0; }
     .burger-menu-wrapper .burger-menu {
       display: flex;
       flex-direction: column;
@@ -524,8 +541,12 @@ body {
       list-style-type: none;
       padding: 0;
       display: flex;
+      gap: 20px;
       justify-content: space-between;
       color: #ffffff; }
+      @media (max-width: 996px) {
+        .footer-container .footer-right .footer-menu {
+          flex-direction: column; } }
       .footer-container .footer-right .footer-menu > li {
         margin-bottom: 10px; }
         .footer-container .footer-right .footer-menu > li > a {
@@ -549,7 +570,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    gap: 20px; }
     .footer-container .footer-bottom-line .footer-social-media {
       display: flex;
       gap: 10px; }

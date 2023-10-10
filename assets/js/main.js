@@ -116,9 +116,15 @@ const mobileMenu = document.querySelector('.burger-menu-wrapper');
 const closeButton = document.querySelector('.burger-menu-closer');
 
 burgerMenu.addEventListener('click', ()=>{ 
+     gsap.fromTo(mobileMenu.querySelectorAll('div,ul'), { duration: .1, stagger: .1,  y: -200 }, { y: 0 })
+     gsap.fromTo(mobileMenu, { duration: .05,  y: -400, x: 0, borderRadius: '0', scale: 1.4 }, { y: 0, x: 0, borderRadius: '0', scale: 1, opacity: 1  })
      mobileMenu.classList.add("open"); 
+     
 })
 
 closeButton.addEventListener('click', ()=> {
-     mobileMenu.classList.remove("open") ;
+     gsap.fromTo(mobileMenu.querySelectorAll('div,ul'), { duration: .1, stagger: .1,  y: 0 }, { y: -200 })
+     gsap.fromTo(mobileMenu, { duration: .05, y: 0, opacity: 1 }, { y: -500, opacity: 0 })
+     console.log('close')
+     setTimeout(()=> {mobileMenu.classList.remove("open")}, 500)  ;
 })
