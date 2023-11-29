@@ -13,6 +13,8 @@ function register_acf_blocks() {
     register_block_type( __DIR__ . '/people-grid' );
     register_block_type( __DIR__ . '/accordion' );
     register_block_type( __DIR__ . '/box-link' );
+    register_block_type( __DIR__ . '/speaker-teaser' );
+    register_block_type( __DIR__ . '/container' );
     //require_once( __DIR__ . '/hero/hero-block.acf.php' );
 }
 

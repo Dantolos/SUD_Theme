@@ -76,22 +76,20 @@ document.addEventListener("DOMContentLoaded", function () {
                let targetDeg = 180 + (randomize * 10 + e)
                let endDeg = 200 + (randomize * 100 + e)
                const tl = gsap.timeline({
-                    scrollTrigger: {
-                         trigger: parent,
-                         start: "-200px 100%", // Adjust this value as needed
-                         end: "bottom top", // Adjust this value as needed
-                         scrub: 1,
-                         onEnter: countFuntion,
-                         markers: false,
-                    },
+                         scrollTrigger: {
+                              trigger: parent,
+                              start: "-200px 100%", 
+                              end: "bottom top", 
+                              scrub: 1,
+                              onEnter: countFuntion,
+                              markers: false,
+                         },
                     });
                     let delay = Math.random();
                     tl.set( element, { scale: .8, rotate: '150deg', y: 2000, ease:"none", display:'block' } )
                     .to( element, { scale: 1, rotate:targetDeg+'deg', y: 0, ease:"none"  } )
                     .to( element, { scale: 1.5, rotate: endDeg+'deg', y: -2000, opacity: 0, ease:"none"  } );
-
           }
- 
      }
 });
 
@@ -101,18 +99,18 @@ document.addEventListener("DOMContentLoaded", function () {
 const parentMenuItems = document.querySelectorAll('.se2-navigation .se2-submenu');
 
 parentMenuItems.forEach((menuItem) => {
-    const parentLink = menuItem.querySelector('.parent-menu-item');
+     const parentLink = menuItem.querySelector('.parent-menu-item');
 
-    menuItem.addEventListener('mouseover', () => {
-        menuItem.querySelector('.se2-sub-menu').style.display = 'block';
-    });
+     menuItem.addEventListener('mouseover', () => {
+          menuItem.querySelector('.se2-sub-menu').style.display = 'block';
+     });
 
-    menuItem.addEventListener('mouseout', (event) => {
-        const relatedTarget = event.relatedTarget;
-        if (!relatedTarget || !menuItem.contains(relatedTarget)) {
-            menuItem.querySelector('.se2-sub-menu').style.display = 'none';
-        }
-    });
+     menuItem.addEventListener('mouseout', (event) => {
+          const relatedTarget = event.relatedTarget;
+          if (!relatedTarget || !menuItem.contains(relatedTarget)) {
+               menuItem.querySelector('.se2-sub-menu').style.display = 'none';
+          }
+     });
 });
 
 //MOBILE BURGER MENU

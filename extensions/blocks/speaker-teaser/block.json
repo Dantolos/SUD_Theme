@@ -1,0 +1,14 @@
+{
+     "name": "acf/speaker-teaser",
+     "title": "Speaker Teaser",
+     "description": "Speaker Teaser",
+     "style": [ "file:./speaker-teaser.css" ],
+     "category": "Startup Days",
+     "icon": { "foreground": "#1582BE",  "src": "groups" },
+     "keywords": [ "teaser", "speaker", "sud"],
+     "acf": {
+         "mode": "preview",
+         "renderTemplate": "./speaker-teaser.php"
+     },
+     "align": "full" 
+}

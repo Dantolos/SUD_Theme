@@ -26,7 +26,7 @@ body {
 #main-wrapper { width:100vw; }
 .bspbox {
      @include primaryBox;
-}
+} 
 
 .bspbox2 {
      @include secondaryBox;
@@ -36,6 +36,7 @@ body {
 @import 'templates/default';
 @import 'templates/legals';
 @import 'templates/partner';
+@import 'templates/content-hub';
 @import 'templates/404';
 
 //plugins

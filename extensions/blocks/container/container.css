@@ -1,0 +1,35 @@
+.sud-containerblock-wrapper {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-wrap: wrap;
+     position: relative;
+     overflow-x: hidden;
+     overflow-y: hidden;
+     padding: 80px 0;
+}
+
+.sud-containerblock-container { 
+     width: 100%;
+     max-width: 1600px;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     min-height: 500px;
+     z-index: 20; 
+     padding:5%;
+}
+
+.sud-containerblock-container p {
+     color: #1582BE;
+}
+.sud-containerblock-container h1,
+.sud-containerblock-container h2, 
+.sud-containerblock-container h3, 
+.sud-containerblock-container h4, 
+.sud-containerblock-container h5, 
+.sud-containerblock-container h6
+{
+     color: #DF5F31;
+}

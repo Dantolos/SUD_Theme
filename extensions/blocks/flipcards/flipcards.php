@@ -36,10 +36,12 @@ if (!function_exists('cast_flipcard_type_1')) {
 
 //---------------------- Klein ------------------------
 if (!function_exists('cast_flipcard_type_2')) {
-     function cast_flipcard_type_2($cards){
+     function cast_flipcard_type_2($cards){ 
           foreach ($cards as &$card) {
+               $flipclass = $card['title_content'] || $card['content'] ? 'flipcard-inner-container' : '';
+
                echo '<div class="flipcard-container flipcard-container-t2">';
-               echo '<div class="flipcard-inner-container flipcard-inner-container-t2">';
+               echo '<div class="'.$flipclass.' flipcard-inner-container-t2">';
                     // front
                     echo '<div class="flipcard-front flipcard-front-t2 primatyBox">';
                          echo '<img src="'.$card['image'].'" alt="image-'.$card['title'].'"/>';
@@ -55,7 +57,7 @@ if (!function_exists('cast_flipcard_type_2')) {
           }
      }
 }
-
+ 
 ?>
 
 <div <?php echo $anchor; ?>class="flipcards-wrapper" style="min-height:200px;">
