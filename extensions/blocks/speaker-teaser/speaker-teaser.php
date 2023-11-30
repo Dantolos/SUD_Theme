@@ -9,7 +9,7 @@ if ( ! empty( $block['anchor'] ) ) {
 // Load values and assign defaults.
 $title = get_field( 'title' ) ?: null;
 $content = get_field( 'content' ) ?: null;
-$speakers = get_field('speakers') ?: false;
+$speakers = get_field( 'speakers' ) ?: false;
 ?>
 
 <div <?php echo $anchor; ?>class="speaker-teaser-wrapper" >

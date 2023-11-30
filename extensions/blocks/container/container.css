@@ -1,13 +1,12 @@
 .sud-containerblock-wrapper {
      width: 100%;
      display: flex;
-     justify-content: center;
-     align-items: center;
+     justify-content: left; 
      flex-wrap: wrap;
      position: relative;
      overflow-x: hidden;
      overflow-y: hidden;
-     padding: 80px 0;
+     padding: 0;
 }
 
 .sud-containerblock-container { 
@@ -15,10 +14,9 @@
      max-width: 1600px;
      display: flex;
      flex-wrap: wrap;
-     justify-content: center;
-     min-height: 500px;
+     justify-content: center; 
      z-index: 20; 
-     padding:5%;
+     padding:0 5%;
 }
 
 .sud-containerblock-container p {

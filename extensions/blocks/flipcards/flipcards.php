@@ -12,24 +12,29 @@ $type = get_field('type') ?: 'type1';
 $section_title = get_field( 'section_title' ) ?: '';
 
 
+
 //---------------------- Gross ------------------------
 if (!function_exists('cast_flipcard_type_1')) {
      function cast_flipcard_type_1($cards){
           foreach ($cards as &$card) {
-               echo '<div class="flipcard-container flipcard-container-t1">';
-               echo '<div class="flipcard-inner-container flipcard-inner-container-t1">';
-                    // front
-                    echo '<div class="flipcard-front flipcard-front-t1 primatyBox" style="background-image: url('.$card['image'].');">';
-                         //echo '<img src="'.$card['image'].'" alt="image-'.$card['title'].'"/>';
-                         echo '<h5 class="c-orange">'.$card['title'].'</h5>';
+               $link = $card['link'] ?: '';
+               echo $card['link'];
+               if($link) { echo '<a href="'.$link.'">'; }
+                    echo '<div class="flipcard-container flipcard-container-t1">';
+                    echo '<div class="flipcard-inner-container flipcard-inner-container-t1">';
+                         // front
+                         echo '<div class="flipcard-front flipcard-front-t1 primatyBox" style="background-image: url('.$card['image'].');">';
+                              //echo '<img src="'.$card['image'].'" alt="image-'.$card['title'].'"/>';
+                              echo '<h5 class="c-orange">'.$card['title'].'</h5>';
+                         echo '</div>';
+                         // back
+                         echo '<div class="flipcard-back primatyBox">';
+                              echo '<h5 class="c-orange">'.$card['title_content'].'</h5>';
+                              echo '<p class="c-blue fxxs">'.$card['content'].'</p>';
+                         echo '</div>';
                     echo '</div>';
-                    // back
-                    echo '<div class="flipcard-back primatyBox">';
-                         echo '<h5 class="c-orange">'.$card['title_content'].'</h5>';
-                         echo '<p class="c-blue fxxs">'.$card['content'].'</p>';
-                    echo '</div>';
-               echo '</div>';
-               echo '</div>'; 
+                    echo '</div>'; 
+               if($link) { echo '</a>'; }
           }
      }
 }
@@ -39,7 +44,8 @@ if (!function_exists('cast_flipcard_type_2')) {
      function cast_flipcard_type_2($cards){ 
           foreach ($cards as &$card) {
                $flipclass = $card['title_content'] || $card['content'] ? 'flipcard-inner-container' : '';
-
+               $link = $card['link'] ?: '';
+               if($link) { echo '<a href="'.$link.'" target="_blank">'; }
                echo '<div class="flipcard-container flipcard-container-t2">';
                echo '<div class="'.$flipclass.' flipcard-inner-container-t2">';
                     // front
@@ -54,6 +60,7 @@ if (!function_exists('cast_flipcard_type_2')) {
                     echo '</div>';
                echo '</div>';
                echo '</div>'; 
+               if($link) { echo '</a>'; }
           }
      }
 }
@@ -63,7 +70,7 @@ if (!function_exists('cast_flipcard_type_2')) {
 <div <?php echo $anchor; ?>class="flipcards-wrapper" style="min-height:200px;">
      <h3 class="c-orange" style="width: 100%; text-align:center; margin-bottom:40px;"><?php echo $section_title; ?></h3>
      <?php
-     if($cards){
+     if($cards) {
           switch ($type) {
                case 'type1':
                     echo cast_flipcard_type_1($cards);
@@ -74,8 +81,7 @@ if (!function_exists('cast_flipcard_type_2')) {
                default:
                     echo '<h4>please choose type</h4>';
                     break;
-          }
-          
+          } 
      }
      ?>
 </div>
