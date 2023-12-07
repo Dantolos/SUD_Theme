@@ -25,6 +25,7 @@ function sud_register_scripts() {
 
      $wnm_custom = array( 
         'templateUrl' => get_template_directory_uri(), 
+        'baseUrl' => get_home_url()
     );
     wp_localize_script( 'sud-script', 'globalURL', $wnm_custom );
 }

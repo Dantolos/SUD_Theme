@@ -233,7 +233,7 @@ const handleFetchAPI = async ( posttype ) => {
      let page = CONTENTWRAPPER.dataset.page ? CONTENTWRAPPER.dataset.page : '1';
      let perPage = '6';
 
-     let resp = await fetch(`http://localhost:10018/wp-json/wp/v2/${posttype}?${searchfilter}&per_page=${perPage}&page=${page}`)
+     let resp = await fetch(`${globalURL.baseUrl}/wp-json/wp/v2/${posttype}?${searchfilter}&per_page=${perPage}&page=${page}`)
           .then( response => {
                totalPages = response.headers.get('x-wp-totalpages')
                handlePagination(totalPages)
