@@ -46,7 +46,7 @@
                               break;
                          default:
                               echo '<li>';
-                              echo '<a href="'.$metamenuItem["link"].'" target="">';
+                              echo '<a href="'.$metamenuItem["link"].'" >';
                               echo $metamenuItem['label'];
                               echo '</a>';
                               echo '</li>';

@@ -15,6 +15,7 @@ function register_acf_blocks() {
     register_block_type( __DIR__ . '/box-link' );
     register_block_type( __DIR__ . '/speaker-teaser' );
     register_block_type( __DIR__ . '/container' );
+    register_block_type( __DIR__ . '/video-gallery' );
     //require_once( __DIR__ . '/hero/hero-block.acf.php' );
 }
 

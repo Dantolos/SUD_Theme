@@ -1,0 +1,20 @@
+.sud-main-wrapper {
+     width: 100%;
+     display: flex;
+     justify-content: left; 
+     flex-wrap: wrap;
+     position: relative;
+     overflow-x: hidden;
+     overflow-y: hidden;
+     padding: 0;
+}
+
+.sud-main-container { 
+     width: 100%;
+     max-width: 1600px;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center; 
+     z-index: 20; 
+     padding:0 5%;
+}

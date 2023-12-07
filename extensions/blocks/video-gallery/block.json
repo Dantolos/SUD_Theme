@@ -1,0 +1,15 @@
+{
+     "name": "acf/video-gallery",
+     "title": "Video Gallery",
+     "description": "Display a Video Gallery.",
+     "style": [ "file:./video-gallery.css" ],
+     "script": "block-video-gallery",
+     "category": "Startup Days",
+     "icon": { "foreground": "#1582BE",  "src": "video-alt3"},
+     "keywords": ["video", "gallery", "content", "hub", "content hub", "sud"],
+     "acf": {
+         "mode": "preview",
+         "renderTemplate": "./video-gallery.php"
+     },
+     "align": "full"
+}

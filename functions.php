@@ -10,6 +10,9 @@ function sud_register_style() {
 add_action('wp_enqueue_scripts', 'sud_register_style');
 
 function sud_register_scripts() {
+
+    
+
      $theme_version = wp_get_theme()->get( 'Version' );
      // extern
      wp_enqueue_script( 'gsap', get_template_directory_uri() . '/assets/js/plugins/gsap/gsap.min.js', array(), '1.0', true );
@@ -19,6 +22,11 @@ function sud_register_scripts() {
      // main theme
      wp_enqueue_script( 'sud-script', get_template_directory_uri() . '/assets/js/main.js', ['gsap', 'gsap-scroll'], $theme_version, true );
      
+
+     $wnm_custom = array( 
+        'templateUrl' => get_template_directory_uri(), 
+    );
+    wp_localize_script( 'sud-script', 'globalURL', $wnm_custom );
 }
 add_action('wp_enqueue_scripts', 'sud_register_scripts');
 
@@ -185,3 +193,33 @@ add_action('init', function () {
 });
 
 
+/*-------------------------------------------------------------*/
+/*--------------------- SEARCH FUNCTION------------------------*/
+/*-------------------------------------------------------------*/
+function __search_by_title_only( $search, $wp_query ) {
+    global $wpdb;
+
+    if ( empty( $search ) )
+        return $search; // skip processing - no search term in query
+
+    $q = $wp_query->query_vars;    
+    $n = ! empty( $q['exact'] ) ? '' : '%';
+
+    $search =
+    $searchand = '';
+
+    foreach ( (array) $q['search_terms'] as $term ) {
+        $term = esc_sql( like_escape( $term ) );
+        $search .= "{$searchand}($wpdb->posts.post_title LIKE '{$n}{$term}{$n}')";
+        $searchand = ' AND ';
+    }
+
+    if ( ! empty( $search ) ) {
+        $search = " AND ({$search}) ";
+        if ( ! is_user_logged_in() )
+            $search .= " AND ($wpdb->posts.post_password = '') ";
+    }
+
+    return $search;
+}
+add_filter( 'posts_search', '__search_by_title_only', 500, 2 );

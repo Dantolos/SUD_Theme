@@ -66,7 +66,7 @@ $fl: clamp(35px, 7vw, 50px);
 $fm: clamp(32px, 6vw, 40px);
 $fs: clamp(24px, 5vw, 28px);
 $fxs: clamp(16px, 2vw, 22px);
-$fxxs: clamp(16px, 1.6vw, 18px);
+$fxxs: clamp(12px, 1.2vw, 18px);
 
 h1, .fxxl { font-size: $fxxl;  }
 
@@ -84,7 +84,7 @@ p, blockquote, ul>li, ol>li { font-size: $fxs; }
 
 a { &:hover {cursor: pointer;} }
 
-.fxxs { font-size: $fxxs; line-height: 1.4; }
+.fxxs { font-size: $fxxs !important; line-height: 1.4; }
 
 ul>li, ol>li { margin-bottom: 10px;  }
 

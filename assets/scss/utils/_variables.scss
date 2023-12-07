@@ -1,7 +1,7 @@
 
 $blue: #1582BE; 
 .bg-blue{ background-color: $blue; }
-.c-blue { color:$blue; }
+.c-blue { color:$blue !important; }
 
 $blue-mid: #6EA9D8;
 .bg-blue-mid{ background-color: $blue-mid; }
