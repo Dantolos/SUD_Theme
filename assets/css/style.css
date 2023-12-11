@@ -1038,4 +1038,7 @@ body {
   .mauticform_wrapper h3.mauticform-label {
     font-size: clamp(35px, 7vw, 50px); }
   .mauticform_wrapper p, .mauticform_wrapper span {
-    font-size: clamp(16px, 2vw, 22px) !important; }
+    font-size: clamp(16px, 2vw, 22px) !important;
+    color: #1582BE !important; }
+  .mauticform_wrapper a {
+    color: #DF5F31 !important; }
