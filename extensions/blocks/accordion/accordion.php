@@ -5,6 +5,7 @@ $anchor = '';
 if ( ! empty( $block['anchor'] ) ) {
     $anchor = 'id="' . esc_attr( $block['anchor'] ) . '" ';
 }
+$hide = get_field('hide_block') ? 'none' : 'block';
 
 // Load values and assign defaults.
 $title = get_field('title') ?: '';
@@ -12,6 +13,7 @@ $text = get_field('text') ?: '';
 $accordions = get_field( 'accordions' ) ?: null;
 ?>
 
+<div style="display:<?php echo $hide; ?>;">
 <div <?php echo $anchor; ?>class="accordion-wrapper" style="min-height:200px;">
      <div class="accordion-container">
           <h3 class="c-orange fl"><?php echo $title; ?></h3>
@@ -36,4 +38,5 @@ $accordions = get_field( 'accordions' ) ?: null;
           ?>
           
      </div>
+</div>
 </div>

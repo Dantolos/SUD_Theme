@@ -1,5 +1,5 @@
 .section-wrapper {
-    width: 100%;
+     width: 100%;
      display:flex;
      justify-content: center;
      align-items: center;
@@ -27,19 +27,19 @@
 }
 
 
-
 /* COMPONENTS */
 .component-title { 
      width: 100%;
-     padding: 50px 40% 0px 10%;
+     padding: 0px 40% 20px 10%;
 }
 
 .component-image, .component-video  {
-     width: 90%;
+     width: 80%;
      border-radius: 25px;
      overflow: hidden;
      max-height: 100%; 
      max-height: fit-content;
+     margin:  0px 10%;
 }
 
 .component-image > img { max-width: 100%; }
@@ -58,9 +58,16 @@
      color: #1582BE;
 }
 
-.component-button {
+div.component-button, .component-button>.btn-primary {
      display: flex;
      margin: 20px 10%;
+     align-items: center;
+     width: fit-content;
+}
+
+.component-button-icon {
+     width: 45px;
+     margin-right: 20px;
 }
 
 @media only screen and (max-width: 992px) {  

@@ -1,0 +1,15 @@
+{
+     "name": "acf/timeline",
+     "title": "Timeline",
+     "description": "Display a Timeline.",
+     "style": [ "file:./timeline.css" ],
+     "script": "block-timeline",
+     "category": "Startup Days",
+     "icon": { "foreground": "#1582BE",  "src": "backup"},
+     "keywords": ["timeline", "journey", "line" ],
+     "acf": {
+         "mode": "preview",
+         "renderTemplate": "./timeline.php"
+     },
+     "align": "full"
+}

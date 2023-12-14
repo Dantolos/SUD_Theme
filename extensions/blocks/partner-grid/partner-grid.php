@@ -5,6 +5,7 @@ $anchor = '';
 if ( ! empty( $block['anchor'] ) ) {
     $anchor = 'id="' . esc_attr( $block['anchor'] ) . '" ';
 }
+$hide = get_field('hide_block') ? 'none' : 'block';
 
 // Load values and assign defaults.
 $section_title = get_field( 'section_title' ) ?: '';
@@ -36,30 +37,31 @@ foreach ($partner_categories as $key => $partner_category) {
 // The query
 
 ?>
+<div style="display:<?php echo $hide; ?>;">
+     <div <?php echo $anchor; ?>class="partner-grid-wrapper" >
+          <div class="partner-grid-container">
+               <h3 class="c-orange"><?php echo $section_title; ?></h3>
 
-<div <?php echo $anchor; ?>class="partner-grid-wrapper" >
-     <div class="partner-grid-container">
-          <h3 class="c-orange"><?php echo $section_title; ?></h3>
-
-          <?php
-          foreach($partners as $key => $partnerCat){
-               echo '<div class="partner-grid-partner-cat">';
-               foreach($partnerCat as $key => $partner){
-                    $partnerID = $partner->ID;
-                    echo '<div class="partner-grid-box">';
-                    echo '<a href="'.get_field('website', $partnerID).'" target="_blank">';
-                    echo '<img src="'.get_field('logo', $partnerID)['url'].'" alt="Logo '.get_field('company_name', $partnerID).'"/>';
-                    echo '</a>';
+               <?php
+               foreach($partners as $key => $partnerCat){
+                    echo '<div class="partner-grid-partner-cat">';
+                    foreach($partnerCat as $key => $partner){
+                         $partnerID = $partner->ID;
+                         echo '<div class="partner-grid-box">';
+                         echo '<a href="'.get_field('website', $partnerID).'" target="_blank">';
+                         echo '<img src="'.get_field('logo', $partnerID)['url'].'" alt="Logo '.get_field('company_name', $partnerID).'"/>';
+                         echo '</a>';
+                         echo '</div>';
+                    }
                     echo '</div>';
                }
-               echo '</div>';
-          }
-          ?>
+               ?>
 
-          <?php
-          if($call_to_action){ 
-               echo '<a href="'.$call_to_action['url'].'" target="'.$call_to_action['target'].'" style="margin-top:40px;"><button>'.$call_to_action['title'].'</button></a>';
-          }
-          ?>
+               <?php
+               if($call_to_action){ 
+                    echo '<a href="'.$call_to_action['url'].'" target="'.$call_to_action['target'].'" style="margin-top:40px;"><button>'.$call_to_action['title'].'</button></a>';
+               }
+               ?>
+          </div>
      </div>
 </div>

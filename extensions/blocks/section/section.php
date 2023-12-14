@@ -6,7 +6,10 @@ if ( ! empty( $block['anchor'] ) ) {
     $anchor = 'id="' . esc_attr( $block['anchor'] ) . '" ';
 }
 
+$hide = get_field('hide_block') ? 'none' : 'block';
+
 // Load values and assign defaults.
+$align = get_field( 'align' ) ?: 'center';
 $columns = get_field( 'columns' ) ?: '2-1';
 $colstyle = [
      'left-width' => '61.8%',
@@ -71,19 +74,21 @@ if (!function_exists('sud_cast_component')) {
                     $componentHTML .= $component['content'];
                     $componentHTML .= '</div>';
                     break;
-               case 'button':
+               case 'button': 
+                    $btnIcon = $component['icon'] ? '<img class="component-button-icon" src="'. $component['icon'].'"/>' : ''; 
                     switch($component['type']){
                          case 'link':
                               $componentHTML .= '<a class="component-button" href="'.$component['buttonlink']['url'].'" target="'.$component['buttonlink']['target'].'">';
-                                   $componentHTML .= '<div class="'.$component['button_type'].'">'; 
-                                        $componentHTML .= $component['buttontext'];
+                                   $componentHTML .= '<div class="'.$component['button_type'].'">';  
+                                        $componentHTML .= $btnIcon;
+                                        $componentHTML .= '<p>'.$component['buttontext'].'</p>';
                                    $componentHTML .= '</div>';
                               $componentHTML .= '</a>';
                               break;
                          case 'lb': 
                               $targeting = 'lb-target-'.rand(100, 999);
                               $componentHTML .= '<div class="component-button">';
-                                   $componentHTML .= '<button class=" '.$component['button_type'].'" onclick="sudLightbox(\''.$targeting.'\')">'.$component['buttontext'].'</button>';
+                                   $componentHTML .= '<button class=" '.$component['button_type'].'" onclick="sudLightbox(\''.$targeting.'\')">'.$btnIcon.$component['buttontext'].'</button>';
                                    //CONTENT
                                    $componentHTML .= '<div class="lightbox-wrapper" lbtarget="'.$targeting.'">'; 
                                         $componentHTML .= '<div class="lightbox-close-layer" lbcloser="'.$targeting.'" ><img src="'. get_template_directory_uri() .'/assets/img/utils/close-cross.svg" alt=""></div>';
@@ -108,37 +113,37 @@ if (!function_exists('sud_cast_component')) {
      }
 }
 ?>
-
-<div <?php echo $anchor; ?>class="section-wrapper reveal" style="min-height:200px;">
-     <!--Design Elements-->
-     <div class="sud-bg-design">
-          <div class="sud-bg-element-half-circle-01 sud-element-animation" style="display:none; right:-35vw; top:-55vw; width:120vw; height:120vw; transform: rotate(180deg);"></div>
-     </div>
-
-     <div class="sud-element" sud-shape="semicircle" style=" bottom:-15%; right:-20%; width:100vw; height:100vw;"></div>
-     
-     <div class="section-container">
-          <div class="section-col section-col-l" style="width:<?php echo $colstyle['left-width']; ?>; ">
-               <?php
-               if($leftComponents) {
-                    foreach($leftComponents['components'] as $leftComponent){
-                         echo sud_cast_component($leftComponent, 'L');
-                    }
-               }
-               ?>
+<div style="display:<?php echo $hide; ?>;">
+     <div <?php echo $anchor; ?>class="section-wrapper reveal" style="min-height:200px;">
+          <!--Design Elements-->
+          <div class="sud-bg-design">
+               <div class="sud-bg-element-half-circle-01 sud-element-animation" style="display:none; right:-35vw; top:-55vw; width:120vw; height:120vw; transform: rotate(180deg);"></div>
           </div>
 
-          <div class="section-col section-col-r" style="width:<?php echo $colstyle['right-width']; ?>; ">
-               <?php
-               if($rightComponents) {
-                    foreach($rightComponents['components'] as $rightComponent){
-                         echo sud_cast_component($rightComponent, 'R');
+          <div class="sud-element" sud-shape="semicircle" style=" bottom:-15%; right:-20%; width:100vw; height:100vw;"></div>
+          
+          <div class="section-container" style="align-items:<?php echo $align; ?>">
+               <div class="section-col section-col-l" style="width:<?php echo $colstyle['left-width']; ?>; ">
+                    <?php
+                    if($leftComponents) {
+                         foreach($leftComponents['components'] as $leftComponent){
+                              echo sud_cast_component($leftComponent, 'L');
+                         }
                     }
-               }
-               ?>
-          </div>
-     </div>
-     
+                    ?>
+               </div>
 
+               <div class="section-col section-col-r" style="width:<?php echo $colstyle['right-width']; ?>; ">
+                    <?php
+                    if($rightComponents) {
+                         foreach($rightComponents['components'] as $rightComponent){
+                              echo sud_cast_component($rightComponent, 'R');
+                         }
+                    }
+                    ?>
+               </div>
+          </div>
+          
+     </div>
 </div>
 

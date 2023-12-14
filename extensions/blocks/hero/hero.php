@@ -5,6 +5,7 @@ $anchor = '';
 if ( ! empty( $block['anchor'] ) ) {
     $anchor = 'id="' . esc_attr( $block['anchor'] ) . '" ';
 }
+$hide = get_field('hide_block') ? 'none' : 'block';
  
 $type = get_field('type') ?: 'type1';
 
@@ -104,6 +105,7 @@ if (!function_exists('cast_hero_type_2')) {
 //-------------------------------------------
 //-----------------OUTPUT--------------------
 //-------------------------------------------
+echo '<div style="display: '.$hide.';">';
 switch ($type) {
     case 'type1':
         echo '<div ' .$anchor. ' class="hero-wrapper" style="min-height:200px;">';
@@ -121,4 +123,5 @@ switch ($type) {
         echo '</div>';
         break;
 }
+echo '</div>';
 ?>

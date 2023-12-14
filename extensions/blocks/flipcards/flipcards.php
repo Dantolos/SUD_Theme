@@ -5,6 +5,7 @@ $anchor = '';
 if ( ! empty( $block['anchor'] ) ) {
     $anchor = 'id="' . esc_attr( $block['anchor'] ) . '" ';
 }
+$hide = get_field('hide_block') ? 'none' : 'block';
 
 // Load values and assign defaults.
 $cards = get_field( 'cards' ) ?: null;
@@ -66,23 +67,23 @@ if (!function_exists('cast_flipcard_type_2')) {
 }
  
 ?>
-
-<div <?php echo $anchor; ?>class="flipcards-wrapper" style="min-height:200px;">
-     <h3 class="c-orange" style="width: 100%; text-align:center; margin-bottom:40px;"><?php echo $section_title; ?></h3>
-     <?php
-     if($cards) {
-          switch ($type) {
-               case 'type1':
-                    echo cast_flipcard_type_1($cards);
-                    break;
-               case 'type2':
-                    echo cast_flipcard_type_2($cards);
-                    break;
-               default:
-                    echo '<h4>please choose type</h4>';
-                    break;
-          } 
-     }
-     ?>
+<div style="display:<?php echo $hide; ?>;">
+     <div <?php echo $anchor; ?>class="flipcards-wrapper" style="min-height:200px; ">
+          <h3 class="c-orange" style="width: 100%; text-align:center; margin-bottom:40px;"><?php echo $section_title; ?></h3>
+          <?php
+          if($cards) {
+               switch ($type) {
+                    case 'type1':
+                         echo cast_flipcard_type_1($cards);
+                         break;
+                    case 'type2':
+                         echo cast_flipcard_type_2($cards);
+                         break;
+                    default:
+                         echo '<h4>please choose type</h4>';
+                         break;
+               } 
+          }
+          ?>
+     </div>
 </div>
-
