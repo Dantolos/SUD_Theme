@@ -1,9 +1,11 @@
 
 $blue: #1582BE; 
+//$blue: #0e95dd; 
 .bg-blue{ background-color: $blue; }
 .c-blue { color:$blue !important; }
 
 $blue-mid: #6EA9D8;
+//$blue-mid: #77bbf3;
 .bg-blue-mid{ background-color: $blue-mid; }
 .c-blue-mid { color:$blue-mid; }
 
@@ -15,7 +17,8 @@ $blue-ultra-light: #E3F0F9;
 .bg-blue-ultra-light{ background-color: $blue-ultra-light; }
 .c-blue-ultra-light { color:$blue-ultra-light; }
 
-$orange: #DF5F31;
+/*$orange: #DF5F31;*/
+$orange: #F95300;
 .bg-orange { background-color: $orange; }
 .c-orange { color:$orange; }
 

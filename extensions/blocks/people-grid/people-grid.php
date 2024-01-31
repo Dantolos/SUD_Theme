@@ -50,7 +50,12 @@ if($sort && $sort != 'custom'){
                     $personID = ( is_int($person) ) ? $person : $person->ID;
                     echo '<div class="people-grid-box">';
                          echo '<div class="people-grid-image"><img src="'.get_field('portrait', $personID)['url'].'" alt="'.get_field('name', $personID).'-'.get_field('surname', $personID).'"/></div>';
-                         echo '<h4 class="c-orange fxs">'.get_field('name', $personID).' '.get_field('surname', $personID).'</h4>';
+                         
+                         $person_title = '';
+                         if( get_field( 'settings' )['show_title'] && get_field( 'degree', $personID ) ){
+                              $person_title =  get_field( 'degree', $personID ) . ' ';
+                         }
+                         echo '<h4 class="c-orange fxs">'.$person_title.get_field('name', $personID).' '.get_field('surname', $personID).'</h4>';
                          echo '<p class="c-blue">';
                               if( get_field( 'settings' )['show_function'] && get_field( 'function', $personID ) ){
                                    echo get_field( 'function', $personID );
