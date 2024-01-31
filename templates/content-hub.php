@@ -33,7 +33,7 @@ echo '<div class="template-content-hub-section">';
                     echo '<button data-contenttype="podcast">Podcast</button>'; 
                echo '</div>';
 
-               echo '<form id="search-form" onsubmit="return handleSearch(event);" ">';
+               echo '<form id="search-form" onsubmit="return handleSearch(event);" >';
                     echo '<input type="search" name="search" id="search-input" onchange="handleSearch(event)"/>';
                     echo '<button type="submit" ><img src="'.get_template_directory_uri().'/assets/img/utils/search.svg" /></button>';
                echo '</form>';

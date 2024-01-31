@@ -120,9 +120,8 @@ const closeButton = document.querySelector('.burger-menu-closer');
 
 burgerMenu.addEventListener('click', ()=>{ 
      gsap.fromTo(mobileMenu.querySelectorAll('div,ul'), { duration: .1, stagger: .1,  y: -200 }, { y: 0 })
-     gsap.fromTo(mobileMenu, { duration: .05,  y: -400, x: 0, borderRadius: '0', scale: 1.4 }, { y: 0, x: 0, borderRadius: '0', scale: 1, opacity: 1  })
-     mobileMenu.classList.add("open"); 
-     
+     gsap.fromTo(mobileMenu, { duration: .05,  y: -400, x: 0, borderRadius: '0', scale: 1.4 }, { y: 0, x: 0, borderRadius: '0', scale: 1, opacity: 1 })
+     mobileMenu.classList.add("open");  
 })
 
 closeButton.addEventListener('click', ()=> {
@@ -142,7 +141,15 @@ const CONTENTHUB_TABS = document.querySelector('.template-content-hub-tab');
 
 
 const INITLOAD = async () => {
-     let firstTab = await document.querySelectorAll('.content-hub-tab-content')[0]
+ 
+     let firstTab = await document.querySelectorAll('.content-hub-tab-content')[0] 
+
+     const searchParams = new URLSearchParams(window.location.search);
+     if(searchParams.has('hub') ){
+          firstTab = await document.querySelector('.content-hub-tab-content[data-content="'+searchParams.get('hub')+'"]')
+          console.log(firstTab)
+     }
+
      firstTab.style.display = 'block'
      await firstTab.classList.add('active-tab-content')
      firstTab.dataset.page = 1 
