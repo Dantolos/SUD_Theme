@@ -1,0 +1,70 @@
+.flashback-teaser-wrapper {
+     display:flex;
+     justify-content: center;
+     align-items: center;
+     flex-wrap: wrap;
+}
+
+.flashback-teaser-container {
+     width: 100%;
+     padding: 80px;
+     max-width: 1600px;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     flex-direction: column;
+     align-items: center;
+}
+
+.flashback-teaser-boxes {
+     display: flex;
+     width: 100%;
+     align-items: center;
+     justify-content: center;
+     flex-wrap: wrap;
+     gap: 20px 5%;
+}
+.flashback-teaser-box {
+     width: 47.5%;
+     min-width: 400px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+     border-radius: 20px;
+    
+     position: relative;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     
+
+     color:white;
+     overflow: hidden;
+}
+
+.flashback-teaser-box-layer {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     background-color: black;
+     opacity: .2;
+     transition:all 200ms;
+}
+.flashback-teaser-box:hover .flashback-teaser-box-layer { 
+     opacity: 0;
+}
+
+.flashback-teaser-box a {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     z-index: 10;
+}
+.flashback-teaser-box a h4 {
+     transition:all 200ms;
+}
+.flashback-teaser-box a:hover h4 {
+     
+     transform: scale(1.1);
+}

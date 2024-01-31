@@ -13,6 +13,8 @@
      width: 100%;
      max-width: 1600px;
      display: flex;
+     flex-direction: column;
+     align-items: center;
      flex-wrap: wrap;
      justify-content: center; 
      z-index: 20; 
@@ -52,7 +54,14 @@
 .timeline-content {
      width: 500px;
      margin-bottom:40px;
+     
+}
+.timeline-content.timeline-slot-w-content {
      cursor: pointer;
+}
+.timeline-content.timeline-slot-w-content:hover {
+     cursor: pointer;
+     color: var(--ür);
 }
 
 .timeline-title {
@@ -71,6 +80,9 @@
     opacity: 0;
     height:0;
 }
+
+
+
 .timeline-item.active  .timeline-desc {
      opacity: 1;
      height:100px;

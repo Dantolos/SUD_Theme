@@ -15,7 +15,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
                     padding: { left: '2%', right: '2%' },
                }
           }
-     });
+     }); 
      splide.mount();
      const PhotoSlider = document.getElementById('photo-slide');
      PhotoSlider.querySelector('.splide__pagination').classList.add('photo_splide__pagination');

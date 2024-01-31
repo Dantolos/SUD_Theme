@@ -10,8 +10,7 @@ function sud_register_style() {
 add_action('wp_enqueue_scripts', 'sud_register_style');
 
 function sud_register_scripts() {
-
-    
+ 
 
      $theme_version = wp_get_theme()->get( 'Version' );
      // extern

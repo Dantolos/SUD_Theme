@@ -1,0 +1,16 @@
+{
+     "name": "acf/hub-teaser",
+     "title": "Hub Teaser",
+     "description": "Teaser for the knowledge hub.",
+     "style": [ "file:./hub-teaser.css" ],
+     "category": "Startup Days",
+     "icon": { "foreground": "#1582BE",  "src": "groups"},
+     "keywords": ["hub", "teaser", "sud"],
+     "acf": {
+         "mode": "preview",
+         "renderTemplate": "./hub-teaser.php"
+     },
+     "align": "full"
+}
+
+

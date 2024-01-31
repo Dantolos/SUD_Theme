@@ -27,19 +27,23 @@ $timeline_items = get_field('timeline_items') ?: false;
                     <?php 
                     if( $timeline_items ){
                          foreach ($timeline_items as $key => $tl_item) {
+
+                              //check for content
+                              $contentClass = $tl_item['content']['description'] ? 'timeline-slot-w-content' : ''; 
                               ?>
                               <div class="<?php echo $key % 2 == 0 ? 'timeline-item right' : 'timeline-item';?>">
                                    <div class="timeline-date">
                                         <span class="c-blue fxs"> <?php echo $tl_item['date']; ?></span>
                                    </div>
                                    <div class="timeline-line"><div class="timeline-point"></div></div>
-                                   <div class="timeline-content">
+                                   <div class="timeline-content <?php echo $contentClass; ?>">
                                         <div class="timeline-title">
                                              <h5 class="c-orange ">
                                                   <span><?php echo $tl_item['content']['title']; ?></span>
                                              </h5>
                                         </div>
-                                        <div class="timeline-desc" >
+                                        
+                                        <div class="timeline-desc <?php echo $contentClass; ?>" >
                                              <p class="c-blue"><?php echo str_replace( '<p>', '<p class="c-blue">', $tl_item['content']['description']); ?></p>
                                         </div>
                                    </div>

@@ -170,7 +170,7 @@ ul > li, ol > li {
 
 .btn-primary {
   font-family: 'Media Sans';
-  font-size: clamp(20px, 3vw, 30px);
+  font-size: clamp(22px, 5vw, 28px);
   padding: 20px;
   border-radius: 25px;
   border: none;
@@ -178,12 +178,14 @@ ul > li, ol > li {
   color: #ffffff; }
   .btn-primary:hover {
     cursor: pointer; }
+  .btn-primary p {
+    font-size: clamp(22px, 5vw, 28px); }
   .btn-primary:hover {
     background-color: #DF5F31; }
 
 .btn-secondary {
   font-family: 'Media Sans';
-  font-size: clamp(20px, 3vw, 30px);
+  font-size: clamp(22px, 5vw, 28px);
   padding: 20px;
   border-radius: 25px;
   border: none;
@@ -192,6 +194,8 @@ ul > li, ol > li {
   color: #1582BE; }
   .btn-secondary:hover {
     cursor: pointer; }
+  .btn-secondary p {
+    font-size: clamp(22px, 5vw, 28px); }
   .btn-secondary:hover {
     border-color: #DF5F31;
     background-color: #DF5F31;
@@ -221,7 +225,7 @@ ul > li, ol > li {
 
 button {
   font-family: 'Media Sans';
-  font-size: clamp(20px, 3vw, 30px);
+  font-size: clamp(22px, 5vw, 28px);
   padding: 20px;
   border-radius: 25px;
   border: none;
@@ -230,6 +234,8 @@ button {
   letter-spacing: 1px; }
   button:hover {
     cursor: pointer; }
+  button p {
+    font-size: clamp(22px, 5vw, 28px); }
   button:hover {
     background-color: #DF5F31; }
 

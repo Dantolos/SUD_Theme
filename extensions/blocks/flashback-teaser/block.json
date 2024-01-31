@@ -1,0 +1,15 @@
+{
+     "name": "acf/flashback-teaser",
+     "title": "Flashback Teaser",
+     "description": "Tease the Flashbacks.",
+     "style": [ "file:./flashback-teaser.css" ],
+     "script": "block-timeline",
+     "category": "Startup Days",
+     "icon": { "foreground": "#1582BE",  "src": "columns"},
+     "keywords": ["flashback-teaser","teaser","flashback", "journey", "line" ],
+     "acf": {
+         "mode": "preview",
+         "renderTemplate": "./flashback-teaser.php"
+     },
+     "align": "full"
+}

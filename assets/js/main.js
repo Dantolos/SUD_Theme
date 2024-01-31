@@ -149,7 +149,9 @@ const INITLOAD = async () => {
      let searchResult = await handleFetchAPI( firstTab.dataset.content )
      reloadData(firstTab, searchResult) 
 }
-INITLOAD()
+if( document.querySelectorAll('.content-hub-tab-content').length > 0 ){
+     INITLOAD()
+}
 
 if(CONTENTHUB_TABS){
      let CONTENTHUB_TAB_BUTTONS = CONTENTHUB_TABS.querySelectorAll('button');

@@ -28,9 +28,12 @@
 
 
 /* COMPONENTS */
+.component-spacer { 
+     width: 100%;
+}
 .component-title { 
      width: 100%;
-     padding: 0px 40% 20px 10%;
+     padding: 0px 40% 0px 10%;
 }
 
 .component-image, .component-video  {

@@ -17,6 +17,8 @@ function register_acf_blocks() {
     register_block_type( __DIR__ . '/container' );
     register_block_type( __DIR__ . '/video-gallery' );
     register_block_type( __DIR__ . '/timeline' );
+    register_block_type( __DIR__ . '/flashback-teaser' );
+    register_block_type( __DIR__ . '/hub-teaser' );
     //require_once( __DIR__ . '/hero/hero-block.acf.php' );
 }
 
@@ -34,7 +36,7 @@ function prefix_block_styles() {
 
      $prefix_custom_css = '
      .edit-post-visual-editor.editor-styles-wrapper { font-family:' . 
-     esc_html( $prefix_body_font ) . ' } 
+     esc_html( $prefix_body_font ) . ' }
 
      .editor-post-title__block .editor-post-title__input,
      .editor-styles-wrapper h1,
