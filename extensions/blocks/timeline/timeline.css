@@ -37,7 +37,6 @@
      border: #DF5F31  2px solid;  
      width: 0;
      position: relative;
-     
 }
 
 .timeline-point {
@@ -77,8 +76,8 @@
 }
 
 .timeline-desc  {
-    opacity: 0;
-    height:0;
+    opacity: 1;
+    height:auto;
 }
 
 
