@@ -1,7 +1,8 @@
 .sud-containerblock-wrapper {
      width: 100%;
      display: flex;
-     justify-content: left; 
+     justify-content: center; 
+
      flex-wrap: wrap;
      position: relative;
      overflow-x: hidden;
