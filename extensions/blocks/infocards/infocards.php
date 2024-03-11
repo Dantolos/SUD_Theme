@@ -13,7 +13,9 @@ $cards = get_field('infocard') ?: null;
 ?>
 <div style="display:<?php echo $hide; ?>;">
      <div <?php echo $anchor; ?>class="infocards-wrapper" style="min-height:200px; ">
+          <div <?php echo $anchor; ?>class="infocards-container" style="min-height:200px; ">
           <?php
+          if ($title) {echo '<h2 class="c-orange">'.$title.'</h2>';}
                if($cards){
                     foreach( $cards as $card ){
                          ?>
@@ -35,5 +37,6 @@ $cards = get_field('infocard') ?: null;
                }
           ?>
           
+          </div>
      </div>
 </div>
