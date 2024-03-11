@@ -83,7 +83,7 @@ if($sort && $sort != 'custom'){
                     echo '</div>';
                } 
                echo '</div>';
-          } 
+          }
           ?>
      </div>
 </div>
