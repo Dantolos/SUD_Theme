@@ -55,6 +55,9 @@
      &:hover {
           background-color: $orange;
      }
+     p {
+          margin : 0px;
+     }
 }
 .btn-primary { @include primaryButton(); }
 

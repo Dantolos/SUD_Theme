@@ -19,6 +19,7 @@ function register_acf_blocks() {
     register_block_type( __DIR__ . '/timeline' );
     register_block_type( __DIR__ . '/flashback-teaser' );
     register_block_type( __DIR__ . '/hub-teaser' );
+    register_block_type( __DIR__ . '/infocards' );
     //require_once( __DIR__ . '/hero/hero-block.acf.php' );
 }
 

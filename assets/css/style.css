@@ -183,6 +183,8 @@ ul > li, ol > li {
     font-size: clamp(22px, 5vw, 28px); }
   .btn-primary:hover {
     background-color: #F95300; }
+  .btn-primary p {
+    margin: 0px; }
 
 .btn-secondary {
   font-family: 'Media Sans';
@@ -239,6 +241,8 @@ button {
     font-size: clamp(22px, 5vw, 28px); }
   button:hover {
     background-color: #F95300; }
+  button p {
+    margin: 0px; }
 
 .sud-bg-design {
   width: 100%;

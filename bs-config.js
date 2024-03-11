@@ -1,5 +1,5 @@
 module.exports = {
-    proxy: 'http://sud.loacl/',
+    proxy: 'http://startupdays.local/',
     files: './assets/css/*.css', 
     injectChanges: true, 
 }

@@ -22,7 +22,6 @@
     "fastq": "^1.15.0",
     "fill-range": "^7.0.1",
     "fs.realpath": "^1.0.0",
-    "fsevents": "^2.3.3",
     "function-bind": "^1.1.1",
     "glob": "^7.1.6",
     "glob-parent": "^6.0.2",
@@ -86,7 +85,7 @@
   },
   "scripts": {
     "build:sass": "node-sass assets/scss/main.scss assets/css/style.css",
-    "watch:sass": "onchange 'assets/scss/**/*.scss' -- npm run build:sass",
+    "watch:sass": "npm run build:sass -- --watch",
     "start": "concurrently \"npm run watch:sass\" \"npm run browser-sync\"",
     "browser-sync": "browser-sync start --config bs-config.js"
   },

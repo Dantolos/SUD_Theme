@@ -1,0 +1,14 @@
+{
+     "name": "acf/infocards",
+     "title": "Infocards",
+     "description": "Present key-informations in Infocards.",
+     "style": [ "file:./infocards.css" ],
+     "category": "Startup Days",
+     "icon": { "foreground": "#1582BE",  "src": "columns"},
+     "keywords": ["infocards", "cards", "sud"],
+     "acf": {
+         "mode": "preview",
+         "renderTemplate": "./infocards.php"
+     },
+     "align": "full"
+ }
