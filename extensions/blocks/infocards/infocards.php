@@ -30,6 +30,10 @@ $cards = get_field('infocard') ?: null;
                               <h4 class="c-orange fs" ><?php if($card['cardtitle']){ echo $card['cardtitle']; } ?></h4>
                               <div class="infocard-content c-blue ">
                                    <?php if($card['cardtitle']){ echo $card['content']; }?>
+                                   <?php if($card['button']) { ?>
+
+                                        <a href="<?php echo $card['button']['url']; ?>" target="<?php echo $card['button']['target']; ?>" rel="noopener noreferrer"><div class="btn-primary"><?php echo $card['button']['title']; ?></div></a>
+                                   <?php } ?>
                               </div>
                          </div>
                          <?php
