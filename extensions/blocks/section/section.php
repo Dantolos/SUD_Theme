@@ -123,7 +123,13 @@ if (!function_exists('sud_cast_component')) {
                     $justifyContent = $component['justify_content'] ?: '';
                     $alignItems = $component['align_items'] ?: '';
                     //$btnIcon = $component["buttons"]['icon'] ? '<img class="component-button-icon" src="'. $component["buttons"]['icon'].'"/>' : ''; 
-                    $componentHTML .= '<div class="component-button-group" style="display:'.$flex.'; flex-wrap:'.$flexwrap.'; justify-content:'. $justifyContent.'; align-items:'.$alignItems .'; gap:'.$gap.'px;">';
+                    $paddingTop = $component['padding']['top'] ?: '0';
+                    $paddingRight = $component['padding']['right'] ?: '0';
+                    $paddingBottom = $component['padding']['bottom'] ?: '0';
+                    $paddingLeft = $component['padding']['left'] ?: '0';
+                    $padding = $paddingTop . " " . $paddingRight . ' ' . $paddingBottom . ' ' .$paddingLeft;
+                    
+                    $componentHTML .= '<div class="component-button-group" style="display:'.$flex.'; flex-wrap:'.$flexwrap.'; justify-content:'. $justifyContent.'; align-items:'.$alignItems .'; gap:'.$gap.'px; padding: '.$padding.'">';
                     foreach ($component['buttons'] as $button) {
                          
                          switch($button['type']){
