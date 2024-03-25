@@ -34,6 +34,14 @@ $speakers = get_field( 'speakers' ) ?: false;
                               echo '</div>';
                          }
                     }
+
+                    if(get_field('button')) {
+                         echo '<div class="speakerbutton-box">';
+                         echo '<a href="'.get_field('button')['url'].'" target="'.get_field('button')['target'].'">';
+                         echo '<button>'.get_field('button')['title'].'</button>';
+                         echo '</a>';
+                         echo '</div>';
+                    }
                     ?>
                </div>
           </div>

@@ -38,9 +38,6 @@
      max-height: 100%;
 }
 
-.infocard-container p {
-     color: var(--r);
-}
 
 .infocard-content {
      display: flex;

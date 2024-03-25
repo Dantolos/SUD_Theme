@@ -39,6 +39,8 @@
 .speakerbox-2 { grid-area: 3 / 2 / 5 / 3; }
 .speakerbox-3 { grid-area: 2 / 3 / 4 / 4; }
 
+.speakerbutton-box { grid-area: 4 / 3 }
+
 .speaker-teaser-speakerbox {
      background-color:#a68e8e;
      border-radius: 20;
@@ -71,6 +73,13 @@
      opacity: 1;
 }
 
+.speakerbutton-box { 
+     display: flex;
+     justify-content: flex-end;
+    align-items: flex-end;
+ }
+
+
 @media (max-width: 900px) {
      .speaker-teaser-grid {
           display: flex;
@@ -81,4 +90,7 @@
      .speaker-teaser-content, .speaker-teaser-speakerbox {
           grid-area: unset;
      }
+
+     .speakerbutton-box { position: absolute;
+          bottom: 20px; }
 }
