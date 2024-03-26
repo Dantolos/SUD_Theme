@@ -35,15 +35,17 @@ $speakers = get_field( 'speakers' ) ?: false;
                          }
                     }
 
-                    if(get_field('button')) {
-                         echo '<div class="speakerbutton-box">';
-                         echo '<a href="'.get_field('button')['url'].'" target="'.get_field('button')['target'].'">';
-                         echo '<button>'.get_field('button')['title'].'</button>';
-                         echo '</a>';
-                         echo '</div>';
-                    }
+                    
                     ?>
                </div>
+
+               <?php if(get_field('button')) {
+                    echo '<div class="speakerbutton-box">';
+                    echo '<a href="'.get_field('button')['url'].'" target="'.get_field('button')['target'].'">';
+                    echo '<button>'.get_field('button')['title'].'</button>';
+                    echo '</a>';
+                    echo '</div>';
+               } ?>
           </div>
      </div>
 </div>
