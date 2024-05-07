@@ -10,5 +10,6 @@
          "mode": "preview",
          "renderTemplate": "./flipcards.php"
      },
-     "align": "full"
+     "align": "full",
+     "supports": {"anchor": true}
  }

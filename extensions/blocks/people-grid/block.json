@@ -10,5 +10,6 @@
          "mode": "preview",
          "renderTemplate": "./people-grid.php"
      },
-     "align": "full"
+     "align": "full",
+     "supports": {"anchor": true}
 }

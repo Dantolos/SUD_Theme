@@ -10,7 +10,8 @@
          "mode": "preview",
          "renderTemplate": "./hub-teaser.php"
      },
-     "align": "full"
+     "align": "full",
+     "supports": {"anchor": true}
 }
 
 

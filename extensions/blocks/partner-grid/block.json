@@ -1,14 +1,15 @@
 {
-     "name": "acf/partner-grid",
-     "title": "Partner Grid",
-     "description": "Section to publish partners in a grid layout.",
-     "style": [ "file:./partner-grid.css" ],
-     "category": "Startup Days",
-     "icon": { "foreground": "#1582BE",  "src": "admin-links"},
-     "keywords": ["partner", "grid", "sponsors", "sud"],
-     "acf": {
-         "mode": "preview",
-         "renderTemplate": "./partner-grid.php"
-     },
-     "align": "full"
+    "name": "acf/partner-grid",
+    "title": "Partner Grid",
+    "description": "Section TTT to publish partners in a grid layout.",
+    "style": [ "file:./partner-grid.css" ],
+    "category": "Startup Days",
+    "icon": { "foreground": "#1582BE",  "src": "admin-links"},
+    "keywords": ["partner", "grid", "sponsors", "sud"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "./partner-grid.php"
+    },
+    "align": "full",
+    "supports": {"anchor": true} 
 }

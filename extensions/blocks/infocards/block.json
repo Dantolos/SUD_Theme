@@ -10,5 +10,6 @@
          "mode": "preview",
          "renderTemplate": "./infocards.php"
      },
-     "align": "full"
+     "align": "full",
+     "supports": {"anchor": true}
  }

@@ -11,5 +11,6 @@
          "mode": "preview",
          "renderTemplate": "./pricing.php"
      },
-     "align": "full"
+     "align": "full",
+     "supports": {"anchor": true}
 }

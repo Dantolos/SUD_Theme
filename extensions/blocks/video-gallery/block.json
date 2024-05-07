@@ -11,5 +11,6 @@
          "mode": "preview",
          "renderTemplate": "./video-gallery.php"
      },
-     "align": "full"
+     "align": "full",
+     "supports": {"anchor": true}
 }

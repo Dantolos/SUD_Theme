@@ -10,5 +10,6 @@
          "mode": "preview",
          "renderTemplate": "./speaker-teaser.php"
      },
-     "align": "full" 
+     "align": "full",
+     "supports": {"anchor": true}
 }
