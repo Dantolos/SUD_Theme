@@ -9,8 +9,8 @@
 }
 
 .flipcard-container { 
-     perspective: 1000px;
-     margin-bottom: 20px;
+     perspective: 1000px; 
+     margin-bottom: 20px; 
 }
  
 .flipcard-inner-container {
@@ -45,6 +45,15 @@
      -webkit-background-size: cover;
      background-repeat: no-repeat !important;
      background-position: center center !important; 
+}
+
+.flipcard-flag {
+     font-family: 'Media Sans';
+     padding: 10px 20px;
+     border-radius: 15px 4px 4px 15px;
+     position: absolute;
+     right: -8px;
+     top: 20px;
 }
 
 .flipcard-front h5 {

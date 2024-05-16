@@ -13,7 +13,6 @@ $type = get_field('type') ?: 'type1';
 $section_title = get_field( 'section_title' ) ?: '';
 
 
-
 //---------------------- Gross ------------------------
 if (!function_exists('cast_flipcard_type_1')) {
      function cast_flipcard_type_1($cards){
@@ -25,6 +24,7 @@ if (!function_exists('cast_flipcard_type_1')) {
                     echo '<div class="flipcard-inner-container flipcard-inner-container-t1">';
                          // front
                          echo '<div class="flipcard-front flipcard-front-t1 primatyBox" style="background-image: url('.$card['image'].');">';
+                              
                               //echo '<img src="'.$card['image'].'" alt="image-'.$card['title'].'"/>';
                               echo '<h5 class="c-orange">'.$card['title'].'</h5>';
                          echo '</div>';
@@ -43,6 +43,10 @@ if (!function_exists('cast_flipcard_type_1')) {
 //---------------------- Klein ------------------------
 if (!function_exists('cast_flipcard_type_2')) {
      function cast_flipcard_type_2($cards){ 
+
+          $flag_color = get_field('flagcolor') ? 'background-color:'.get_field('flagcolor').';' : '';
+          $flag_text_color = get_field('flagtextcolor') ? 'color:'.get_field('flagtextcolor').';' : '';
+
           foreach ($cards as &$card) {
                $flipclass = $card['title_content'] || $card['content'] ? 'flipcard-inner-container' : '';
                $link = $card['link'] ?: '';
@@ -51,6 +55,9 @@ if (!function_exists('cast_flipcard_type_2')) {
                echo '<div class="'.$flipclass.' flipcard-inner-container-t2">';
                     // front
                     echo '<div class="flipcard-front flipcard-front-t2 primatyBox">';
+                         if($card['flagtext']){
+                              echo '<div class="flipcard-flag" style="'.$flag_color.$flag_text_color.'">'.$card['flagtext'].'</div>';
+                         }
                          echo '<img src="'.$card['image'].'" alt="image-'.$card['title'].'"/>';
                          echo '<h5 class="c-orange">'.$card['title'].'</h5>';
                     echo '</div>';
