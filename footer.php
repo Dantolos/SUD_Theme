@@ -51,7 +51,7 @@
                          echo '<img src="'.get_template_directory_uri().'/assets/img/utils/sm/'.$sm['icon'].'-neg.svg" alt="icon-'.$sm['icon'].'">';
                          echo '</a>';
                     }
-                    echo '</ul>';
+                    echo '</div>';
                }
                ?>
           </div>
