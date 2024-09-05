@@ -529,7 +529,8 @@ video::-webkit-media-controls-timeline-container {
       transform: scale(1.2); }
 
 body {
-  margin-top: 140px; }
+  margin-top: 140px;
+  background-color: #f8f8f8; }
   @media (max-width: 996px) {
     body {
       margin-top: 100px; } }
@@ -548,12 +549,15 @@ body {
       height: 100px; } }
 
 .header-logo {
-  display: flex;
-  max-height: 100%; }
+  display: block;
+  height: 100%;
+  width: auto; }
   .header-logo:hover {
     cursor: pointer; }
   .header-logo img {
-    max-height: 100%; }
+    max-height: 100%;
+    object-fit: contain;
+    width: auto; }
     @media (max-width: 996px) {
       .header-logo img {
         height: 60px; } }

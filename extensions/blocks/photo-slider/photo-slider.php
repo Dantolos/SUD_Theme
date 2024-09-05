@@ -23,7 +23,7 @@ $photos = get_field( 'photos' ) ?: null;
           <div class="sud-element" sud-shape="semicircle" style=" bottom:-15%; right:-60%; width:100vw; height:100vw;"></div>
 
           <?php if($photos){ ?>
-               <div id="photo-slide" class="splide">
+               <div id="photo-slide" class="splide"> 
                     <div class="splide__track" style="overflow:visible;">
                          <ul class="splide__list" style="overflow-y:visible;">
                               <?php

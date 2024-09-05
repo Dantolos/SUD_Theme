@@ -7,7 +7,7 @@ if ( ! empty( $block['anchor'] ) ) {
 }
 $hide = get_field('hide_block') ? 'none' : 'block';
 
-
+ 
 
 ?>
 
@@ -22,12 +22,18 @@ $hide = get_field('hide_block') ? 'none' : 'block';
                <div class="hub-teaser-columns">
                     <div class="hub-teaser-row">
                          <a href="<?php echo get_field('podcast')['link']; ?>"> 
-                              <img src="<?php echo get_field('podcast')['image']; ?>" alt="podcast">
+                              <div class="hub-teaser-button">
+                                   <div class="hub-teaser-button-hover"><h3><?php echo __('Podcast') ?></h3></div>
+                                   <img src="<?php echo get_template_directory_uri().'/assets/img/utils/icon_podcast.svg'; ?>" alt="podcast">
+                              </div>
                          </a>
                     </div>
                     <div class="hub-teaser-row">
                          <a href="<?php echo get_field('video')['link']; ?>"> 
-                              <img src="<?php echo get_field('video')['image']; ?>" alt="video">
+                              <div class="hub-teaser-button">
+                                   <div class="hub-teaser-button-hover"><h3><?php echo __('Video') ?></h3></div>
+                                   <img src="<?php echo get_template_directory_uri().'/assets/img/utils/icon_video.svg'; ?>" alt="video">
+                              </div>
                          </a>
                     </div>
                </div>

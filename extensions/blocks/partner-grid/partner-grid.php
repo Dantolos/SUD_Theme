@@ -1,7 +1,7 @@
 <?php
 
 // Support custom "anchor" values.
-$anchor = '';
+$anchor = ''; 
 if ( ! empty( $block['anchor'] ) ) {
     $anchor = 'id="' . esc_attr( $block['anchor'] ) . '" ';
 }
@@ -29,12 +29,10 @@ foreach ($partner_categories as $key => $partner_category) {
           ),
      );
      $the_query = new WP_Query( $args );
-     array_push($partners, $the_query->posts);
-     //var_dump($the_query);
+     array_push($partners, $the_query->posts); 
 }
 
 
-// The query
 
 ?>
 <div style="display:<?php echo $hide; ?>;">

@@ -31,7 +31,7 @@ if (!function_exists('cast_flipcard_type_1')) {
                          // back
                          echo '<div class="flipcard-back primatyBox">';
                               echo '<h5 class="c-orange">'.$card['title_content'].'</h5>';
-                              echo '<p class="c-blue fxxs">'.$card['content'].'</p>';
+                              echo '<p class="c-blue fxs">'.$card['content'].'</p>';
                          echo '</div>';
                     echo '</div>';
                     echo '</div>'; 

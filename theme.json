@@ -1,0 +1,83 @@
+{
+	"version": 2,
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"name": "Blue",
+					"slug": "blue",
+					"color": "#1582BE"
+				},
+				{
+					"name": "Orange",
+					"slug": "orange",
+					"color": "#DF5F31"
+				},
+				{
+					"name": "Black",
+					"slug": "black",
+					"color": "#454034"
+				},
+				{
+					"name": "Blue Mid",
+					"slug": "blue-mid",
+					"color": "#6EA9D8"
+				},
+				{
+					"name": "Blue Light",
+					"slug": "blue-light",
+					"color": "#A1CCEB"
+				}
+			],
+			"background": "white",
+			"text": "black"
+		},
+		"typography": {
+			"fontSizes": [
+				{
+					"name": "Small",
+					"slug": "small",
+					"size": "12px"
+				},
+				{
+					"name": "Medium",
+					"slug": "medium",
+					"size": "16px"
+				},
+				{
+					"name": "Large",
+					"slug": "large",
+					"size": "32px"
+				},
+				{
+					"name": "Extra Large",
+					"slug": "extra-large",
+					"size": "48px"
+				}
+			],
+			"lineHeight": {
+				"default": "1.6",
+				"normal": "1.5",
+				"relaxed": "1.75"
+			}
+		},
+		"spacing": {
+			"units": ["px", "em", "rem", "%"],
+			"blockGap": "1.5rem"
+		},
+		"layout": {
+			"contentSize": "800px",
+			"wideSize": "1200px"
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "#ffffff",
+			"text": "#000000"
+		},
+		"typography": {
+			"fontSize": "16px",
+			"lineHeight": "1.6"
+		}
+	}
+}

@@ -80,7 +80,7 @@ function mytheme_setup_theme_supported_features() {
            'slug' => 'blue',
            'color' => '#1582BE',
        ),
-       array(
+       array( 
           'name' => esc_attr__( 'orange', 'SUD_Theme' ),
           'slug' => 'orange',
           'color' => '#DF5F31',
