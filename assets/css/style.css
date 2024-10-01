@@ -549,7 +549,7 @@ body {
       height: 100px; } }
 
 .header-logo {
-  display: block;
+  display: flex;
   height: 100%;
   width: auto; }
   .header-logo:hover {
