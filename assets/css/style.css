@@ -293,19 +293,38 @@ button {
 form label {
   font-size: clamp(16px, 2vw, 22px); }
 
-form input[type=text],
-form input[type=email] {
+form input[type="text"],
+form input[type="tel"],
+form input[type="email"] {
   font-size: clamp(16px, 2vw, 22px);
-  font-family: 'GT Alpina';
+  font-family: "GT Alpina";
   padding: 20px;
   border-radius: 20px; }
-  form input[type=text]:focus,
-  form input[type=email]:focus {
+  form input[type="text"]:focus,
+  form input[type="tel"]:focus,
+  form input[type="email"]:focus {
     background-color: #E3F0F9; }
 
-form input[type=checkbox] {
+form input[type="checkbox"] {
   border-radius: 50%;
   margin: 0; }
+
+form .mauticform-button {
+  font-family: 'Media Sans';
+  font-size: clamp(22px, 5vw, 28px);
+  padding: 20px;
+  border-radius: 25px;
+  border: none;
+  background-color: #1582BE;
+  color: #ffffff; }
+  form .mauticform-button:hover {
+    cursor: pointer; }
+  form .mauticform-button p {
+    font-size: clamp(22px, 5vw, 28px); }
+  form .mauticform-button:hover {
+    background-color: #F95300; }
+  form .mauticform-button p {
+    margin: 0px; }
 
 /* Firefox */
 * {
