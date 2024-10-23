@@ -1121,9 +1121,9 @@ body {
   .mauticform_wrapper .mauticform-helpmessage {
     font-size: 16px !important; }
   .mauticform_wrapper .mauticform-button {
-    border: none;
-    background-color: #1582be;
-    color: #ffffff;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-size: 1.2rem; }
+    border: none !important;
+    background-color: #1582be !important;
+    color: #ffffff !important;
+    padding: 10px 20px !important;
+    border-radius: 20px !important;
+    font-size: 1.2rem !important; }
