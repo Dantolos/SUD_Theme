@@ -1127,3 +1127,6 @@ body {
     padding: 10px 20px !important;
     border-radius: 20px !important;
     font-size: 1.2rem !important; }
+  .mauticform_wrapper .mauticform-errormsg {
+    color: red !important;
+    font-size: 1rem !important; }
