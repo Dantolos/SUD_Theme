@@ -1,17 +1,30 @@
 .mauticform_wrapper {
-     margin: 0 !important;
-     max-width: none !important;
+	margin: 0 !important;
+	max-width: none !important;
 
-     h3.mauticform-label  {
-          font-size : $fl;
-     }
+	h3.mauticform-label {
+		font-size: $fl;
+	}
 
-     p, span { font-size: $fxs !important; color:$black !important;}
-     a { color: $orange !important; }
-     
-     .mauticform-helpmessage {
-          font-size: 16px !important;
-     }
+	p,
+	span {
+		font-size: $fxs !important;
+		color: $black !important;
+	}
+	a {
+		color: $orange !important;
+	}
+
+	.mauticform-helpmessage {
+		font-size: 16px !important;
+	}
+
+	.mauticform-button {
+		border: none;
+		background-color: #1582be;
+		color: #ffffff;
+		padding: 10px 20px;
+		border-radius: 20px;
+		font-size: 1.2rem;
+	}
 }
-
- 

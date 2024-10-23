@@ -1112,10 +1112,18 @@ body {
   max-width: none !important; }
   .mauticform_wrapper h3.mauticform-label {
     font-size: clamp(35px, 7vw, 50px); }
-  .mauticform_wrapper p, .mauticform_wrapper span {
+  .mauticform_wrapper p,
+  .mauticform_wrapper span {
     font-size: clamp(16px, 2vw, 22px) !important;
     color: #454034 !important; }
   .mauticform_wrapper a {
     color: #F95300 !important; }
   .mauticform_wrapper .mauticform-helpmessage {
     font-size: 16px !important; }
+  .mauticform_wrapper .mauticform-button {
+    border: none;
+    background-color: #1582be;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1.2rem; }
