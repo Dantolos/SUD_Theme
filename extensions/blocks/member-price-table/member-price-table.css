@@ -1,0 +1,61 @@
+.member-price-table-wrapper {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	position: relative;
+	padding: 80px 0;
+	overflow-x: clip;
+	overflow-y: visible;
+}
+
+.member-price-table-container {
+	width: 100%;
+	max-width: 1200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	overflow-y: visible;
+	box-shadow: 5px 5px 21px 0px rgba(69, 64, 52, 0.3);
+	margin: 0 2%;
+	border-radius: 20px;
+	padding: 25px 5%;
+	position: relative;
+}
+
+.ember-price-table-benefits {
+}
+.member-benefit {
+	border-top: 1px solid #1582be;
+	display: flex;
+	align-items: center;
+	gap: 25px;
+	padding: 15px 0;
+}
+.member-benefit img {
+	width: 40px;
+}
+.member-benefit p {
+	margin: 0;
+	line-height: 1.2em;
+}
+
+.member-price-pricetag {
+	width: 100%;
+	border-top: 2px solid #f95300;
+	display: flex;
+	justify-content: space-between;
+}
+
+.member-price-pricetag-price p {
+	margin-top: -10px;
+}
+
+.member-price-signup-button {
+	position: absolute;
+	bottom: -55px;
+}
+.member-price-signup-button button {
+	padding: 35px 40px;
+}

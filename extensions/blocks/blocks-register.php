@@ -20,6 +20,7 @@ function register_acf_blocks() {
     register_block_type( __DIR__ . '/flashback-teaser' );
     register_block_type( __DIR__ . '/hub-teaser' );
     register_block_type( __DIR__ . '/infocards' );
+    register_block_type( __DIR__ . '/member-price-table' );
     //require_once( __DIR__ . '/hero/hero-block.acf.php' );
 }
 

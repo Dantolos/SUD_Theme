@@ -21,6 +21,11 @@
 	width: 100%;
 }
 
+.partner-grid-container > p {
+	text-align: center;
+	width: 90%;
+}
+
 .partner-grid-partner-cat {
 	width: 100%;
 	display: flex;
@@ -52,4 +57,18 @@
 .partner-grid-box img {
 	max-width: 100%;
 	max-height: 100%;
+}
+
+.partner-grid-box-name_only {
+	width: calc(25% - 10px);
+	min-width: 300px;
+
+	position: relative;
+	background-color: #1582be;
+
+	margin: 15px;
+	box-shadow: 5px 5px 21px 0px rgba(69, 64, 52, 0.3);
+	border-radius: 20px;
+	color: white;
+	padding: 20px;
 }

@@ -1,0 +1,15 @@
+{
+	"name": "acf/member-price-table",
+	"title": "Member Price Table",
+	"description": "Show upcoming events.",
+	"style": ["file:./member-price-table.css"],
+	"category": "Startup Days",
+	"icon": { "foreground": "#1582BE", "src": "money-alt" },
+	"keywords": ["price", "table", "member", "sud"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "./member-price-table.php"
+	},
+	"align": "full",
+	"supports": { "anchor": true }
+}

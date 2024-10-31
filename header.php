@@ -51,8 +51,7 @@
                               echo '</a>';
                               echo '</li>';
                               break;
-                    }
-                  
+                    } 
                }
                echo '</ul>';
           }

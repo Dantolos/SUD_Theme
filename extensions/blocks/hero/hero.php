@@ -94,6 +94,9 @@ if (!function_exists('cast_hero_type_2')) {
             $hero_type_2 .= '<div class="hero-col hero-col-right">';
                 $hero_type_2 .= '<h2 class="c-orange fl">'.$data['title'].'</h2>';
                 $hero_type_2 .= '<p class="c-blue">'.$data['text'].'</p>';
+                if($data['button']){ 
+                    $hero_type_2 .= '<a href="' . $data['button']['link']['url'] . '"><button class="">' . $data['button']['buttontext'] . '</button></a>';
+                } 
             $hero_type_2 .= '</div>';
         $hero_type_2 .= '</div>';
 
