@@ -22,6 +22,11 @@
 	color: $white;
 }
 
+
+html {
+  scroll-behavior: smooth !important;
+}
+
 body {
 	cursor: url("../img/utils/cursor.svg"), auto !important;
 }

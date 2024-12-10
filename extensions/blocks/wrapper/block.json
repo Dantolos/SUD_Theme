@@ -1,0 +1,16 @@
+{
+  "name": "acf/wrapper",
+  "title": "Wrapper",
+  "description": "Wrapper for SUD-Background-Elements",
+  "style": ["file:./wrapper.css"],
+  "script": "block-wrapper",
+  "category": "Startup Days",
+  "icon": { "foreground": "#1582BE", "src": "layout" },
+  "keywords": ["wrapper", "zähler", "sud"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "./wrapper.php"
+  },
+  "align": "full",
+  "supports": { "anchor": true }
+}

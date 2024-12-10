@@ -297,16 +297,21 @@ button {
 form label {
   font-size: clamp(16px, 2vw, 22px); }
 
+form .mauticform-radiogrp-label, form .mauticform-checkboxgrp-label {
+  font-size: clamp(12px, 1.2vw, 18px); }
+
 form input[type="text"],
 form input[type="tel"],
-form input[type="email"] {
+form input[type="email"],
+form textarea {
   font-size: clamp(16px, 2vw, 22px);
   font-family: "GT Alpina";
   padding: 20px;
   border-radius: 20px; }
   form input[type="text"]:focus,
   form input[type="tel"]:focus,
-  form input[type="email"]:focus {
+  form input[type="email"]:focus,
+  form textarea:focus {
     background-color: #E3F0F9; }
 
 form input[type="checkbox"] {
@@ -774,6 +779,9 @@ body {
 ::selection {
   background: #F95300;
   color: #ffffff; }
+
+html {
+  scroll-behavior: smooth !important; }
 
 body {
   cursor: url("../img/utils/cursor.svg"), auto !important; }

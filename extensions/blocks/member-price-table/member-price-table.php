@@ -32,7 +32,7 @@ $price_description = get_field('price_informations') ?: null;
 
      <div <?php echo esc_attr($anchor); ?>class="member-price-table-wrapper" style="min-height:50px;">
           <div class="member-price-table-container">
-               <h3 class="c-orange"><?php echo esc_html($title); ?></h3>
+               <h1 class="c-orange fm"><?php echo esc_html($title); ?></h1>
                <p class="c-blue"><?php echo wp_kses_data($content); ?></p>
                <?php if($benefits){
                     echo '<div class="member-price-table-benefits">';
@@ -56,7 +56,7 @@ $price_description = get_field('price_informations') ?: null;
                </div>
                <?php if($signup_button){
                     echo '<div class="member-price-signup-button">';
-                    echo '<a href="'. esc_url($signup_button['url']). ' target="'.esc_attr($signup_button['target']).'">';
+                    echo '<a href="'. esc_url($signup_button['url']). '" target="'.esc_attr($signup_button['target']).'">';
                     echo '<button>'.esc_html($signup_button['title']).'</button>';
                     echo '</a>';
                } ?>

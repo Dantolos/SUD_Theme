@@ -1,0 +1,16 @@
+.sud__wrapper {
+  width: 100vw;
+  min-height: 500px;
+  background-color: #f1f1f1;
+}
+.sud__wrapper-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.sud__bg_elemement_01 {
+  background-color: #fff500;
+  widht: 100px;
+  height: 50px;
+  border-radius: 50px 50px 0 0;
+}

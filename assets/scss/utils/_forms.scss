@@ -2,10 +2,15 @@ form {
 	label {
 		font-size: $fxs;
 	}
+	.mauticform-radiogrp-label, .mauticform-checkboxgrp-label {
+		font-size: $fxxs;
+	}
 
 	input[type="text"],
 	input[type="tel"],
-	input[type="email"] {
+	input[type="email"],
+	textarea
+	 {
 		font-size: $fxs;
 		font-family: "GT Alpina";
 		padding: 20px;
