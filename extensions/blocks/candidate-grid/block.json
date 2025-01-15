@@ -1,0 +1,16 @@
+{
+  "name": "acf/candidate-grid",
+  "title": "Candidate Grid",
+  "description": "Canditate Grid for SUD Newcomers",
+  "style": ["file:./candidate-grid.css"],
+  "script": "block-candidate-grid",
+  "category": "Startup Days",
+  "icon": { "foreground": "#1582BE", "src": "layout" },
+  "keywords": ["candidate", "newscomer", "grid", "award", "sud"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "./candidate-grid.php"
+  },
+  "align": "full",
+  "supports": { "anchor": true }
+}

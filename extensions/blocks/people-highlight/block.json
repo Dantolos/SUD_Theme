@@ -1,0 +1,16 @@
+{
+  "name": "acf/people-highlight",
+  "title": "People Highlight",
+  "description": "Display single person from 'People'-posttype prominent.",
+  "style": ["file:./people-highlight.css"],
+  "script": "block-people-highlight",
+  "category": "Startup Days",
+  "icon": { "foreground": "#1582BE", "src": "id" },
+  "keywords": ["person", "people", "portrait", "highlight", "sud"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "./people-highlight.php"
+  },
+  "align": "full",
+  "supports": { "anchor": true }
+}

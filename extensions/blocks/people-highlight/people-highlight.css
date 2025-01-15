@@ -1,0 +1,95 @@
+.sud__people_highlight_wrapper {
+    width: 100%;
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.sud__people_highlight_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1600px;
+}
+
+.sud__people_highlight_title_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sud__people_highlight_title_section > p {
+    max-width: 600px;
+    text-align: center;
+}
+
+.sud__people_highlight_person_container {
+    display: flex;
+    align-self: center;
+    position: relative;
+    padding: 20px;
+}
+
+.sud__people_highlight_person_portrait {
+    width: 300px;
+    height: 380px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 25px;
+    margin-right: -50px;
+    margin-top: -50px;
+
+    z-index: 5;
+}
+
+.sud__people_highlight_person_content {
+    width: 600px;
+
+    padding: 40px 20px 40px 80px;
+    background-color: white;
+    box-shadow: 5px 5px 21px 0px rgba(69, 64, 52, 0.3);
+    border-radius: 25px;
+}
+
+.sud__people_highlight_person_content > h4 {
+    line-height: 1.2em;
+}
+
+/* LIGHTBOX */
+.sud__people_highlight_lightbox_lightbox_container {
+    background-color: #dcedf7 !important;
+}
+
+@media only screen and (max-width: 992px) {
+    .sud__people_highlight_lightbox_lightbox_container {
+        padding: 40px !important;
+    }
+    .sud__people_highlight_title_section {
+        max-width: 90%;
+    }
+
+    .sud__people_highlight_person_container {
+        flex-direction: column;
+        max-width: 100%;
+    }
+    .sud__people_highlight_person_content {
+        padding: 80px 20px 40px 20px;
+        max-width: 100%;
+    }
+
+    .sud__people_highlight_person_portrait {
+        width: 300px;
+        height: 300px;
+        margin: 0 0px -60px 20px;
+    }
+}

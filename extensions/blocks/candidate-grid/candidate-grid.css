@@ -1,0 +1,188 @@
+.candidat-grid-wrapper {
+    width: 100%;
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.candidat-grid-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1600px;
+}
+
+.sud__canditate_box {
+    max-width: 300px;
+    width: 30%;
+    height: 200px;
+    background-color: white;
+    padding: 10px;
+    margin: 5px;
+    box-shadow: 5px 5px 21px 0px rgba(69, 64, 52, 0.3);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all ease 200ms;
+}
+
+.sud__canditate_box:hover > img {
+    transform: scale(1.05);
+}
+
+.sud__canditate_box > img {
+    max-height: 85%;
+    max-width: 80%;
+    widht: auto;
+    height: auto;
+    transition: inherit;
+}
+
+.sud__canditate_catch_of_jury {
+    position: absolute;
+    background-color: rgb(249, 83, 0);
+    width: 30px;
+    height: 50px;
+    top: -4px;
+    right: 20px;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 80%, 0% 100%, 0% 0%);
+    border-radius: 3px 3px 10px 10px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.sud__canditate_catch_of_jury > img {
+    max-width: 80%;
+    max-height: 60%;
+    width: auto;
+    height: auto;
+    margin-top: 5px;
+}
+
+.sud__canditate_catch_of_jury_lb {
+    right: 40px;
+    width: 50px;
+    height: 80px;
+}
+.sud__canditate_catch_of_jury_lb > img {
+    margin-top: 10px;
+}
+
+.sud__canditate_innosuisse {
+    position: absolute;
+    display: flex;
+    justify-content: c;
+    align-items: center;
+    width: auto;
+    height: 40px;
+    bottom: -20px;
+    right: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px 0px rgba(69, 64, 52, 0.4);
+
+    z-index: 2;
+    transition: inherit;
+    overflow: hidden;
+}
+
+.sud__canditate_innosuisse > img {
+    transition: inherit;
+    max-width: 70%;
+    max-height: 70%;
+    height: auto;
+    width: 25px;
+    margin: 8px 5px 8px 8px;
+}
+
+.sud__canditate_innosuisse > p {
+    transition: inherit;
+    line-height: 1em;
+    font-size: 14px;
+    width: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    opacity: 0;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.sud__canditate_box:hover > .sud__canditate_innosuisse {
+    transform: scale(1);
+}
+
+.sud__canditate_box:hover > .sud__canditate_innosuisse > p {
+    opacity: 1;
+    width: 150px;
+}
+.sud__canditate_box:hover > .sud__canditate_innosuisse > img {
+    opacity: 1;
+}
+
+/*LIGHTBOX*/
+.sud__candidate_lightbox_container {
+    display: flex;
+    align-items: flex-start;
+    gap: 5%;
+    width: 95vw;
+}
+
+.sud__candidate_lightbox_logo {
+    width: 25%;
+    background-color: white;
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sud__candidate_lightbox_logo > img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.sud__candidate_lightbox_content {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sud__candidate_lightbox_content > h2 {
+    color: white;
+}
+
+@media only screen and (max-width: 992px) {
+    .sud__canditate_box {
+        width: 45%;
+    }
+    .sud__candidate_lightbox_container {
+        display: flex;
+        flex-direction: column;
+        padding: 5% !important;
+        overflow-y: scroll !important;
+    }
+    .sud__candidate_lightbox_content {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 664px) {
+    .sud__canditate_box {
+        width: 95%;
+    }
+}

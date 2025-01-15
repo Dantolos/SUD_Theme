@@ -1,163 +1,229 @@
 .hero-wrapper {
-     position: relative;
-     height: calc(100vh - 180px);
-     overflow: hidden;
+    position: relative;
+    height: calc(100vh - 180px);
+    overflow: hidden;
 }
-.hero-background { width: 100%; height:100%;}
+.hero-background {
+    width: 100%;
+    height: 100%;
+}
 .hero-background img {
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .hero-background > video {
-     min-height:100%;
-     min-width:100%;
+    min-height: 100%;
+    min-width: 100%;
 }
 
 .hero-content-container {
-     position: absolute;
-     top:0;
-     right: 0;
-     width: 50%;
-     height: 100%;
-     display: flex;
-     flex-direction: column;
-     flex-wrap: wrap;
-     align-items: flex-start;
-     justify-content: end;
-     padding: 5% 5% 50px 5%;
-     gap: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: end;
+    padding: 5% 5% 50px 5%;
+    gap: 20px;
 }
 
-.hero-bg-element{
-     position: absolute;
-     bottom: 0;
-     right: 0;
-     background-color: rgba(255, 255, 255, 0.7);
-     
-     width: 65vw;
-     height: 65vw;
-     border-top-left-radius: 100%;
+.hero-bg-element {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+
+    width: 65vw;
+    height: 65vw;
+    border-top-left-radius: 100%;
 }
 
-h1, h3 { z-index: 5; }
+h1,
+h3 {
+    z-index: 5;
+}
 
 .hero-cta {
-     z-index: 4;
-     position: absolute;
-     left: -100px;
-     top:50%;
-     height:255px;
-     width: 255px;
-     border-radius: 50%;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     transform: rotate(-10deg);
-     padding:2%;
+    z-index: 4;
+    position: absolute;
+    left: -100px;
+    top: 50%;
+    height: 255px;
+    width: 255px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-10deg);
+    padding: 2%;
+}
+
+/*---- NEW VERSION 2025 ----*/
+.sud__hero_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+.sud__hero_container {
+    max-width: 1600px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+.sud__hero_video {
+    width: 70vw;
+    border-radius: 25px;
+    overflow: hidden;
+}
+.sud__hero_video > #hero_video {
+    width: 100%;
+}
+.sud__hero_video > img {
+    display: none;
+}
+
+.sud__hero_text {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.sud__hero_text > h1 {
+    max-width: 800px;
+    line-height: 1em;
+    font-size: 4em;
 }
 @media only screen and (max-width: 992px) {
-     .hero-wrapper {
-          height: calc(100vh - 100px);
-     }
- 
-     .hero-bg-element{
-          width: 100vw;
-          height: 100vw;
-     }
+    .hero-wrapper {
+        height: calc(100vh - 100px);
+    }
 
-     .hero-content-container {
-          width:80%;
-          padding: 3%;
-     }
+    .hero-bg-element {
+        width: 100vw;
+        height: 100vw;
+    }
 
-     .hero-cta {
-          top:10vh;
-          left: 20%;
-          
-     }
+    .hero-content-container {
+        width: 80%;
+        padding: 3%;
+    }
+
+    .hero-cta {
+        top: 10vh;
+        left: 20%;
+    }
 }
 
 @media only screen and (max-width: 600px) {
-     
-     .hero-bg-element{
-          width: 120vw;
-          height: 120vw;
-     }
+    .hero-bg-element {
+        width: 120vw;
+        height: 120vw;
+    }
 
-     .hero-content-container {
-          width:90%;
-          padding: 0 1.5% 40px ;
-     }
+    .hero-content-container {
+        width: 90%;
+        padding: 0 1.5% 40px;
+    }
 
-     .hero-cta {
-          width: 180px;
-          height:180px;
-          top: -20px;
-     }
+    .hero-cta {
+        width: 180px;
+        height: 180px;
+        top: -20px;
+    }
 
-     .hero-content-container > h1 { font-size: 30px !important; }
-     .hero-content-container > h3 { font-size: 26px !important; }
-
+    .hero-content-container > h1 {
+        font-size: 30px !important;
+    }
+    .hero-content-container > h3 {
+        font-size: 26px !important;
+    }
 }
 
 @media only screen and (max-width: 380px) {
-     .hero-cta {
-         
-          visibility: hidden;
-     }
+    .hero-cta {
+        visibility: hidden;
+    }
 }
 
 /* TYPE 2 */
 .hero-wrapper-t2 {
-     height:auto;
-     min-height: 60vh;
+    height: auto;
+    min-height: 60vh;
 }
 .hero-t2-container {
-     display: flex;
-     flex-direction: row;
-     align-items: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .hero-col {
-     width: 50%;
-     position: relative;
+    width: 50%;
+    position: relative;
 }
- 
+
 .hero-t2-bg-element {
-     position: absolute;
-     width: 100%;
-     height: 100%;
-     top:0; left:0;
-     border-radius: 0 0 100% 0;
-     z-index: -5;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 0 0 100% 0;
+    z-index: -5;
 }
-
-
 
 .hero-col-left {
-     padding: 5%;
+    padding: 5%;
 }
 
 .hero-col-right {
-     padding: 0 5% 0 0;
+    padding: 0 5% 0 0;
 }
 .hero-t2-media {
-     overflow: hidden;
-     z-index: 5;
-     height: 50vh;
-     border-radius: 30px;
-     overflow: hidden;
-     display: flex;
-     justify-content: center;
+    overflow: hidden;
+    z-index: 5;
+    height: 50vh;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
 }
-.hero-t2-media > video { height: 100%; }
+.hero-t2-media > video {
+    height: 100%;
+}
 
-.hero-t2-media > img { object-fit: cover;  width: 100%; height: 100%; }
+.hero-t2-media > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
 
 @media only screen and (max-width: 900px) {
-     .hero-t2-container { flex-wrap: wrap; }
-     .hero-col-left { width: 100%; padding: 5%; }
-     .hero-col-right { width: 100%; padding: 5%; }
+    .hero-t2-container {
+        flex-wrap: wrap;
+    }
+    .hero-col-left {
+        width: 100%;
+        padding: 5%;
+    }
+    .hero-col-right {
+        width: 100%;
+        padding: 5%;
+    }
+}
+
+.sud__background_element {
+    z-index: 0;
+    position: fixed;
+    top: 50px;
+    right: -20vw;
+    width: 100vw;
 }

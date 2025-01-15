@@ -1,17 +1,19 @@
 <?php
 
 // Support custom "anchor" values.
-$anchor = '';
-if ( ! empty( $block['anchor'] ) ) {
-    $anchor = 'id="' . esc_attr( $block['anchor'] ) . '" ';
+$anchor = "";
+if (!empty($block["anchor"])) {
+    $anchor = 'id="' . esc_attr($block["anchor"]) . '" ';
 }
-$hide = get_field('hide_block') ? 'none' : 'block';
+$hide = get_field("hide_block") ? "none" : "block";
+$hide_on_mobile = get_field("hide_on_mobile") ? "sud__hide_on_mobile" : "";
 
 // Load values and assign defaults.
-$photos = get_field( 'photos' ) ?: null;
+$photos = get_field("photos") ?: null;
 ?>
 
-<div style="display:<?php echo $hide; ?>;">
+
+<div class="<?php echo $hide_on_mobile; ?>" style="display:<?php echo $hide; ?>">
      <div <?php echo $anchor; ?>class="photo-slide-wrapper" >
           <!--Design Elements-->
           <div class="sud-bg-design" style="display: none;">
@@ -22,22 +24,24 @@ $photos = get_field( 'photos' ) ?: null;
           <div class="sud-element" sud-shape="polycon-01" style=" width:150vw; height:150vh;  top: 0; bottom:0; left:0;"></div>
           <div class="sud-element" sud-shape="semicircle" style=" bottom:-15%; right:-60%; width:100vw; height:100vw;"></div>
 
-          <?php if($photos){ ?>
-               <div id="photo-slide" class="splide"> 
+          <?php if ($photos) { ?>
+               <div id="photo-slide" class="splide">
                     <div class="splide__track" style="overflow:visible;">
                          <ul class="splide__list" style="overflow-y:visible;">
-                              <?php
-                              foreach($photos as $key => $photo){
-                                   $alt = $photo['alt'] ?: $photo['name'].$key;
-                                   echo '<li class="splide__slide photo-slide-li-element">';
-                                   echo '<div class="photo-slide-box " >';
-                                        echo '<div class="photo-slide-image sud-shadow">';
-                                        echo '<img src="'.$photo['url'].'" alt="'.$alt.'" />';
-                                        echo '</div>';
-                                   echo '</div>';
-                                   echo '</li>';
-                              }
-                              ?>
+                              <?php foreach ($photos as $key => $photo) {
+                                  $alt = $photo["alt"] ?: $photo["name"] . $key;
+                                  echo '<li class="splide__slide photo-slide-li-element">';
+                                  echo '<div class="photo-slide-box " >';
+                                  echo '<div class="photo-slide-image sud-shadow">';
+                                  echo '<img src="' .
+                                      $photo["url"] .
+                                      '" alt="' .
+                                      $alt .
+                                      '" />';
+                                  echo "</div>";
+                                  echo "</div>";
+                                  echo "</li>";
+                              } ?>
                          </ul>
                     </div>
                </div>

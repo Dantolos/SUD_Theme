@@ -6,6 +6,7 @@ if (!empty($block["anchor"])) {
     $anchor = 'id="' . esc_attr($block["anchor"]) . '" ';
 }
 $hide = get_field("hide_block") ? "none" : "block";
+$hide_on_mobile = get_field("hide_on_mobile") ? "sud__hide_on_mobile" : "";
 
 // Load values and assign defaults.
 $section_title = get_field("section_title") ?: "";
@@ -16,8 +17,9 @@ $tickets = get_field("tickets") ?: null;
 $button = get_field("button") ?: null;
 ?>
 
-<div style="display:<?php echo $hide; ?>;">
-     <div <?php echo $anchor; ?>class="pricing-wrapper" style="min-height:200px;">
+
+<div class="<?php echo $hide_on_mobile; ?>" style="display:<?php echo $hide; ?>">
+    <div <?php echo $anchor; ?>class="pricing-wrapper" style="min-height:200px;">
 
           <div class="pricing-container">
 
