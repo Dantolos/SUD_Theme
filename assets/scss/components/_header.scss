@@ -1,74 +1,75 @@
-$headerHeight: 140px;
+$headerHeight: 120px;
 
 body {
-	margin-top: $headerHeight;
-	background-color: #f8f8f8;
-	@include breakpoint("m") {
-		$headerHeight: 100px;
-		margin-top: $headerHeight;
-	}
+    margin-top: $headerHeight;
+    background-color: #f8f8f8;
+    @include breakpoint("m") {
+        $headerHeight: 100px;
+        margin-top: $headerHeight;
+    }
 }
 
 .header-wrapper {
-	z-index: 5000;
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: $headerHeight;
-	width: 100vw;
-	padding: 20px 30px;
-	background-color: $white;
+    z-index: 5000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: $headerHeight;
+    width: 100vw;
+    padding: 25px 30px;
+    background-color: $white;
+    @include shadow();
 
-	@include breakpoint("m") {
-		$headerHeight: 100px;
-		height: $headerHeight;
-	}
+    @include breakpoint("m") {
+        $headerHeight: 100px;
+        height: $headerHeight;
+    }
 }
 
 .header-logo {
-	display: flex;
-	height: 100%;
-	width: auto;
-	&:hover {
-		cursor: pointer;
-	}
+    display: flex;
+    height: 100%;
+    width: auto;
+    &:hover {
+        cursor: pointer;
+    }
 
-	img {
-		max-height: 100%;
-		object-fit: contain;
-		width: auto;
-		@include breakpoint("m") {
-			height: 60px;
-		}
-	}
+    img {
+        max-height: 100%;
+        object-fit: contain;
+        width: auto;
+        @include breakpoint("m") {
+            height: 60px;
+        }
+    }
 }
 
 //META MENU
 .header-meta-menu {
-	position: absolute;
-	right: 30px;
-	top: 0px !important;
+    position: absolute;
+    right: 30px;
+    top: 0px !important;
 
-	@include breakpoint("m") {
-		display: none;
-	}
+    @include breakpoint("m") {
+        display: none;
+    }
 
-	ul {
-		display: flex;
-		list-style: none outside none !important;
-		color: $blue;
-		font-weight: bold;
-		li {
-			padding: 10px 10px 0 10px;
-			border-left: 2px solid $blue;
-			&:last-of-type {
-				border-right: 2px solid $blue;
-			}
-			&:hover {
-				background-color: $blue;
-				color: $white;
-				cursor: pointer;
-			}
-		}
-	}
+    ul {
+        display: flex;
+        list-style: none outside none !important;
+        color: $blue;
+        li {
+            padding: 5px 10px 0 10px;
+            border-left: 2px solid $blue;
+            font-size: 1.1em;
+            &:last-of-type {
+                border-right: 2px solid $blue;
+            }
+            &:hover {
+                background-color: $blue;
+                color: $white;
+                cursor: pointer;
+            }
+        }
+    }
 }

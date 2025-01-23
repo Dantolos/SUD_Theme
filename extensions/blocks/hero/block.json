@@ -1,16 +1,16 @@
 {
-     "name": "acf/hero",
-     "title": "Hero",
-     "description": "Show upcoming events.",
-     "style": [ "file:./hero.css" ],
-     "script": "block-hero",
-     "category": "Startup Days",
-     "icon": { "foreground": "#1582BE",  "src": "align-full-width"},
-     "keywords": ["hero", "header", "sud"],
-     "acf": {
-         "mode": "preview",
-         "renderTemplate": "./hero.php"
-     },
-     "align": "full",
-     "supports": {"anchor": true}
- }
+  "name": "acf/hero",
+  "title": "Hero",
+  "description": "Show upcoming events.",
+  "style": ["file:./hero.css"],
+  "script": "block-hero",
+  "category": "Startup Days",
+  "icon": { "foreground": "#1582BE", "src": "align-full-width" },
+  "keywords": ["hero", "header", "sud"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "./hero.php"
+  },
+  "align": "full",
+  "supports": { "anchor": true }
+}

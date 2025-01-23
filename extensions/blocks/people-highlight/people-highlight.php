@@ -12,7 +12,11 @@ $personID = get_field("person") ?: null;
 ?>
 
 <div class="<?php echo $hide_on_mobile; ?>" style="display:<?php echo $hide; ?>">
-    <div <?php echo $anchor; ?> class="sud__people_highlight_wrapper" style="min-height:200px;">
+    <div <?php echo str_replace(
+        '"',
+        "",
+        $anchor
+    ); ?> class="sud__people_highlight_wrapper" style="min-height:200px;">
         <?php
         echo '<div class="sud__people_highlight_container">';
         echo '<div class="sud__people_highlight_title_section">';
