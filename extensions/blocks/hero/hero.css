@@ -269,6 +269,7 @@ h3 {
 @media only screen and (max-width: 900px) {
     .sud__hero_type_4 {
         flex-direction: column;
+        height: auto;
     }
     .sud__hero_type_4 .sud__hero_video {
         position: relative;
@@ -276,5 +277,8 @@ h3 {
         height: 47.5vw;
         max-height: none;
         min-height: 47.5vw;
+    }
+    .sud__hero_type_4 .sud__hero_text {
+        width: auto;
     }
 }

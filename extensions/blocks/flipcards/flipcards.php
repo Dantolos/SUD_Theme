@@ -13,6 +13,9 @@ $cards = get_field("cards") ?: null;
 $type = get_field("type") ?: "type1";
 $section_title = get_field("section_title") ?: "";
 
+//slider funktion
+$slider = get_field("slider") ? "" : "";
+
 //---------------------- Gross ------------------------
 if (!function_exists("cast_flipcard_type_1")) {
     function cast_flipcard_type_1($cards)

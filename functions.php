@@ -132,6 +132,14 @@ function sud_register_block_script()
         $theme_version,
         true
     );
+    wp_register_script(
+        "block-flipcards",
+        get_template_directory_uri() .
+            "/extensions/blocks/flipcards/flipcards.js",
+        ["jquery"],
+        $theme_version,
+        true
+    );
 }
 
 /*-------------------------------------------------------------*/
