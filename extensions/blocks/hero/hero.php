@@ -253,7 +253,9 @@ if (!function_exists("cast_hero_type_4")) {
         $hero_type_4 = "";
 
         //Background
+
         $hero_video = '<div class="sud__hero_video">';
+
         if ($data["video"]["videofiles"]["webm"]) {
             $hero_video .=
                 '<video id="hero_video" poster="' .
@@ -296,7 +298,20 @@ if (!function_exists("cast_hero_type_4")) {
         }
         $hero_type_4 .= "</div>";
 
-        $hero_type_4 .= $hero_video;
+        if ($data["image"] && !$data["video"]["videofiles"]["webm"]) {
+            $hero_type_4 .= '<div class="sud__hero_image">';
+            $hero_type_4 .=
+                '<img src="' .
+                $data["image"] .
+                '" alt="hero-image-' .
+                $data["title"] .
+                '">';
+            $hero_type_4 .= "</div>";
+        }
+
+        if ($data["video"]["videofiles"]["webm"]) {
+            $hero_type_4 .= $hero_video;
+        }
 
         $hero_type_4 .= "</div>";
 

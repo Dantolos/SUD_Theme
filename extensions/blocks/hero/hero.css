@@ -250,7 +250,8 @@ h3 {
     max-width: none;
     padding: 0 0 0 50px;
 }
-.sud__hero_type_4 .sud__hero_video {
+.sud__hero_type_4 .sud__hero_video,
+.sud__hero_type_4 .sud__hero_image {
     position: absolute;
     width: 60vw;
     right: -20px;
@@ -266,19 +267,39 @@ h3 {
     max-height: 100%;
 }
 
+.sud__hero_type_4 .sud__hero_image {
+    overflow: hidden;
+    border-radius: 25px;
+}
+.sud__hero_type_4 .sud__hero_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @media only screen and (max-width: 900px) {
     .sud__hero_type_4 {
         flex-direction: column;
         height: auto;
+        gap: 40px;
+        margin-top: 20px;
     }
-    .sud__hero_type_4 .sud__hero_video {
+    .sud__hero_type_4 .sud__hero_video,
+    .sud__hero_type_4 .sud__hero_image {
         position: relative;
         width: 90vw;
         height: 47.5vw;
-        max-height: none;
+        max-height: 220px;
         min-height: 47.5vw;
+        right: 0;
+        min-width: 100%;
+        height: 100%;
     }
     .sud__hero_type_4 .sud__hero_text {
         width: auto;
+        padding: 0;
     }
 }
