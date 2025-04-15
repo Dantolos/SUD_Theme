@@ -252,19 +252,23 @@ h3 {
 }
 .sud__hero_type_4 .sud__hero_video,
 .sud__hero_type_4 .sud__hero_image {
-    position: absolute;
-    width: 60vw;
-    right: -20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     height: 100%;
-    max-height: 100%;
-    max-width: 800px;
+    overflow: hidden;
+    position: relative;
 }
 
 .sud__hero_type_4 .sud__hero_video video {
-    width: auto !important;
     min-width: 100%;
-    height: 100%;
-    max-height: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .sud__hero_type_4 .sud__hero_image {
