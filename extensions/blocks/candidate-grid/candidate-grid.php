@@ -8,6 +8,9 @@ if (!empty($block["anchor"])) {
 $hide = get_field("hide_block") ? "none" : "block";
 $hide_on_mobile = get_field("hide_on_mobile") ? "sud__hide_on_mobile" : "";
 
+$filterCotJ = get_field("catch_of_the_jury") ?: false;
+$filterInnosuisse = get_field("innosuisse") ?: false;
+
 $args = [
     "post_type" => "candidate", // the post type
     "posts_per_page" => "-1",
@@ -15,6 +18,18 @@ $args = [
     "orderby" => "meta_value",
     "order" => "ASC",
 ];
+
+$year = get_field("year") ?: false;
+if ($year) {
+    $args["tax_query"] = [
+        [
+            "taxonomy" => "years",
+            "terms" => is_array($year) ? $year : [$year], // accepts array or single ID
+            "field" => "term_id",
+        ],
+    ];
+}
+
 $canditates = new WP_Query($args);
 
 // Nur catch of the Jury filter
@@ -26,6 +41,20 @@ $canditates = new WP_Query($args);
             <?php if (count($canditates->posts) > 0) {
                 foreach ($canditates->posts as $canditate) {
                     $candidateID = $canditate->ID;
+                    if (
+                        $filterCotJ &&
+                        !get_field("catch_of_the_jury", $candidateID)
+                    ) {
+                        continue;
+                    }
+
+                    if (
+                        $filterInnosuisse &&
+                        !get_field("innosuisse", $candidateID)
+                    ) {
+                        continue;
+                    }
+
                     echo '<div class="sud__canditate_box" data-candidate="' .
                         $candidateID .
                         '">';
