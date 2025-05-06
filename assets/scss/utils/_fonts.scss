@@ -1,63 +1,77 @@
-/* _fonts.scss */
+@use "../utils/variables";
 
 @font-face {
-     font-family: 'Media Sans';
-     src: url('../fonts/mediasansweb-bold.woff2') format('woff2'),
-          url('../fonts/mediasansweb-bold.woff') format('woff');
-     /* Add more src lines for different formats if needed */
-     font-weight: normal;
-     font-style: normal;
-}
-
-@font-face {
-     font-family: 'GT Alpina';
-     src: url('../fonts/GT-Alpina-Standard-Regular.woff2') format('woff2'),
-          url('../fonts/GT-Alpina-Standard-Regular.woff') format('woff');
-     /* Add more src lines for different formats if needed */
-     font-weight: normal;
-     font-style: normal;
+    font-family: "Media Sans";
+    src:
+        url("../fonts/mediasansweb-bold.woff2") format("woff2"),
+        url("../fonts/mediasansweb-bold.woff") format("woff");
+    /* Add more src lines for different formats if needed */
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-     font-family: 'GT Alpina';
-     src: url('../fonts/GT-Alpina-Standard-Bold.woff2') format('woff2'),
-          url('../fonts/GT-Alpina-Standard-Bold.woff') format('woff');
-     /* Add more src lines for different formats if needed */
-     font-weight: bold;
-     font-style: normal;
+    font-family: "GT Alpina";
+    src:
+        url("../fonts/GT-Alpina-Standard-Regular.woff2") format("woff2"),
+        url("../fonts/GT-Alpina-Standard-Regular.woff") format("woff");
+    /* Add more src lines for different formats if needed */
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-     font-family: 'GT Alpina';
-     src: url('../fonts/GT-Alpina-Standard-Regular-Italic.woff2') format('woff2'),
-          url('../fonts/GT-Alpina-Standard-Regular-Italic.woff') format('woff');
-     /* Add more src lines for different formats if needed */
-     font-weight: normal;
-     font-style: italic;
+    font-family: "GT Alpina";
+    src:
+        url("../fonts/GT-Alpina-Standard-Bold.woff2") format("woff2"),
+        url("../fonts/GT-Alpina-Standard-Bold.woff") format("woff");
+    /* Add more src lines for different formats if needed */
+    font-weight: bold;
+    font-style: normal;
 }
 
 @font-face {
-     font-family: 'GT Alpina';
-     src: url('../fonts/GT-Alpina-Standard-Bold-Italic.woff2') format('woff2'),
-          url('../fonts/GT-Alpina-Standard-Bold-Italic.woff') format('woff');
-     /* Add more src lines for different formats if needed */
-     font-weight: bold;
-     font-style: italic;
+    font-family: "GT Alpina";
+    src:
+        url("../fonts/GT-Alpina-Standard-Regular-Italic.woff2") format("woff2"),
+        url("../fonts/GT-Alpina-Standard-Regular-Italic.woff") format("woff");
+    /* Add more src lines for different formats if needed */
+    font-weight: normal;
+    font-style: italic;
 }
 
-:root{
-     font-family: 'GT Alpina';
-     color:$black;
+@font-face {
+    font-family: "GT Alpina";
+    src:
+        url("../fonts/GT-Alpina-Standard-Bold-Italic.woff2") format("woff2"),
+        url("../fonts/GT-Alpina-Standard-Bold-Italic.woff") format("woff");
+    /* Add more src lines for different formats if needed */
+    font-weight: bold;
+    font-style: italic;
 }
 
-h1, h2, h3, h4, h5, h6 {
-     font-family:  'Media Sans';
-     margin: 0;
-     letter-spacing: 1px;
+:root {
+    font-family: "GT Alpina";
+    color: variables.$black;
 }
 
-.gtalpina { font-family: 'GT Alpina'; }
-.mediosans { font-family:  'Media Sans'; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Media Sans";
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.gtalpina {
+    font-family: "GT Alpina";
+}
+.mediosans {
+    font-family: "Media Sans";
+}
 
 //Font Size Definition
 $fxxl: clamp(55px, 10vw, 80px);
@@ -68,23 +82,56 @@ $fs: clamp(24px, 5vw, 28px);
 $fxs: clamp(16px, 2vw, 22px);
 $fxxs: clamp(12px, 1.2vw, 18px);
 
-h1, .fxxl { font-size: $fxxl;  }
+h1,
+.fxxl {
+    font-size: $fxxl;
+}
 
-h2, .fxl { font-size: $fxl; }
+h2,
+.fxl {
+    font-size: $fxl;
+}
 
-h3, .fl { font-size: $fl; }
+h3,
+.fl {
+    font-size: $fl;
+}
 
-h4, .fm { font-size: $fm; }
+h4,
+.fm {
+    font-size: $fm;
+}
 
-h5, .fs { font-size: $fs; }
+h5,
+.fs {
+    font-size: $fs;
+}
 
-h6, .fxs { font-size: $fxs; }
+h6,
+.fxs {
+    font-size: $fxs;
+}
 
-p, blockquote, ul>li, ol>li { font-size: $fxs; }
+p,
+blockquote,
+ul > li,
+ol > li {
+    font-size: $fxs;
+    //color: variables.$blue-dark;
+}
 
-a { &:hover {cursor: pointer;} }
+a {
+    &:hover {
+        cursor: pointer;
+    }
+}
 
-.fxxs { font-size: $fxxs !important; line-height: 1.4; }
+.fxxs {
+    font-size: $fxxs !important;
+    line-height: 1.4;
+}
 
-ul>li, ol>li { margin-bottom: 10px;  }
-
+ul > li,
+ol > li {
+    margin-bottom: 10px;
+}

@@ -1,0 +1,24 @@
+.editor-visual-editor__post-title-wrapper {
+    margin: 1em 0 !important;
+}
+
+.wp-block-post-title {
+    font-size: 2.5em !important;
+    line-height: 1.2em !important;
+    margin: 0 !important;
+}
+
+.editor-sidebar__panel-tabs span {
+    font-size: 0.6em !important;
+}
+
+.editor-styles-wrapper {
+    padding: 0 10px;
+    background-color: #f6f6f6;
+}
+
+.block-editor-block-list__layout {
+    padding: 10px 1px;
+    background-color: white;
+    border-radius: 5px;
+}

@@ -1,168 +1,249 @@
-.template-partner-wrapper{
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     padding: 60px 20px;
-     .template-partner-container{
-          max-width: 800px;
+@use "../utils/variables";
+@use "../utils/elements";
+@use "../utils/responsive";
 
-          h1, h2, h3, h4, h5, h6 {
-               color: $orange;
-          }
-          p, li, span, ul, ol {
-               color: $blue;
-          }
-     }
+.template-partner-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    .template-partner-container {
+        max-width: 800px;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: variables.$orange;
+        }
+        p,
+        li,
+        span,
+        ul,
+        ol {
+            color: variables.$blue;
+        }
+    }
 }
 
-
 .sud-partner-container {
-     display: flex;
-     flex-wrap: wrap;
-     justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
-     h5 { width: 100%; margin-bottom: 40px; }
-     .partner-logo-grid {
-          margin: 20px 0 80px 0;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: flex-start;
-          align-content: flex-start;
+    h5 {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .partner-logo-grid {
+        margin: 20px 0 80px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: flex-start;
 
-          a, .partner-logo-box { 
-               min-height: 200px;
-          }
+        a,
+        .partner-logo-box {
+            min-height: 200px;
+        }
 
-          .partner-logo-box {
-               position: relative; 
-               display: flex;
-               justify-content: center;
-               align-items: center;
-               padding: 15px 10px;
-               
-               overflow: hidden;
-               @include primaryBox;
+        .partner-logo-box {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 10px;
 
-               transition: all ease 200ms;
+            overflow: hidden;
+            @include elements.primaryBox;
 
+            transition: all ease 200ms;
 
-               img {
-                    transition: all ease 200ms;
-                    max-width: 95%;
-                    max-height: 95%;
-               }
+            img {
+                transition: all ease 200ms;
+                max-width: 95%;
+                max-height: 95%;
+            }
 
-               .partner-box-overlay {
-                    z-index: 10;
-                    position: absolute;
-                    width: 100%;
-                    height:100%;
-                    transition: all ease 200ms;
-                    opacity: 0;
-                    background: linear-gradient(-360deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 46%);
+            .partner-box-overlay {
+                z-index: 10;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                transition: all ease 200ms;
+                opacity: 0;
+                background: linear-gradient(
+                    -360deg,
+                    rgba(255, 255, 255, 1) 0%,
+                    rgba(255, 255, 255, 0) 46%
+                );
+            }
 
-               }
+            .partner-link-arrow {
+                z-index: 12;
+                position: absolute;
+                margin: auto;
+                top: 0;
+                bottom: 0;
 
-               .partner-link-arrow {
-                    z-index: 12;
-                    position: absolute;
-                    margin: auto;
-                    top: 0;
-                    bottom:0;
-                    
-                    opacity: 0;
-                    border-radius: 50%;
-                    height:50px;
-                    width: 50px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center; 
-                    transition: all ease 400ms;
-               }
+                opacity: 0;
+                border-radius: 50%;
+                height: 50px;
+                width: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all ease 400ms;
+            }
 
-               &:hover {
-                    cursor: pointer;
-                    transform: scale(.98);
-                    
-                    background-color: #E3F0F940;
+            &:hover {
+                cursor: pointer;
+                transform: scale(0.98);
+
+                background-color: #e3f0f940;
+                img {
+                    transform: scale(1.05);
+                }
+
+                .partner-box-overlay {
+                    background: linear-gradient(
+                        280deg,
+                        rgba(255, 255, 255, 1) 30%,
+                        rgba(255, 255, 255, 0) 90%
+                    );
+                    opacity: 0.8;
+                }
+                .partner-link-arrow {
+                    background-color: variables.$blue;
+                    opacity: 1;
+                    right: 0;
+                    left: 0;
+                    transform: scale(1.35);
+
                     img {
-                         transform: scale(1.05);
+                        filter: brightness(10);
                     }
+                }
+            }
+        }
+    }
 
-                    .partner-box-overlay {
-                         background: linear-gradient(280deg, rgba(255,255,255,1) 30%, rgba(255,255,255,0) 90%);
-                         opacity: .8;
-                    }
-                    .partner-link-arrow {
-                         background-color: $blue;
-                         opacity: 1;
-                         right:0; left:0;
-                         transform: scale(1.35);
-                         
-                         img { filter:brightness(10); }
-                    }
-               }
-          }         
-     }
+    /* PRIO 1 */
+    .partner-prio-1 {
+        a,
+        .partner-logo-a-placer {
+            width: 49%;
+            margin: 0.5%;
+            min-height: 200px;
+            @include responsive.breakpoint("xs") {
+                width: 100%;
+                margin: 0;
+            }
+        }
+    }
 
-     /* PRIO 1 */
-     .partner-prio-1 {
-          a, .partner-logo-a-placer { 
-               width: 49%; margin:.5%; min-height: 200px; 
-               @include breakpoint('xs'){ width: 100%; margin:0; }
-          }
-     }
+    /* PRIO 2 */
+    .partner-prio-2 {
+        a,
+        .partner-logo-a-placer {
+            width: 32%;
+            margin: 0.5%;
+            min-height: 180px;
+            @include responsive.breakpoint("s") {
+                width: 49%;
+                margin: 0.5%;
+                min-height: 200px;
+            }
+            @include responsive.breakpoint("xxs") {
+                width: 100%;
+                margin: 0;
+            }
+        }
+    }
 
-     /* PRIO 2 */
-     .partner-prio-2 {
-          a, .partner-logo-a-placer { 
-               width: 32%; margin:.5%; min-height: 180px; 
-               @include breakpoint('s'){ width: 49%; margin:.5%; min-height: 200px; }
-               @include breakpoint('xxs'){ width: 100%; margin:0; }
-          }
-     }
+    /* PRIO 3 */
+    .partner-prio-3 {
+        a,
+        .partner-logo-a-placer {
+            width: 24%;
+            margin: 0.5%;
+            min-height: 130px;
+            @include responsive.breakpoint("s") {
+                width: 32%;
+                margin: 0.5%;
+                min-height: 180px;
+            }
+            @include responsive.breakpoint("xs") {
+                width: 49%;
+                margin: 0.5%;
+                min-height: 180px;
+            }
+            @include responsive.breakpoint("xxs") {
+                width: 100%;
+                margin: 0;
+            }
+        }
+    }
 
-     /* PRIO 3 */
-     .partner-prio-3 {
-          a, .partner-logo-a-placer { 
-               width: 24%; margin:.5%; min-height: 130px; 
-               @include breakpoint('s'){ width: 32%; margin:.5%; min-height: 180px; }
-               @include breakpoint('xs'){ width: 49%; margin:.5%; min-height: 180px; }
-               @include breakpoint('xxs'){ width: 100%; margin:0; }
-          }
-     }
-
-     .partner-prio-3.partner-grid-width-50 {
-          width: 49%;
-          @include breakpoint('s'){ width: 100%; }
-          a, .partner-logo-a-placer  { 
-               width: 49%; margin:.5%; min-height: 150px; 
-               @include breakpoint('xs'){ width: 49%; margin:.5%; min-height: 180px; }
-               @include breakpoint('xxs'){ width: 100%; margin:0; }
-          }
-          
-     }
+    .partner-prio-3.partner-grid-width-50 {
+        width: 49%;
+        @include responsive.breakpoint("s") {
+            width: 100%;
+        }
+        a,
+        .partner-logo-a-placer {
+            width: 49%;
+            margin: 0.5%;
+            min-height: 150px;
+            @include responsive.breakpoint("xs") {
+                width: 49%;
+                margin: 0.5%;
+                min-height: 180px;
+            }
+            @include responsive.breakpoint("xxs") {
+                width: 100%;
+                margin: 0;
+            }
+        }
+    }
 }
 
 .partner-lightbox {
-     .lightbox-content {
-          display: flex;
-          flex-direction: column;
-     }
-     blockquote {
-          font-family: 'Media Sans';
-          letter-spacing: 2px;
-          line-height: 2rem;
-          &::before, &::after  { position: absolute; font-size: 64px;  opacity: .8; font-family: 'GT Alpina';}
-          &::before { content: '«'; margin: -10px 0 0 -45px; }
-          &::after { content: '»'; right: 40px; margin: 0 -35px 0 0;}
+    .lightbox-content {
+        display: flex;
+        flex-direction: column;
+    }
+    blockquote {
+        font-family: "Media Sans";
+        letter-spacing: 2px;
+        line-height: 2rem;
+        &::before,
+        &::after {
+            position: absolute;
+            font-size: 64px;
+            opacity: 0.8;
+            font-family: "GT Alpina";
+        }
+        &::before {
+            content: "«";
+            margin: -10px 0 0 -45px;
+        }
+        &::after {
+            content: "»";
+            right: 40px;
+            margin: 0 -35px 0 0;
+        }
 
-          span { font-family: 'GT Alpina'; }
-     }
+        span {
+            font-family: "GT Alpina";
+        }
+    }
 
-     .partner-website-btn {
-          display: block;
-          width: fit-content;
-          align-self: center;
-     }
+    .partner-website-btn {
+        display: block;
+        width: fit-content;
+        align-self: center;
+    }
 }

@@ -1,3 +1,8 @@
+@use "fonts";
+@use "variables";
+@use "elements";
+@use "responsive";
+
 //MENU
 .header-menu {
     position: absolute;
@@ -12,14 +17,14 @@
         gap: 10px;
         list-style: none outside none !important;
         font-family: "Media Sans";
-        font-size: $fxxs;
-        color: $blue;
+        font-size: fonts.$fxxs;
+        color: variables.$blue;
         transition: inherit;
     }
 
     .menu-item:hover {
         > a {
-            color: $blue;
+            color: variables.$blue;
         }
     }
 
@@ -50,7 +55,7 @@
         top: 100%;
         left: -18px;
         background-color: #fff;
-        @include shadow();
+        @include elements.shadow();
         padding: 10px;
         margin-top: 10px;
         transition: all 200ms ease-in-out;
@@ -71,7 +76,7 @@
         cursor: pointer;
         transition: all 200ms ease-in-out;
         &:hover {
-            background-color: $blue-ultra-light;
+            background-color: variables.$blue-ultra-light;
         }
     }
 
@@ -87,7 +92,7 @@
     display: none;
 }
 
-@include breakpoint("m") {
+@include responsive.breakpoint("m") {
     .header-menu {
         display: flex;
         flex-direction: column;
@@ -117,7 +122,7 @@
         position: fixed;
         width: 100vw;
         height: 100vh;
-        background-color: $blue;
+        background-color: variables.$blue;
         top: 0;
         left: 0;
         z-index: 2000;
@@ -181,13 +186,13 @@
 
             > li {
                 width: 100%;
-                border-bottom: 1px solid $blue-mid;
+                border-bottom: 1px solid variables.$blue-mid;
                 padding: 20px 0;
                 margin: 0;
                 text-align: center;
 
                 &:hover {
-                    background-color: $blue-mid;
+                    background-color: variables.$blue-mid;
                 }
 
                 .sub-menu {
@@ -206,15 +211,15 @@
                         }
                         width: 100%;
                         padding: 20px 0;
-                        border-bottom: 1px solid $blue;
+                        border-bottom: 1px solid variables.$blue;
                         text-align: center;
-                        background-color: $blue-mid;
+                        background-color: variables.$blue-mid;
                         &:hover {
-                            background-color: $blue-light;
+                            background-color: variables.$blue-light;
                         }
 
                         a {
-                            color: $blue;
+                            color: variables.$blue;
                         }
                     }
                 }

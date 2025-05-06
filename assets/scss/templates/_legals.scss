@@ -1,16 +1,28 @@
-.template-legals-wrapper{
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     padding: 60px 20px;
-     .template-legals-container{
-          max-width: 800px;
+@use "../utils/variables";
 
-          h1, h2, h3, h4, h5, h6 {
-               color: $orange;
-          }
-          p, li, span, ul, ol {
-               color: $blue;
-          }
-     }
+.template-legals-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+
+    .template-legals-container {
+        max-width: 800px;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: variables.$orange;
+        }
+        p,
+        li,
+        span,
+        ul,
+        ol {
+            color: variables.$blue;
+        }
+    }
 }

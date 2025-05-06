@@ -1,39 +1,43 @@
+@use "fonts";
+@use "variables";
+@use "elements";
+
 form {
-	label {
-		font-size: $fxs;
-	}
-	.mauticform-radiogrp-label, .mauticform-checkboxgrp-label {
-		font-size: $fxxs;
-	}
+    label {
+        font-size: fonts.$fxs;
+    }
+    .mauticform-radiogrp-label,
+    .mauticform-checkboxgrp-label {
+        font-size: fonts.$fxxs;
+    }
 
-	input[type="text"],
-	input[type="tel"],
-	input[type="email"],
-	textarea
-	 {
-		font-size: $fxs;
-		font-family: "GT Alpina";
-		padding: 20px;
-		border-radius: 20px;
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    textarea {
+        font-size: fonts.$fxs;
+        font-family: "GT Alpina";
+        padding: 20px;
+        border-radius: 20px;
 
-		&:focus {
-			background-color: $blue-ultra-light;
-		}
-	}
+        &:focus {
+            background-color: variables.$blue-ultra-light;
+        }
+    }
 
-	input[type="checkbox"] {
-		border-radius: 50%;
-		margin: 0;
-	}
-	.mauticform-button {
-		@include basicButton();
-		background-color: $blue;
-		color: $white;
-		&:hover {
-			background-color: $orange;
-		}
-		p {
-			margin: 0px;
-		}
-	}
+    input[type="checkbox"] {
+        border-radius: 50%;
+        margin: 0;
+    }
+    .mauticform-button {
+        @include elements.basicButton();
+        background-color: variables.$blue;
+        color: variables.$white;
+        &:hover {
+            background-color: variables.$orange;
+        }
+        p {
+            margin: 0px;
+        }
+    }
 }

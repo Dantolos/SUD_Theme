@@ -1,39 +1,41 @@
+@use "sass:map";
+
 $size__site_content_width: 1024px;
 
 $media-direction: max;
 
 $breakpoints: (
-	"default": "",
-	"xxs": 380px,
-	"xs": 480px,
-	"s": 600px,
-	"m": 996px,
-	"l": 1280px,
-	"xl": 1680px,
+    "default": "",
+    "xxs": 380px,
+    "xs": 480px,
+    "s": 600px,
+    "m": 996px,
+    "l": 1280px,
+    "xl": 1680px,
 );
 
 @mixin breakpoint($breakpoint, $direction: $media-direction) {
-	// Es wird gecheckt ob der Wert in der Sass Map vorhanden ist
-	@if map-has-key($breakpoints, $breakpoint) {
-		// Ausgabe
-		@media (#{$direction}-width: #{map-get($breakpoints, $breakpoint)}) {
-			@content;
-		}
-	}
+    // Es wird gecheckt ob der Wert in der Sass Map vorhanden ist
+    @if map.has-key($breakpoints, $breakpoint) {
+        // Ausgabe
+        @media (#{$direction}-width: #{map.get($breakpoints, $breakpoint)}) {
+            @content;
+        }
+    }
 
-	// Wenn ihr oben einen Wert eingetragen habt wird hier gecheckt ob ihr einen Einheit angehängt habt. Falls nicht wird px genutzt.
-	@else if unitless($breakpoint) {
-		$breakpoint: $breakpoint + 0px;
+    // Wenn ihr oben einen Wert eingetragen habt wird hier gecheckt ob ihr einen Einheit angehängt habt. Falls nicht wird px genutzt.
+    @else if unitless($breakpoint) {
+        $breakpoint: $breakpoint + 0px;
 
-		// Ausgabe
-		@media (#{$direction}-width: $breakpoint) {
-			@content;
-		}
-	}
+        // Ausgabe
+        @media (#{$direction}-width: $breakpoint) {
+            @content;
+        }
+    }
 }
 
 .sud__hide_on_mobile {
-	@include breakpoint("m") {
-		display: none !important;
-	}
+    @include breakpoint("m") {
+        display: none !important;
+    }
 }

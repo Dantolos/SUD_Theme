@@ -16,6 +16,8 @@ $args = [
     "order" => "ASC",
 ];
 $canditates = new WP_Query($args);
+
+// Nur catch of the Jury filter
 ?>
 
 <div class="<?php echo $hide_on_mobile; ?>" style="display:<?php echo $hide; ?>">

@@ -1,24 +1,28 @@
+@use "../utils/variables";
+
 .sud-404-wrapper {
-     background-color: $blue-ultra-light;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     padding: 60px 20px;
+    background-color: variables.$blue-ultra-light;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
 
-     .sud-404-container {
-          max-width: 1600px;
-          margin: 10vh 0;
-          h3 {
-               color: $orange;
-               font-size: 20vw;
-          }
-          h5 {
-               text-align: right;
-          }
-          p, li, span, ul, ol {
-               color: $blue;
-          }
-     }
-
-
+    .sud-404-container {
+        max-width: 1600px;
+        margin: 10vh 0;
+        h3 {
+            color: variables.$orange;
+            font-size: 20vw;
+        }
+        h5 {
+            text-align: right;
+        }
+        p,
+        li,
+        span,
+        ul,
+        ol {
+            color: variables.$blue;
+        }
+    }
 }

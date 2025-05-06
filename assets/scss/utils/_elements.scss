@@ -1,3 +1,7 @@
+@use "variables";
+@use "fonts";
+@use "responsive";
+
 @mixin imageSettings {
     background-size: cover;
     -ms-background-size: cover;
@@ -12,7 +16,7 @@
 }
 
 @mixin shadow {
-    box-shadow: 5px 5px 21px 0px rgba(69, 64, 52, 0.3);
+    box-shadow: 5px 5px 21px 0px rgba(0, 43, 74, 0.3);
 }
 .sud-shadow {
     @include shadow();
@@ -21,7 +25,7 @@
 @mixin primaryBox {
     @include shadow;
     border-radius: 20px;
-    border: 1px solid rgba(69, 64, 52, 0.15);
+    border: 1px solid rgba(0, 43, 74, 0.15);
     background: var(--white, #fff);
 }
 .primatyBox {
@@ -29,7 +33,7 @@
 }
 
 @mixin secondaryBox {
-    border-radius: $fs;
+    border-radius: fonts.$fs;
     border: 1px solid rgba(0, 0, 0, 0.2);
     background: rgb(248, 248, 248);
 }
@@ -54,10 +58,14 @@
 
 @mixin primaryButton {
     @include basicButton();
-    background-color: $blue;
-    color: $white;
+    background-color: variables.$blue-dark;
+    color: variables.$white;
+    transition: all 120ms ease;
     &:hover {
-        background-color: $orange;
+        background-color: variables.$orange;
+        color: variables.$white;
+        transform: scale(0.98);
+        border-radius: 50px;
     }
     p {
         margin: 0px;
@@ -66,16 +74,21 @@
 .btn-primary {
     @include primaryButton();
 }
+.btn-primary-light {
+    @include primaryButton();
+    background-color: variables.$blue-mid;
+    color: variables.$blue-dark;
+}
 
 @mixin secondaryButton {
     @include basicButton();
-    border: 2px solid $blue;
+    border: 2px solid variables.$blue;
     background-color: unset;
-    color: $blue;
+    color: variables.$blue;
     &:hover {
-        border-color: $orange;
-        background-color: $orange;
-        color: $white;
+        border-color: variables.$orange;
+        background-color: variables.$orange;
+        color: variables.$white;
     }
 }
 .btn-secondary {
@@ -87,24 +100,24 @@
     font-size: clamp(20px, 3vw, 30px);
     padding: 20px;
     letter-spacing: 1px;
-    @include breakpoint("m") {
+    @include responsive.breakpoint("m") {
         font-size: clamp(20px, 3vw, 30px);
         padding: 20px;
     }
 }
 .btn-s {
     font-size: clamp(10px, 2vw, 20px);
-    padding: 10px;
+    padding: 10px 20px;
     letter-spacing: 1px;
-    @include breakpoint("m") {
+    @include responsive.breakpoint("m") {
         font-size: clamp(15px, 2.5vw, 30px);
         padding: 15px;
     }
 }
 
 .btn-secondary.btn-neg {
-    border-color: $white;
-    color: $white;
+    border-color: variables.$white;
+    color: variables.$white;
 }
 
 button {
@@ -122,7 +135,7 @@ button {
     overflow: visible;
 
     .sud-bg-element-half-circle-01 {
-        background-color: $blue-ultra-light;
+        background-color: variables.$blue-ultra-light;
         clip-path: circle(50% at 50% 0%);
         position: absolute;
         overflow: visible;
@@ -130,7 +143,7 @@ button {
 
     .sud-bg-element-polygon-01 {
         position: absolute;
-        background-color: $blue-ultra-light;
+        background-color: variables.$blue-ultra-light;
         clip-path: polygon(100% 0, 63% 71%, 100% 100%);
     }
 }
@@ -144,6 +157,6 @@ button {
     div {
         width: 100%;
         height: 100%;
-        background-color: $blue-ultra-light;
+        background-color: variables.$blue-ultra-light;
     }
 }

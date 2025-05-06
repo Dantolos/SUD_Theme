@@ -1,88 +1,92 @@
+@use "../utils/responsive";
+@use "../utils/elements";
+@use "../utils/variables";
+
 .lightbox-wrapper {
-     position: fixed;
-     z-index: 8000 !important;
-     top:0;
-     left:0;
-     width: 100vw;
-     height:100vh;
-     background-color: rgba(255,255,255,.3);
-     backdrop-filter: blur(20px);
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     visibility: hidden;
+    position: fixed;
+    z-index: 8000 !important;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
 
-     .lightbox-close-layer {
-          z-index: 10;
-          position: absolute;
-          width: 100px;
-          height: 100px;
-          top:2%;
-          right:2%; 
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          @include breakpoint('m'){ top:1%; }
-          img {
-               width: 50%;
-               height: 50%;
-               transform: all();
-               transition-duration: 200ms;
-               &:hover {
-                    cursor: pointer;
-                    transform: scale(1.25);
-               }
-          }
-     }
+    .lightbox-close-layer {
+        z-index: 10;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 2%;
+        right: 2%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include responsive.breakpoint("m") {
+            top: 1%;
+        }
+        img {
+            width: 50%;
+            height: 50%;
+            transform: all();
+            transition-duration: 200ms;
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.25);
+            }
+        }
+    }
 
-     .lightbox-container {
-          z-index: 2010;
-          position: relative;
-          background-color: $blue-mid;
-          max-width: 90vw;
-          max-height: 75vh;
-          padding: 60px;
-          border-radius: 30px;
-          overflow: hidden;
-          @include shadow; 
-         
-          @include breakpoint('m'){
-               padding: 30px 0 20px 10px;
-               max-width: 95vw;
-     
-          }
+    .lightbox-container {
+        z-index: 2010;
+        position: relative;
+        background-color: variables.$blue-mid;
+        max-width: 90vw;
+        max-height: 75vh;
+        padding: 60px;
+        border-radius: 30px;
+        overflow: hidden;
+        @include elements.shadow;
 
-          .lightbox-content {
-               position: relative;
-               overflow-y: scroll;
-               max-height: 60vh;
-               padding: 10px;
-               z-index: 2015;
-          }
+        @include responsive.breakpoint("m") {
+            padding: 30px 0 20px 10px;
+            max-width: 95vw;
+        }
 
-          .lightbox-bg-element-01 {
-               z-index: 2010;
-               height: 80%;
-               width: 60%;
-               position: absolute;
-               top: 5%;
-               left: -20%;
-               background-color: $blue;
-               clip-path: polygon(63% 0, 0 60%, 100% 97%);
-               opacity: .6;
-          }
+        .lightbox-content {
+            position: relative;
+            overflow-y: scroll;
+            max-height: 60vh;
+            padding: 10px;
+            z-index: 2015;
+        }
 
-          .lightbox-bg-element-02 {
-               z-index: 2010;
-               height: 80%;
-               width:100%;
-               position: absolute;
-               bottom: 0;
-               right: -50%;
-               background-color: $blue-light;
-               clip-path: circle(50% at 50% 99%);
-               opacity: .6;
-          }
+        .lightbox-bg-element-01 {
+            z-index: 2010;
+            height: 80%;
+            width: 60%;
+            position: absolute;
+            top: 5%;
+            left: -20%;
+            background-color: variables.$blue;
+            clip-path: polygon(63% 0, 0 60%, 100% 97%);
+            opacity: 0.6;
+        }
 
-     }
+        .lightbox-bg-element-02 {
+            z-index: 2010;
+            height: 80%;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            right: -50%;
+            background-color: variables.$blue-light;
+            clip-path: circle(50% at 50% 99%);
+            opacity: 0.6;
+        }
+    }
 }

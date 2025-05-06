@@ -1,9 +1,13 @@
+@use "../utils/elements";
+@use "../utils/responsive";
+@use "../utils/variables";
+
 $headerHeight: 120px;
 
 body {
     margin-top: $headerHeight;
     background-color: #f8f8f8;
-    @include breakpoint("m") {
+    @include responsive.breakpoint("m") {
         $headerHeight: 100px;
         margin-top: $headerHeight;
     }
@@ -17,10 +21,10 @@ body {
     height: $headerHeight;
     width: 100vw;
     padding: 25px 30px;
-    background-color: $white;
-    @include shadow();
+    background-color: variables.$white;
+    @include elements.shadow();
 
-    @include breakpoint("m") {
+    @include responsive.breakpoint("m") {
         $headerHeight: 100px;
         height: $headerHeight;
     }
@@ -38,7 +42,7 @@ body {
         max-height: 100%;
         object-fit: contain;
         width: auto;
-        @include breakpoint("m") {
+        @include responsive.breakpoint("m") {
             height: 60px;
         }
     }
@@ -50,24 +54,24 @@ body {
     right: 30px;
     top: 0px !important;
 
-    @include breakpoint("m") {
+    @include responsive.breakpoint("m") {
         display: none;
     }
 
     ul {
         display: flex;
         list-style: none outside none !important;
-        color: $blue;
+        color: variables.$blue;
         li {
             padding: 5px 10px 0 10px;
-            border-left: 2px solid $blue;
+            border-left: 2px solid variables.$blue;
             font-size: 1.1em;
             &:last-of-type {
-                border-right: 2px solid $blue;
+                border-right: 2px solid variables.$blue;
             }
             &:hover {
-                background-color: $blue;
-                color: $white;
+                background-color: variables.$blue;
+                color: variables.$white;
                 cursor: pointer;
             }
         }

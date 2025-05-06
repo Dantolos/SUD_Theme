@@ -1,54 +1,54 @@
-@import "utils/reset";
-@import "utils/responsive";
-@import "utils/variables";
-@import "utils/fonts";
-@import "utils/elements";
-@import "utils/layout";
-@import "utils/forms";
-@import "utils/scrollbar";
-@import "utils/video";
-@import "utils/animation";
-@import "utils/menu";
-@import "utils/social-media-flag";
-@import "utils/wp-styles";
+@use "utils/reset";
+@use "utils/responsive";
+@use "utils/variables";
+@use "utils/fonts";
+@use "utils/elements";
+@use "utils/layout";
+@use "utils/forms";
+@use "utils/scrollbar";
+@use "utils/video";
+@use "utils/animation";
+@use "utils/menu";
+@use "utils/social-media-flag";
+@use "utils/wp-styles";
 
-@import "components/header";
-@import "components/footer";
-@import "components/lightbox";
+@use "components/header";
+@use "components/footer";
+@use "components/lightbox";
 // Import other files as needed
 
+//templates
+@use "templates/default";
+@use "templates/legals";
+@use "templates/partner";
+@use "templates/content-hub";
+@use "templates/post";
+@use "templates/404" as error404;
+
+//plugins
+@use "plugins/splide";
+@use "plugins/friendly-forms";
+
 ::selection {
-	background: $orange;
-	color: $white;
+    background: variables.$orange;
+    color: variables.$white;
 }
 
-
 html {
-  scroll-behavior: smooth !important;
+    scroll-behavior: smooth !important;
 }
 
 body {
-	cursor: url("../img/utils/cursor.svg"), auto !important;
+    cursor: url("../img/utils/cursor.svg"), auto !important;
 }
 
 #main-wrapper {
-	width: 100vw;
+    width: 100vw;
 }
 .bspbox {
-	@include primaryBox;
+    @include elements.primaryBox;
 }
 
 .bspbox2 {
-	@include secondaryBox;
+    @include elements.secondaryBox;
 }
-
-//templates
-@import "templates/default";
-@import "templates/legals";
-@import "templates/partner";
-@import "templates/content-hub";
-@import "templates/404";
-
-//plugins
-@import "plugins/splide";
-@import "plugins/friendly-forms";

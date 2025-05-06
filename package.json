@@ -64,7 +64,7 @@
     "resolve": "^1.22.4",
     "reusify": "^1.0.4",
     "run-parallel": "^1.2.0",
-    "sass": "^1.71.1",
+    "sass": "^1.87.0",
     "source-map-js": "^1.0.2",
     "sucrase": "^3.34.0",
     "supports-preserve-symlinks-flag": "^1.0.0",
@@ -80,11 +80,10 @@
   "devDependencies": {
     "browser-sync": "^2.29.3",
     "concurrently": "^8.2.2",
-    "node-sass": "^9.0.0",
     "onchange": "^7.1.0"
   },
   "scripts": {
-    "build:sass": "node-sass assets/scss/main.scss assets/css/style.css",
+    "build:sass": "sass assets/scss/main.scss assets/css/style.css",
     "watch:sass": "npm run build:sass -- --watch",
     "start": "concurrently \"npm run watch:sass\" \"npm run browser-sync\"",
     "browser-sync": "browser-sync start --config bs-config.js"
@@ -93,4 +92,3 @@
   "author": "",
   "license": "ISC"
 }
- 

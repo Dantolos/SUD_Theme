@@ -32,7 +32,7 @@
           <!-- Footer Bottom Line -->
           <div class="footer-bottom-line">
 
-               <button type="button" onclick="sudLightbox('newsletter')" class="btn-s"><?php echo get_field(
+               <button type="button" onclick="sudLightbox('newsletter')" class="btn-s btn-primary-light "><?php echo get_field(
                    "newsletter",
                    "option"
                )["button_text"]; ?></button>

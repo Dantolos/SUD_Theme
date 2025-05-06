@@ -60,10 +60,27 @@ function sud_register_scripts()
         true
     );
 
+    // page template specific scripts
+    $theme_version = wp_get_theme()->get("Version");
+    if (is_page_template("templates/posts.php")) {
+        // Replace with your template filename
+        wp_enqueue_script(
+            "posts-js", // Handle
+            get_template_directory_uri() . "/assets/js/posts.js", // Path to your JS file
+            [], // Dependencies (optional)
+            $theme_version,
+            true // Load in footer
+        );
+    }
+
+    global $post;
     $wnm_custom = [
         "templateUrl" => get_template_directory_uri(),
         "baseUrl" => get_home_url(),
     ];
+    if (isset($post->ID)) {
+        $wnm_custom["templateSlug"] = get_page_template_slug($post->ID);
+    }
     wp_localize_script("sud-script", "globalURL", $wnm_custom);
 }
 add_action("wp_enqueue_scripts", "sud_register_scripts");
@@ -141,6 +158,16 @@ function sud_register_block_script()
         true
     );
 }
+
+/* ENQUEUE ADMIN STYLE */
+function my_admin_theme_style()
+{
+    wp_enqueue_style(
+        "my-admin-style",
+        get_stylesheet_directory_uri() . "/assets/css/admin_style.css"
+    );
+}
+add_action("admin_enqueue_scripts", "my_admin_theme_style");
 
 /*-------------------------------------------------------------*/
 /*------------------------ Blocks -----------------------------*/
@@ -327,3 +354,33 @@ function __search_by_title_only($search, $wp_query)
     return $search;
 }
 add_filter("posts_search", "__search_by_title_only", 500, 2);
+
+//filtering
+add_filter(
+    "rest_post_query",
+    function ($args, $request) {
+        // For Categories
+        if (isset($request["cat"])) {
+            $args["tax_query"][] = [
+                "taxonomy" => "category",
+                "terms" => explode(",", $request["cat"]),
+                "operator" => "AND",
+                "include_children" => false,
+            ];
+        }
+
+        // For Tags
+        if (isset($request["sudtag"])) {
+            $args["tax_query"][] = [
+                "taxonomy" => "post_tag",
+                "terms" => explode(",", $request["sudtag"]),
+                "operator" => "AND",
+                "include_children" => false,
+            ];
+        }
+
+        return $args;
+    },
+    10,
+    2
+);

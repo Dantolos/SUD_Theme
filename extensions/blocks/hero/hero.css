@@ -49,6 +49,15 @@ h3 {
     z-index: 5;
 }
 
+.sud__hero_strapline {
+    margin: 0;
+    padding: 5px 20px;
+    width: fit-content;
+    background-color: #1582be;
+    border-radius: 25px;
+    color: white !important;
+}
+
 .hero-cta {
     z-index: 4;
     position: absolute;

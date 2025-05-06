@@ -1,35 +1,38 @@
+@use "../utils/fonts";
+@use "../utils/variables";
+
 .mauticform_wrapper {
-	margin: 0 !important;
-	max-width: none !important;
+    margin: 0 !important;
+    max-width: none !important;
 
-	h3.mauticform-label {
-		font-size: $fl;
-	}
+    h3.mauticform-label {
+        font-size: fonts.$fl;
+    }
 
-	p,
-	span {
-		font-size: $fxs !important;
-		color: $black !important;
-	}
-	a {
-		color: $orange !important;
-	}
+    p,
+    span {
+        font-size: fonts.$fxs !important;
+        color: variables.$black !important;
+    }
+    a {
+        color: variables.$orange !important;
+    }
 
-	.mauticform-helpmessage {
-		font-size: 16px !important;
-	}
+    .mauticform-helpmessage {
+        font-size: 16px !important;
+    }
 
-	.mauticform-button {
-		border: none !important;
-		background-color: #1582be !important;
-		color: #ffffff !important;
-		padding: 10px 20px !important;
-		border-radius: 20px !important;
-		font-size: 1.2rem !important;
-	}
+    .mauticform-button {
+        border: none !important;
+        background-color: #1582be !important;
+        color: #ffffff !important;
+        padding: 10px 20px !important;
+        border-radius: 20px !important;
+        font-size: 1.2rem !important;
+    }
 
-	.mauticform-errormsg {
-		color: red !important;
-		font-size: 1rem !important;
-	}
+    .mauticform-errormsg {
+        color: red !important;
+        font-size: 1rem !important;
+    }
 }
