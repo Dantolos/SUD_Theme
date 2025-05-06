@@ -1,111 +1,109 @@
 .testimonials-wrapper {
-     width: 100%;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     overflow-x: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
 }
 
 .testimonials-header {
-     width: 600px;
-     height: 300px;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     border-top-left-radius: 300px;
-     border-top-right-radius: 300px;
-     padding: 0 100px;
+    width: 600px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 300px;
+    border-top-right-radius: 300px;
+    padding: 0 100px;
 }
 
 .testimonials-container {
-     transform: translateY(-80px);
-     width: 100vw;
-     padding: 60px 60px;
-     display: flex;
-     justify-content: center;
-     z-index: 20;
+    transform: translateY(-80px);
+    width: 100vw;
+    padding: 60px 60px;
+    display: flex;
+    justify-content: center;
+    z-index: 20;
 }
 
 .testimonials-footer {
-     width: 600px;
-     height: 300px;
-     border-bottom-left-radius: 300px;
-     border-bottom-right-radius: 300px;
-     transform: translateY(-160px);
-     z-index: 0;
+    width: 600px;
+    height: 300px;
+    border-bottom-left-radius: 300px;
+    border-bottom-right-radius: 300px;
+    transform: translateY(-160px);
+    z-index: 0;
 }
 
 .splide__slide {
-     padding: 50px;
+    padding: 50px;
 }
 
 .testimonial-box {
-     display: flex;
-     justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .testimonial-portrait {
-     width:150px;
-     height:150px;
-     border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
 
-     background-size: cover !important;
-     -ms-background-size: cover;
-     -o-background-size: cover;
-     -moz-background-size: cover;
-     -webkit-background-size: cover;
-     background-repeat: no-repeat !important;
-     background-position: center center !important;
+    background-size: cover !important;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
 }
 
 .testimonial-content {
-     width: calc(100% - 150px);
-     padding-left: 20px;
+    width: calc(100% - 150px);
+    padding-left: 20px;
 }
 
 .testimonial-content > span {
-     font-family: 'Media Sans';
-     font-weight: normal;
-     margin-bottom: 0;
-     line-height: 1;
-    
+    font-family: "Media Sans";
+    font-weight: normal;
+    margin-bottom: 0;
+    line-height: 1;
 }
 
-
 .testimonial-content > blockquote {
-     font-weight: normal;
-     margin: -30px 0 5px 0;     
+    font-weight: normal;
+    margin: -30px 0 5px 0;
 }
 
 .splide__pagination {
-     position: absolute;
-     left: 0; right: 0;
-     bottom:-140px;
-     padding: 0;
-     gap: 10px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -140px !important;
+    padding: 0;
+    gap: 10px;
 }
 
-
 @media only screen and (max-width: 600px) {
-     .testimonials-container{
-          padding: unset!important;
-     }
-     .testimonial-box {
-          flex-wrap: wrap; 
-     }
-     .testimonial-content {
-          width: 100%;
-     }
-     .splide__slide {
-          padding: 20px;
-     }
-     .testimonial-content { 
-          padding-left: 0;
-     }
-     .testimonial-portrait {
-          margin-bottom: 40px;
-     }
-     .splide__pagination {
-          bottom: -80px;
-     }
+    .testimonials-container {
+        padding: unset !important;
+    }
+    .testimonial-box {
+        flex-wrap: wrap;
+    }
+    .testimonial-content {
+        width: 100%;
+    }
+    .splide__slide {
+        padding: 20px;
+    }
+    .testimonial-content {
+        padding-left: 0;
+    }
+    .testimonial-portrait {
+        margin-bottom: 40px;
+    }
+    .splide__pagination {
+        bottom: -80px !important;
+    }
 }

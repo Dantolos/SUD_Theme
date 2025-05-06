@@ -1,12 +1,14 @@
 .splide {
-     width: 100%;
+    width: 100%;
 }
 
-
+.splide__slider {
+    position: relative;
+}
 .splide__pagination__page {
-     padding: 15px;
+    padding: 15px;
 }
 
 .splide__pagination__page.is-active {
-     background-color: #6EA9D8;
+    background-color: #6ea9d8;
 }

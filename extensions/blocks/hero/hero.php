@@ -10,7 +10,7 @@ $hide = get_field("hide_block") ? "none" : "block";
 $type = get_field("type") ?: "type1";
 
 $data["title"] = get_field("title") ?: "Titel ";
-$data["strapline"] = get_field("strapline") ?: "Titel ";
+$data["strapline"] = get_field("strapline") ?: false;
 $data["subtitle"] = get_field("subtitle") ?: "Subtitle";
 $data["text"] = get_field("text") ?: "";
 $data["image"] = get_field("image") ?: null;
@@ -286,8 +286,12 @@ if (!function_exists("cast_hero_type_4")) {
 
         //Content
         $hero_type_4 .= '<div class="sud__hero_text">';
-        $hero_type_4 .=
-            '<p class="sud__hero_strapline ">' . $data["strapline"] . "</p>";
+        if ($data["strapline"]) {
+            $hero_type_4 .=
+                '<p class="sud__hero_strapline ">' .
+                $data["strapline"] .
+                "</p>";
+        }
         $hero_type_4 .= '<h1 class="fl c-orange">' . $data["title"] . "</h1>";
         $hero_type_4 .=
             '<h3 class="fs c-blue gtalpina">' . $data["subtitle"] . "</h3>";

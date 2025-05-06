@@ -4,6 +4,8 @@
 function sud_register_style()
 {
     $theme_version = wp_get_theme()->get("Version");
+
+    /*
     wp_enqueue_style(
         "splide-style",
         get_template_directory_uri() .
@@ -12,7 +14,14 @@ function sud_register_style()
         $theme_version,
         "all"
     );
-
+    */
+    wp_enqueue_style(
+        "splide-style",
+        "https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css",
+        [],
+        $theme_version,
+        "all"
+    );
     wp_enqueue_style(
         "sud-style",
         get_template_directory_uri() . "/assets/css/style.css",
@@ -116,7 +125,8 @@ function sud_register_block_script()
         get_template_directory_uri() .
             "/extensions/blocks/testimonials/testimonials.js",
         ["jquery", "splide"],
-        $theme_version
+        $theme_version,
+        true
     );
     wp_register_script(
         "block-timeline",
@@ -126,6 +136,7 @@ function sud_register_block_script()
         $theme_version,
         true
     );
+    /*
     wp_register_script(
         "block-photo-slider",
         get_template_directory_uri() .
@@ -133,6 +144,17 @@ function sud_register_block_script()
         ["jquery", "splide"],
         $theme_version
     );
+
+    */
+    wp_register_script(
+        "block-photo-slider",
+        get_template_directory_uri() .
+            "/extensions/blocks/photo-slider/photo-slider.js",
+        ["jquery", "splide"],
+        $theme_version,
+        true
+    );
+
     wp_register_script(
         "block-candidate-grid",
         get_template_directory_uri() .

@@ -17,6 +17,10 @@
 @use "components/lightbox";
 // Import other files as needed
 
+//plugins
+@use "plugins/splide";
+@use "plugins/friendly-forms";
+
 //templates
 @use "templates/default";
 @use "templates/legals";
@@ -24,10 +28,6 @@
 @use "templates/content-hub";
 @use "templates/post";
 @use "templates/404" as error404;
-
-//plugins
-@use "plugins/splide";
-@use "plugins/friendly-forms";
 
 ::selection {
     background: variables.$orange;
@@ -51,4 +51,16 @@ body {
 
 .bspbox2 {
     @include elements.secondaryBox;
+}
+
+.splide {
+    width: 100%;
+}
+
+.splide__pagination__page {
+    padding: 15px;
+}
+
+.splide__pagination__page.is-active {
+    background-color: #6ea9d8;
 }

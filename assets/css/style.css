@@ -1025,6 +1025,53 @@ body {
   opacity: 0.6;
 }
 
+.splide {
+  width: 100%;
+}
+
+.splide__slider {
+  position: relative;
+}
+
+.splide__pagination__page {
+  padding: 15px;
+}
+
+.splide__pagination__page.is-active {
+  background-color: #6ea9d8;
+}
+
+.mauticform_wrapper {
+  margin: 0 !important;
+  max-width: none !important;
+}
+.mauticform_wrapper h3.mauticform-label {
+  font-size: clamp(35px, 7vw, 50px);
+}
+.mauticform_wrapper p,
+.mauticform_wrapper span {
+  font-size: clamp(16px, 2vw, 22px) !important;
+  color: #454034 !important;
+}
+.mauticform_wrapper a {
+  color: #f95300 !important;
+}
+.mauticform_wrapper .mauticform-helpmessage {
+  font-size: 16px !important;
+}
+.mauticform_wrapper .mauticform-button {
+  border: none !important;
+  background-color: #1582be !important;
+  color: #ffffff !important;
+  padding: 10px 20px !important;
+  border-radius: 20px !important;
+  font-size: 1.2rem !important;
+}
+.mauticform_wrapper .mauticform-errormsg {
+  color: red !important;
+  font-size: 1rem !important;
+}
+
 .template-default-wrapper {
   display: flex;
   padding: 20px;
@@ -1714,49 +1761,6 @@ body {
   color: #1582be;
 }
 
-.splide {
-  width: 100%;
-}
-
-.splide__pagination__page {
-  padding: 15px;
-}
-
-.splide__pagination__page.is-active {
-  background-color: #6EA9D8;
-}
-
-.mauticform_wrapper {
-  margin: 0 !important;
-  max-width: none !important;
-}
-.mauticform_wrapper h3.mauticform-label {
-  font-size: clamp(35px, 7vw, 50px);
-}
-.mauticform_wrapper p,
-.mauticform_wrapper span {
-  font-size: clamp(16px, 2vw, 22px) !important;
-  color: #454034 !important;
-}
-.mauticform_wrapper a {
-  color: #f95300 !important;
-}
-.mauticform_wrapper .mauticform-helpmessage {
-  font-size: 16px !important;
-}
-.mauticform_wrapper .mauticform-button {
-  border: none !important;
-  background-color: #1582be !important;
-  color: #ffffff !important;
-  padding: 10px 20px !important;
-  border-radius: 20px !important;
-  font-size: 1.2rem !important;
-}
-.mauticform_wrapper .mauticform-errormsg {
-  color: red !important;
-  font-size: 1rem !important;
-}
-
 ::selection {
   background: #f95300;
   color: #ffffff;
@@ -1785,6 +1789,18 @@ body {
   border-radius: clamp(24px, 5vw, 28px);
   border: 1px solid rgba(0, 0, 0, 0.2);
   background: rgb(248, 248, 248);
+}
+
+.splide {
+  width: 100%;
+}
+
+.splide__pagination__page {
+  padding: 15px;
+}
+
+.splide__pagination__page.is-active {
+  background-color: #6ea9d8;
 }
 
 /*# sourceMappingURL=style.css.map */
