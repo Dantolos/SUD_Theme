@@ -1035,6 +1035,7 @@ body {
 
 .splide__pagination__page {
   padding: 15px;
+  background-color: #a1cceb;
 }
 
 .splide__pagination__page.is-active {
@@ -1705,6 +1706,12 @@ body {
   border-radius: 40px;
   background-position: center;
   background-size: cover;
+}
+.template-single-post-container .sud__post_author h1,
+.template-single-post-container .sud__post_author h2,
+.template-single-post-container .sud__post_author h3,
+.template-single-post-container .sud__post_author h4 {
+  color: #002b4a;
 }
 .template-single-post-container .sud__post_author p {
   line-height: 1.1em;

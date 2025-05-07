@@ -209,6 +209,12 @@
             background-position: center;
             background-size: cover;
         }
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: variables.$blue-dark;
+        }
         p {
             line-height: 1.1em;
             margin: 0;

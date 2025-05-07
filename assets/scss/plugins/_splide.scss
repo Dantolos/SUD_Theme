@@ -1,3 +1,5 @@
+@use "../utils/variables";
+
 .splide {
     width: 100%;
 }
@@ -7,6 +9,7 @@
 }
 .splide__pagination__page {
     padding: 15px;
+    background-color: variables.$blue-light;
 }
 
 .splide__pagination__page.is-active {
