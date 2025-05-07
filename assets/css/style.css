@@ -1707,12 +1707,6 @@ body {
   background-position: center;
   background-size: cover;
 }
-.template-single-post-container .sud__post_author h1,
-.template-single-post-container .sud__post_author h2,
-.template-single-post-container .sud__post_author h3,
-.template-single-post-container .sud__post_author h4 {
-  color: #002b4a;
-}
 .template-single-post-container .sud__post_author p {
   line-height: 1.1em;
   margin: 0;
@@ -1740,6 +1734,13 @@ body {
 }
 .template-single-post-container .sud__post_content {
   margin-bottom: 40px;
+}
+.template-single-post-container .sud__post_content h1,
+.template-single-post-container .sud__post_content h2,
+.template-single-post-container .sud__post_content h3,
+.template-single-post-container .sud__post_content h4 {
+  color: #002b4a;
+  line-height: 1.2em;
 }
 
 .sud-404-wrapper {
