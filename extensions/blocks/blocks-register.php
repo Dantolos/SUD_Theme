@@ -25,6 +25,7 @@ function register_acf_blocks()
     register_block_type(__DIR__ . "/wrapper");
     register_block_type(__DIR__ . "/candidate-grid");
     register_block_type(__DIR__ . "/people-highlight");
+    register_block_type(__DIR__ . "/supporters-grid");
     //require_once( __DIR__ . '/hero/hero-block.acf.php' );
 }
 

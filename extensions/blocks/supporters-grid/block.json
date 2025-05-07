@@ -1,0 +1,16 @@
+{
+  "name": "acf/supporters-grid",
+  "title": "Supporters Grid",
+  "description": "Canditate Grid for SUD Newcomers",
+  "style": ["file:./supporters-grid.css"],
+  "script": "block-supporters-grid",
+  "category": "Startup Days",
+  "icon": { "foreground": "#1582BE", "src": "heart" },
+  "keywords": ["supporters", "sss", "grid", "sud"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "./supporters-grid.php"
+  },
+  "align": "full",
+  "supports": { "anchor": true }
+}
