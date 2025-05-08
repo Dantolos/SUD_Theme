@@ -20,14 +20,16 @@
             gap: 20px;
             flex-direction: column;
             width: 50%;
-            max-width: 500px;
+
+            max-width: 240px;
             margin: 20px 0;
             select {
                 padding: 8px 20px;
                 border-radius: 25px;
-                border: 2px solid variables.$blue;
+                border: 0px solid variables.$blue;
                 font-family: "GT Alpina";
-                font-size: fonts.$fxs;
+                font-size: fonts.$fxxs;
+                @include elements.shadow();
             }
             .sud__selection_category_summary,
             .sud__selection_tag_summary {
@@ -90,12 +92,14 @@
                     }
 
                     .post-item {
+                        transition: all 200ms ease-out;
                         .post-featured-image {
                             width: 100%;
                             height: 120px;
                             background-size: cover;
                             background-position: center;
                             background-color: variables.$blue-ultra-light;
+                            transition: inherit;
                         }
 
                         .post-item-content {
@@ -114,6 +118,17 @@
                                 margin: 0;
                                 font-size: fonts.$fxxs;
                             }
+
+                            .post-item-tag-container {
+                                display: flex;
+                                gap: 5px;
+                                flex-wrap: wrap;
+                                flex-align: center;
+                                .post-item-tag-item {
+                                    opacity: 0.5;
+                                }
+                            }
+
                             .post-item-category-container {
                                 display: flex;
                                 gap: 5px;
@@ -130,6 +145,11 @@
                     }
 
                     &:hover {
+                        box-shadow: none;
+                        transform: scale(0.99);
+                        .post-featured-image {
+                            transform: scale(1.05);
+                        }
                     }
                 }
             }

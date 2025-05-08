@@ -1512,16 +1512,17 @@ body {
   gap: 20px;
   flex-direction: column;
   width: 50%;
-  max-width: 500px;
+  max-width: 240px;
   margin: 20px 0;
 }
 .template-post-wrapper .post-list-filter .sud__filter_category select,
 .template-post-wrapper .post-list-filter .sud__filter_tag select {
   padding: 8px 20px;
   border-radius: 25px;
-  border: 2px solid #1582be;
+  border: 0px solid #1582be;
   font-family: "GT Alpina";
-  font-size: clamp(16px, 2vw, 22px);
+  font-size: clamp(12px, 1.2vw, 18px);
+  box-shadow: 5px 5px 21px 0px rgba(0, 43, 74, 0.3);
 }
 .template-post-wrapper .post-list-filter .sud__filter_category .sud__selection_category_summary,
 .template-post-wrapper .post-list-filter .sud__filter_category .sud__selection_tag_summary,
@@ -1600,12 +1601,16 @@ body {
     width: 100%;
   }
 }
+.template-post-wrapper .template-post-container .post-list-wrapper .sud__post_list_container a .post-item {
+  transition: all 200ms ease-out;
+}
 .template-post-wrapper .template-post-container .post-list-wrapper .sud__post_list_container a .post-item .post-featured-image {
   width: 100%;
   height: 120px;
   background-size: cover;
   background-position: center;
   background-color: #e3f0f9;
+  transition: inherit;
 }
 .template-post-wrapper .template-post-container .post-list-wrapper .sud__post_list_container a .post-item .post-item-content {
   padding: 20px 15px 25px 15px;
@@ -1624,6 +1629,15 @@ body {
   margin: 0;
   font-size: clamp(12px, 1.2vw, 18px);
 }
+.template-post-wrapper .template-post-container .post-list-wrapper .sud__post_list_container a .post-item .post-item-content .post-item-tag-container {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  flex-align: center;
+}
+.template-post-wrapper .template-post-container .post-list-wrapper .sud__post_list_container a .post-item .post-item-content .post-item-tag-container .post-item-tag-item {
+  opacity: 0.5;
+}
 .template-post-wrapper .template-post-container .post-list-wrapper .sud__post_list_container a .post-item .post-item-content .post-item-category-container {
   display: flex;
   gap: 5px;
@@ -1636,6 +1650,14 @@ body {
   padding: 3px 20px;
   border-radius: 20px;
 }
+.template-post-wrapper .template-post-container .post-list-wrapper .sud__post_list_container a:hover {
+  box-shadow: none;
+  transform: scale(0.99);
+}
+.template-post-wrapper .template-post-container .post-list-wrapper .sud__post_list_container a:hover .post-featured-image {
+  transform: scale(1.05);
+}
+
 /* SINGLE PAGE */
 .template-single-post-wrapper {
   display: flex;

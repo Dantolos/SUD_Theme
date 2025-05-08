@@ -119,11 +119,31 @@ const createPostDIV = async (content) => {
       CategoryContainer.append(CategoryItem);
     });
   }
+  console.log(content);
+  //Tag handling
+  let TagContainer = "";
+  if (Array.isArray(content.tags)) {
+    TagContainer = document.createElement("div");
+    TagContainer.className = "post-item-tag-container";
+    content.tags.forEach(async (tag) => {
+      let TagItem = document.createElement("div");
+      TagItem.className = "post-item-tag-item";
+      TagItem.innerHTML = await loadTagById(tag);
+      //let categoryname = await loadCategoryById(category);
+      TagContainer.append(TagItem);
+    });
+  }
 
   //generate output
   let PostContent = document.createElement("div");
   PostContent.className = "post-item-content";
-  PostContent.append(PublishDate, PostTitle, PostExcerpt, CategoryContainer);
+  PostContent.append(
+    PublishDate,
+    PostTitle,
+    TagContainer,
+    PostExcerpt,
+    CategoryContainer,
+  );
 
   PostWrapper.append(PostImage, PostContent);
   PostLink.append(PostWrapper);
@@ -155,7 +175,14 @@ const loadCategoryById = async (categoryID) => {
   return category.name;
 };
 
-const loadTagById = async (categorieID) => {};
+const loadTagById = async (tagID) => {
+  let tag = await fetch(
+    `${globalURL.baseUrl}/wp-json/wp/v2/tags/${tagID}`,
+  ).then((response) => {
+    return response.json();
+  });
+  return tag.name;
+};
 
 //FILTER LOGIC
 const FilterArgs = {
